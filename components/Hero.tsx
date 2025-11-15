@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
       {/* Background Image */}
       <div className="absolute top-0 left-0 w-full h-full z-0">
         <img 
-          src="https://picsum.photos/seed/digitalart/1920/1080" 
+          src="test-image.jpg" 
           alt="Abstract digital art background" 
           className="w-full h-full object-cover filter brightness-50" 
         />
