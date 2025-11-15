@@ -142,6 +142,7 @@ export const projects: Project[] = [
       knowledge: ['K1','K2', 'K4', 'K5', 'K6', 'K7', 'K8', 'K7','K15' ,'K17'],
       skills: ['S1', 'S2', 'S4', 'S5', 'S6','S10','S14', 'S15','S18'],
       behaviours: ['B1', 'B2', 'B3', 'B5']
+    }
   },
   {
     id: '12',
