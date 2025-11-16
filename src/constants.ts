@@ -1,4 +1,8 @@
 import type { Project } from './types';
+import LaptopImage from './assets/LaptopOpenground.png';
+import OpengroundFinal from './assets/FinalisedDesign.png';
+import Before from './assets/BeforePhotography.jpeg';
+import After from './assets/AfterPhotography.jpeg';
 
 export const projects: Project[] = [
   {
@@ -7,7 +11,7 @@ export const projects: Project[] = [
     category: 'Infographic Design',
     description: "This infographic was designed for Arup's internal GeoWiki to clearly explain the features of the new OpenGround software and its extension tools. The objective was to create a simple, user-friendly layout that enables team members to quickly understand the functionality of each connector and encourage the adoption of OpenGround in project workflows.",
     processDescription: "The design process strictly adhered to Arup's brand guidelines to ensure the final infographic met corporate standards for quality, accessibility, and visual consistency. Key considerations included web accessibility compliance, such as appropriate fonts and colour contrasts, to ensure clarity for a diverse audience. An iterative design process, incorporating user testing and feedback, was fundamental to refining the layout. This user-centred approach ensured the final design was not only visually engaging but also highly functional, with feedback directly influencing practical design choices, such as using coloured logos for better recognition.",
-    images: ['https://picsum.photos/seed/proj1a/800/600', 'https://picsum.photos/seed/proj1b/800/600', 'https://picsum.photos/seed/proj1c/800/600'],
+    images: [LaptopImage, OpengroundFinal, 'https://picsum.photos/seed/proj1c/800/600'],
     ksbs: {
       knowledge: ['K1', 'K2', 'K6', 'K7','K11', 'K13', 'K14', 'K16',],
       skills: ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S10', 'S11', 'S12', 'S13', 'S14', 'S15', 'S16'],
@@ -87,7 +91,7 @@ The conclusion was that Concepts was the best solution for Arup, mainly because 
     category: 'Photography & Editing',
     description: "As part of my ongoing development in photography, I keep improving my skills through workshops and hands‑on practice. A recent commission to photograph a big birthday celebration and a wedding gave me the chance to use my technical knowledge in a real setting, focusing on lighting, composition, and capturing important moments.",
     processDescription: "Each commission came with its own challenges. At the wedding, the focus was on capturing the bridal party as they got ready. The 80th birthday celebration brought together guests from different places, and the client wanted lots of photos of people they don’t often see, which meant paying close attention to group shots and key moments. One of the main problems at the birthday party was the cake cutting, which took place outside under a green gazebo because of the weather. This gave the photos a strong green tint. The main technical challenge was fixing this colour cast caused by the lighting. \n\nUsing professional editing software, I corrected the colours to bring back natural tones and improve the overall look of the images. The project finished with the design and delivery of a commemorative photo album, giving me valuable experience in managing the whole process from client consultation to final delivery.",
-    images: ['https://picsum.photos/seed/proj7a/800/600', 'https://picsum.photos/seed/proj7b/800/600'],
+    images: ['https://picsum.photos/seed/proj7a/800/600', Before, After],
     ksbs: {
       knowledge: ['K1', 'K2', 'K4', 'K7', 'K10', 'K19'],
       skills: ['S1', 'S2', 'S3', 'S4', 'S6', 'S8', 'S14', 'S15'],

@@ -1,4 +1,5 @@
 import React from 'react';
+import profileImage from '../assets/profilePicture.jpg';
 
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <h3 className="text-xl font-bold text-arup-dark-gray border-b-2 border-arup-red pb-2 mb-4">{children}</h3>
@@ -17,7 +18,7 @@ const About: React.FC<AboutProps> = ({ onReadMoreClick }) => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-5 gap-12 items-start">
           <div className="md:col-span-2">
-            <img src="https://picsum.photos/seed/eleanor/600/800" alt="Eleanor Seaton" className="rounded-lg shadow-2xl w-full object-cover aspect-[3/4]" />
+            <img src={profileImage} alt="Eleanor Seaton" loading="lazy" className="rounded-lg shadow-2xl w-full object-cover aspect-[3/4]" />
             <div className="mt-4 text-center md:text-left bg-white p-4 rounded-lg shadow-md">
                 <p className="font-bold text-lg">Eleanor Seaton</p>
                 <p className="text-sm text-arup-medium-gray"><span className="font-bold">Profession:</span> Civil and Ground Engineer</p>
