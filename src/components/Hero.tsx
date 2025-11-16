@@ -1,4 +1,5 @@
 import React from 'react';
+import testImage from '../assets/test-image.jpg';
 
 const ArupLogo: React.FC<{ className?: string }> = ({ className }) => (
   <svg width="100" height="35" viewBox="0 0 133 35" fill="none" xmlns="http://www.w3.org/2000/svg" className={className || "h-8 w-auto text-arup-red"}>
@@ -21,7 +22,7 @@ const Hero: React.FC = () => {
       {/* Background Image */}
       <div className="absolute top-0 left-0 w-full h-full z-0">
         <img 
-          src="test-image.jpg" 
+          src={testImage}
           alt="Abstract digital art background" 
           className="w-full h-full object-cover filter brightness-50" 
         />

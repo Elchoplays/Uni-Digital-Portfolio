@@ -1,20 +1,52 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Uni Digital Portfolio
 
-# Run and deploy your AI Studio app
+A curated digital portfolio that highlights key university project work — designed to showcase my skills, creativity, and growth throughout my degree.
 
-This contains everything you need to run your app locally.
+---
 
-View your app in AI Studio: https://ai.studio/apps/drive/1LTiGL4I_0ca3ysLhRGfi82PIsg2W-U1w
+## 🎯 Purpose
 
-## Run Locally
+This portfolio serves as a professional showcase of my university coursework, design projects, and academic achievements. It’s not just a gallery — it's a structured narrative of how I’ve applied my learning in real-world contexts.
 
-**Prerequisites:**  Node.js
+---
 
+## 💼 Featured Projects
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Here are some of the standout pieces included in the portfolio (with short descriptions):
+
+- **Project A** — A deep-dive into [insert topic]: I tackled [problem or challenge], designed [solution], and reflected on [key outcome / learning].  
+- **Project B** — A collaborative group project where we ...  
+- **Project C** — A solo design / research / development effort focused on ...  
+
+*(Each project on the site links through to a dedicated project page with more detail, visuals, and outcomes.)*
+
+---
+
+## 🌱 What I Learned
+
+Through these projects, I developed:
+
+- **Critical thinking** — breaking down complex problems from lectures and translating them into actionable design or research tasks.  
+- **Communication skills** — presenting findings, writing reports, and creating user-friendly visuals.  
+- **Technical proficiency** — turning theory into practice by building functional prototypes and deliverables.
+
+---
+
+## 🚀 How to Navigate
+
+1. **Homepage** — Overview of me + navigation to each project  
+2. **Projects section** — Click into each project to see: context, my role, deliverables, and reflections  
+3. **Contact / About page** — More about me, my future goals, and how to reach out
+
+---
+
+## 📬 Feedback & Use
+
+- Feel free to **browse** the portfolio to understand my academic journey.  
+- If you're a **potential employer or collaborator**, I’m happy to walk you through specific projects.  
+- **Feedback** is very welcome — any thoughts on how I can improve the presentation or narrative are appreciated.
+
+---
+
+Thanks for stopping by — I hope this gives a clear window into my university work and how I approach design, research, and problem-solving.
+
