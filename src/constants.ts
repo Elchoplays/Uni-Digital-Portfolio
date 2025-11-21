@@ -3,6 +3,21 @@ import LaptopImage from './assets/LaptopOpenground.png';
 import OpengroundFinal from './assets/FinalisedDesign.png';
 import Before from './assets/BeforePhotography.jpeg';
 import After from './assets/AfterPhotography.jpeg';
+import ProcreateDrawing from './assets/ProcreateDrawing.png';
+import ipadmockupConcepts from './assets/ipadmockupConcepts.png';
+import HandDrawing from './assets/HandDrawing.png';
+import Observationscreenshot from './assets/Observationscreenshot.jpg';
+import ipadmockup3dMODEL from './assets/ipadmockup3dMODEL.png';
+import RStudioScreenshot from './assets/RStudioScreenshot.jpg';
+import RStudioScreenshot2 from './assets/RStudioScreenshot2.jpg';
+import VREquipment from './assets/VREquipment.jpeg';
+import Markup from './assets/Markup.png';
+import Illustration from './assets/Illustration.jpg';
+import CopilotLicenseInfo from './assets/CopilotLicenseInfo.png';
+import GDPR from './assets/GDPR.png';
+import aimessageScreenshot from './assets/aimessageScreenshot.jpg';
+import FigmaPhone from './assets/FigmaPhone.png';
+import FullimageFigma from './assets/FullimageFigma.png';
 
 export const projects: Project[] = [
   {
@@ -11,7 +26,7 @@ export const projects: Project[] = [
     category: 'Infographic Design',
     description: "This infographic was designed for Arup's internal GeoWiki to clearly explain the features of the new OpenGround software and its extension tools. The objective was to create a simple, user-friendly layout that enables team members to quickly understand the functionality of each connector and encourage the adoption of OpenGround in project workflows.",
     processDescription: "The design process strictly adhered to Arup's brand guidelines to ensure the final infographic met corporate standards for quality, accessibility, and visual consistency. Key considerations included web accessibility compliance, such as appropriate fonts and colour contrasts, to ensure clarity for a diverse audience. An iterative design process, incorporating user testing and feedback, was fundamental to refining the layout. This user-centred approach ensured the final design was not only visually engaging but also highly functional, with feedback directly influencing practical design choices, such as using coloured logos for better recognition.",
-    images: [LaptopImage, OpengroundFinal, 'https://picsum.photos/seed/proj1c/800/600'],
+    images: [LaptopImage, OpengroundFinal, HandDrawing],
     ksbs: {
       knowledge: ['K1', 'K2', 'K6', 'K7','K11', 'K13', 'K14', 'K16',],
       skills: ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S10', 'S11', 'S12', 'S13', 'S14', 'S15', 'S16'],
@@ -24,7 +39,7 @@ export const projects: Project[] = [
     category: '3D Modelling',
     description: "This project involved developing a 3D ground model from real-world drilling data by digitising borehole geology. The resulting model provided critical information for foundation design. A key component of the project was a cut-and-fill analysis to evaluate the potential for reusing site geology, optimising material usage. The project presented technical challenges related to software limitations, task complexity, and performance optimisation.",
     processDescription: "To address the technical demands of this project and expand my proficiency in Leapfrog, I undertook a structured learning approach. This included studying technical documentation, completing a formal training course, and collaborating closely with project engineers to ensure a thorough understanding of all requirements. This proactive approach resulted in the successful delivery of the 3D model and accurate cut-and-fill calculations. These calculations were instrumental in assessing the feasibility of reusing on-site soil, aligning with sustainable construction practices by minimising landfill waste and the need for imported materials. The analysis also provided valuable data for the sustainability team's carbon impact assessment. This project significantly enhanced my 3D modelling skills and reinforced the importance of continuous learning and adaptation in digital design.",
-    images: ['https://picsum.photos/seed/proj2a/800/600', 'https://picsum.photos/seed/proj2b/800/600'],
+    images: [ipadmockup3dMODEL, 'https://picsum.photos/seed/proj2b/800/600'],
     ksbs: {
       knowledge: ['K7', 'K8', 'K16', 'K17', 'K19', 'K20'],
       skills: ['S2', 'S5', 'S7', 'S12', 'S14', 'S15', 'S17', 'S18'],
@@ -39,7 +54,7 @@ export const projects: Project[] = [
     processDescription: `This research project explored which sketching software would be the best fit for Arup. I assessed applications based on ease of use, workflow compatibility, and the quality of results. Testing involved observing how users interacted with the software, how the features worked, and how well each tool integrated with others. The three main programmes I tested were Concepts, Procreate, and Sketchbook. I looked at how each performed on iPads, which are often used at Arup for site visits and office work, as well as on desktops, where most sketching still takes place. I gathered feedback from users with different levels of experience to understand their challenges, while ensuring feedback was handled fairly and ethically.
 
 The conclusion was that Concepts was the best solution for Arup, mainly because it is designed with engineering in mind, allowing drawings to be made to scale. It also offers both tablet and desktop versions, meeting many of the team’s requirements. As an extension to this project, I developed an asset library of scaled objects that Arup users could add to their sketches, helping speed up the process and produce more professional, standardised drawings.`,
-    images: ['https://picsum.photos/seed/proj3a/800/600', 'https://picsum.photos/seed/proj3b/800/600'],
+    images: [ipadmockupConcepts, ProcreateDrawing, Observationscreenshot],
     ksbs: {
       knowledge: ['K1', 'K2', 'K6', 'K7', 'K8', 'K9', 'K10', 'K11', 'K14', 'K16', 'K17'],
       skills: ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8','S10', 'S11', 'S12', 'S13', 'S14', 'S15', 'S18'],
@@ -52,7 +67,7 @@ The conclusion was that Concepts was the best solution for Arup, mainly because 
     category: 'Artificial Intelligence',
     description: "This project shows how I’ve been learning to use AI Copilot to make everyday tasks faster and more efficient. It handles repetitive jobs, so people can spend more time on creative thinking and important decisions. I’ve used it to quickly check data, support decision-making, and help write things like PowerPoint slides and work emails. It’s helped save time, improve productivity, and keep projects on track. I’ve also realised it’s important to think carefully about the ethical issues that come with using AI in project work.",
     processDescription: "The use of AI Copilot in my work has shown both its big advantages and the ethical issues that come with it. While it makes tasks more efficient, it also raises concerns about data privacy, copyright, and bias. This is especially important because we sign many agreements about confidentiality with projects, and misuse could cause problems. Through this process, I learnt about Arup’s agreement with Copilot and why the company holds a Copilot licence. This ensures that any data entered into the system is not used to train the AI, which protects our confidentiality commitments. I also found out that while other chatbot services can be used, all confidential information must be removed before entering data. In some cases, Arup has blocked access to certain sites to stop staff from accidentally sharing sensitive information. This experience has highlighted the professional duty to stay aware of the ethical issues around AI, to question its results, and to promote its responsible use in line with industry standards.",
-    images: ['https://picsum.photos/seed/proj4a/800/600', 'https://picsum.photos/seed/proj4b/800/600'],
+    images: ['https://picsum.photos/seed/proj4a/800/600', CopilotLicenseInfo, GDPR, aimessageScreenshot],
     ksbs: {
       knowledge: ['K1', 'K2', 'K6', 'K8', 'K9', 'K10', 'K13', 'K14', 'K16', 'K17', 'K18'],
       skills: ['S5', 'S6', 'S10', 'S11', 'S13', 'S14', 'S18'],
@@ -65,7 +80,7 @@ The conclusion was that Concepts was the best solution for Arup, mainly because 
     category: 'Data Analysis & Coding',
     description: "This university project was about learning to use R Studio for data analysis and visualisation. As I was new to the language, I was encouraged to use generative AI to help me understand difficult functions and syntax, and to build my knowledge of R. One of the main things I learnt was how to write clear prompts to get accurate and useful guidance from the AI, which made the learning process much quicker.",
     processDescription: "A key part of this project was learning how to check and improve AI‑generated code. I found that copying and pasting code directly from the AI often caused errors that needed fixing. Instead of being frustrated, I used this as a chance to understand why the code was wrong and how to correct it. Over time, I started spotting mistakes even before running the script, as the guidance was not always completely accurate. This process of reviewing and refining was very useful in building my coding skills. It showed me that, when used carefully and with a critical approach, AI can be a powerful tool for speeding up learning in technical subjects. I also learnt that different programming languages are better suited to different tasks. For example, R is especially good for data analysis and visualising information.",
-    images: ['https://picsum.photos/seed/proj5a/800/600', 'https://picsum.photos/seed/proj5b/800/600'],
+    images: [RStudioScreenshot, RStudioScreenshot2],
     ksbs: {
       knowledge: ['K7', 'K13', 'K17', 'K18', ],
       skills: ['S5', 'S6', 'S10', 'S11', 'S17', 'S18'],
@@ -78,7 +93,7 @@ The conclusion was that Concepts was the best solution for Arup, mainly because 
     category: 'Technical Illustration',
     description: "For this task, I was asked to update a Geotechnical Engineering graphic to show the team’s offshore expertise, which was missing from the original design. I used Procreate to sketch quick ideas and Illustrator to create a polished, brand‑compliant version. The project helped explain what geotechnical engineering actually involves, as many people even within the engineering department,  find it difficult to understand. This graphic also strengthened our professional image.",
     processDescription: "I learned the importance of being flexible and using feedback to make sure the final design met stakeholder needs. The process involved gathering comments, adjusting the design based on suggestions. I enjoyed using Procreate to produce quick sketches, as it allowed me to show different ideas and move through the review process faster. For example, I first sketched an offshore oil rig, but the engineer asked for a wind turbine instead. Because it was only a rough sketch, the change was easy to make and ensured the final version was correct. This approach saved time and made sure the final design was informative, visually appealing, and suitable for reports, presentations, and online use.",
-    images: ['https://picsum.photos/seed/proj6a/800/600', 'https://picsum.photos/seed/proj6b/800/600'],
+    images: [Illustration, Markup, ProcreateDrawing],
     ksbs: {
       knowledge: ['K1', 'K2', 'K7', 'K9', 'K10', 'K11', 'K13', 'K14', 'K15', 'K16', 'K17'],
       skills: ['S1','S2', 'S3', 'S4','S5', 'S6', 'S7', 'S12', 'S13', 'S14', 'S15', 'S16', 'S18'],
@@ -104,7 +119,7 @@ The conclusion was that Concepts was the best solution for Arup, mainly because 
     category: 'Digital Futures',
     description: 'This project explored how immersive technology could support engineering by improving client engagement and design reviews. It compared costly immersive dome setups with more practical options such as Virtual Reality (VR), Mixed Reality (MR) and Augmented Reality (AR). Domes provide impressive experiences but are expensive and difficult to justify for a single project, while VR, MR and AR are cheaper, portable and flexible, making them easier to use across offices and sites. The aim was to balance cost with benefits and find the most suitable technology to showcase Arup’s digital work and strengthen communication with clients.',
     processDescription: 'During the project I explored different immersive technologies, starting with high‑end dome systems, which I experienced at Sheffield Hallam in the Igloo, before moving on to more practical options like VR, MR and AR. I looked at the costs, ease of use and benefits of each, and how they could be applied to real engineering projects. Dome systems provide an impressive shared experience but require a lot of money, ongoing maintenance and dedicated space, which makes them unsuitable for everyday use. VR proved useful for walking through 3D models and spotting design issues early, MR showed strong potential for overlaying digital plans onto real spaces to support construction planning, and AR worked well for quick client presentations and making complex designs easier to understand. \n\nThrough this work I gained a clearer understanding of how immersive technology can improve teamwork, reduce errors and strengthen client engagement. I also learned the importance of balancing innovation with cost, making sure technology choices are practical as well as impressive. Overall, the project showed me that VR, MR and AR can provide flexible and affordable solutions that add real value to engineering projects without the large investment needed for dome systems. ',
-    images: ['https://picsum.photos/seed/proj8a/800/600', 'https://picsum.photos/seed/proj8b/800/600'],
+    images: [VREquipment, 'https://picsum.photos/seed/proj8b/800/600'],
     ksbs: {
       knowledge: ['K1', 'K2', 'K4', 'K5', 'K8','K10', 'K11', 'K12', 'K13', 'K14', 'K16', 'K19', 'K20', 'K21'],
       skills: ['S5', 'S6', 'S10', 'S12', 'S13','S17','S18'],
@@ -117,7 +132,7 @@ The conclusion was that Concepts was the best solution for Arup, mainly because 
     category: 'UI/UX Design',
     description: 'The aim of this project was to make geotechnical engineering easier to understand and more engaging for a wider audience. It was designed to support training, client education, and internal communication. The goal was to create an interactive experience that shows why geotechnical work matters in engineering. Using Figma, I turned a static illustration into a clickable, animated infographic that helps users explore geotechnical processes, infrastructure, and techniques. The design also follows Arup’s brand and accessibility guidelines.',
     processDescription: 'The project started by comparing illustration-based learning with VR to see which worked best for the team’s skills and resources. Illustration was chosen because it was more practical and less demanding in terms of time and my expertise level. Using Figma, I created an interactive infographic with animations, clickable elements, and scrollable overlays, supported by a clear navigation flow from the homepage to the tutorial. A mobile‑first approach was used to match user behaviour and improve accessibility, with a clean layout that made the design easier to use on smaller screens. I worked with Arup’s Graphics team to follow brand guidelines, keeping the design clear and consistent for non‑technical audiences. Through this process, I gained valuable experience with Figma’s animation tools, strengthened my knowledge of UX design, and saw how interactive learning can be effective in practice.',
-    images: ['https://picsum.photos/seed/proj9a/800/600', 'https://picsum.photos/seed/proj9b/800/600'],
+    images: [FigmaPhone, FullimageFigma],
     ksbs: {
       knowledge: ['K1','K2', 'K4', 'K5', 'K6', 'K7', 'K8', 'K7', 'K10', 'K11', 'K12', 'K13', 'K15' ,'K17'],
       skills: ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7','S12', 'S13', 'S14', 'S15', 'S16', 'S18'],
