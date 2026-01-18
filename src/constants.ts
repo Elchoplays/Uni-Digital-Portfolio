@@ -27,6 +27,10 @@ import Dprinting1 from './assets/3Dprinting1.png';
 import Dprinting2 from './assets/3dPrinting2.png';
 import Dprinting3 from './assets/3Dprinting3.png';
 import RLogo from './assets/R-logo.png';
+import copilot_preview from './assets/Copilot header.png';
+import WhatsAppImage from './assets/WhatsAppImage.jpeg';
+import PythonCoding from './assets/PythonCoding.jpg';
+
 
 export const projects: Project[] = [
   {
@@ -77,7 +81,7 @@ The conclusion was that Concepts was the best solution for Arup, mainly because 
     description: "This project shows how I’ve been learning to use AI Copilot to make everyday tasks faster and more efficient. It handles repetitive jobs, so people can spend more time on creative thinking and important decisions. I’ve used it to quickly check data, support decision-making, and help write things like PowerPoint slides and work emails. It’s helped save time, improve productivity, and keep projects on track. I’ve also realised it’s important to think carefully about the ethical issues that come with using AI in project work.",
     processDescription: "The use of AI Copilot in my work has shown both its big advantages and the ethical issues that come with it. While it makes tasks more efficient, it also raises concerns about data privacy, copyright, and bias. This is especially important because we sign many agreements about confidentiality with projects, and misuse could cause problems. Through this process, I learnt about Arup’s agreement with Copilot and why the company holds a Copilot licence. This ensures that any data entered into the system is not used to train the AI, which protects our confidentiality commitments. I also found out that while other chatbot services can be used, all confidential information must be removed before entering data. In some cases, Arup has blocked access to certain sites to stop staff from accidentally sharing sensitive information. This experience has highlighted the professional duty to stay aware of the ethical issues around AI, to question its results, and to promote its responsible use in line with industry standards.",
     images: [CopilotWhy, CopilotExample, CopilotLicenseInfo, GDPR, aimessageScreenshot],
-    headerImage: RLogo,
+    headerImage: copilot_preview,
     ksbs: {
       knowledge: ['K1', 'K2', 'K6', 'K8', 'K9', 'K10', 'K13', 'K14', 'K16', 'K17', 'K18'],
       skills: ['S5', 'S6', 'S10', 'S11', 'S13', 'S14', 'S18'],
@@ -118,6 +122,7 @@ The conclusion was that Concepts was the best solution for Arup, mainly because 
     description: "As part of my ongoing development in photography, I keep improving my skills through workshops and hands‑on practice. A recent commission to photograph a big birthday celebration and a wedding gave me the chance to use my technical knowledge in a real setting, focusing on lighting, composition, and capturing important moments.",
     processDescription: "Each commission came with its own challenges. At the wedding, the focus was on capturing the bridal party as they got ready. The 80th birthday celebration brought together guests from different places, and the client wanted lots of photos of people they don’t often see, which meant paying close attention to group shots and key moments. One of the main problems at the birthday party was the cake cutting, which took place outside under a green gazebo because of the weather. This gave the photos a strong green tint. The main technical challenge was fixing this colour cast caused by the lighting. \n\nUsing professional editing software, I corrected the colours to bring back natural tones and improve the overall look of the images. The project finished with the design and delivery of a commemorative photo album, giving me valuable experience in managing the whole process from client consultation to final delivery.",
     images: ['https://picsum.photos/seed/proj7a/800/600', Before, After],
+    headerImage: WhatsAppImage,
     ksbs: {
       knowledge: ['K1', 'K2', 'K4', 'K7', 'K10', 'K19'],
       skills: ['S1', 'S2', 'S3', 'S4', 'S6', 'S8', 'S14', 'S15'],
@@ -158,6 +163,7 @@ The conclusion was that Concepts was the best solution for Arup, mainly because 
     description: 'The SESRO project gave me the chance to use my Python skills in a real engineering setting, moving on from training exercises to practical problem-solving. My main tasks were to improve a Bill of Quantities script so it worked properly with the current dataset, and to create a new Python script that could automatically generate Legend codes for the OpenGround database. These jobs were important for making workflows smoother, organising data better, and supporting the wider geotechnical engineering team. The project also helped me build confidence in coding, learn more advanced techniques, and see how AI tools like Copilot could support my learning and development.',
     processDescription: 'In this project I started by reviewing the SESRO requirements and exploring the OpenGround database to understand how the data was set up. I then planned the logic for a new Legend Code script and worked on improving the Bill of Quantities script so it would run properly with the dataset. The main issue with the Bill of Quantities was that it had been built for one project and was not designed to handle multiple projects, so I had to adjust and fix it to make it work. The challenge with the Legend Code script was that it needed to read geology descriptions and match them to the most suitable legend codes, which was difficult because the descriptions were often slightly different. \n\nTo solve these problems I tested, rewrote and refined the code, explored new Python libraries to make my scripts cleaner, and used Copilot to troubleshoot and learn new approaches. I also made sure my documentation was clear so that others could reuse my work. Through this process I became more confident using Python in real engineering tasks, learned the importance of breaking problems into steps, saw how AI tools can support learning, and understood the value of good communication and feedback. Overall, the project gave me a stronger base in coding, problem‑solving and teamwork, and prepared me to take on bigger technical challenges in the future.',
     images: ['https://picsum.photos/seed/proj10a/800/600', 'https://picsum.photos/seed/proj10b/800/600'],
+    headerImage: PythonCoding,
     ksbs: {
       knowledge: ['K1', 'K9', 'K11', 'K12', 'K15' , 'K18'],
       skills: ['S2', 'S3', 'S5', 'S6', 'S7', 'S12', 'S15', 'S16', 'S18'],
@@ -171,7 +177,7 @@ The conclusion was that Concepts was the best solution for Arup, mainly because 
     description: 'This project began after I finished a task using the OpenGround extension for Civil 3D, something no one else at Arup had done before. It was a great learning experience, as I had to quickly build up my skills and work out the best way to get it done. My mentor suggested I make a tutorial video to share what I’d learned, so other Arup users could follow the process themselves. I recorded the video and audio, edited everything, and uploaded it to Arup’s media space.',
     processDescription: 'One of the main challenges I faced during this project was making sure the audio quality of the tutorial video was clear and professional. From my own experience of watching tutorials, I know that sound quality is very important, poor audio makes it harder to take in the information and often makes me stop watching. Good sound was therefore essential so that viewers could follow the instructions without distraction or confusion. To achieve this, I tested two different headsets by recording short videos and comparing the audio quality, before choosing the one that gave the best results. I also worked on balancing the audio with the visuals, making sure the narration matched the pace of the demonstration and was easy to understand. \n\nOnce the recording was complete, I edited the video using Clipchamp, a free editing tool. I chose this software instead of Premiere Pro because the budget for the task was small and I needed a quick way to produce the video. With a larger budget, I could have put more time and effort into refining the final edit, but Clipchamp allowed me to create a clear and accessible tutorial efficiently.',
     images: ['https://picsum.photos/seed/proj11a/800/600', 'https://picsum.photos/seed/proj11b/800/600'],
-    videos: ['https://www.youtube.com/watch?v=dQw4w9WgXcQ','https://www.youtube.com/watch?v=1P5yyeeYF9o'],
+    videos: ['https://youtu.be/bSO4XNdvy1M'],
     ksbs: {
       knowledge: ['K1','K2', 'K4', 'K5', 'K6', 'K7', 'K8', 'K7','K15' ,'K17'],
       skills: ['S1', 'S2', 'S4', 'S5', 'S6','S10','S14', 'S15','S18'],
