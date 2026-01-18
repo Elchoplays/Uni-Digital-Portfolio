@@ -8,12 +8,14 @@ interface PortfolioProps {
 }
 
 const ProjectCard: React.FC<{ project: Project; onSelect: () => void }> = ({ project, onSelect }) => {
+  const displayImage = project.headerImage || project.images[0];
+  
   return (
     <div 
       className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer transform hover:-translate-y-2 transition-transform duration-300"
       onClick={onSelect}
     >
-      <img src={project.images[0]} alt={project.title} className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110" />
+      <img src={displayImage} alt={project.title} className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110" />
       <div className="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-70 transition-all duration-300 flex flex-col justify-end p-6">
         <span className="text-xs uppercase font-semibold text-arup-red tracking-wider">{project.category}</span>
         <h3 className="text-white text-2xl font-bold mt-1">{project.title}</h3>

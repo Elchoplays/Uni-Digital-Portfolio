@@ -13,5 +13,6 @@ export interface Project {
   processDescription: string;
   images: string[];
   videos?: string[];
+  headerImage?: string;
   ksbs: KSBs;
 }

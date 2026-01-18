@@ -23,6 +23,10 @@ import CopilotWhy from './assets/Copilot Why.png';
 import StoryboardConcept from './assets/Storyboard Concept.png';
 import Storyboard_inuse from './assets/Storyboard_inuse.png';
 import Concept_DigitalSketching from './assets/Concept_DigitalSketching.png';
+import Dprinting1 from './assets/3Dprinting1.png';
+import Dprinting2 from './assets/3dPrinting2.png';
+import Dprinting3 from './assets/3Dprinting3.png';
+import RLogo from './assets/R-logo.png';
 
 export const projects: Project[] = [
   {
@@ -73,6 +77,7 @@ The conclusion was that Concepts was the best solution for Arup, mainly because 
     description: "This project shows how I’ve been learning to use AI Copilot to make everyday tasks faster and more efficient. It handles repetitive jobs, so people can spend more time on creative thinking and important decisions. I’ve used it to quickly check data, support decision-making, and help write things like PowerPoint slides and work emails. It’s helped save time, improve productivity, and keep projects on track. I’ve also realised it’s important to think carefully about the ethical issues that come with using AI in project work.",
     processDescription: "The use of AI Copilot in my work has shown both its big advantages and the ethical issues that come with it. While it makes tasks more efficient, it also raises concerns about data privacy, copyright, and bias. This is especially important because we sign many agreements about confidentiality with projects, and misuse could cause problems. Through this process, I learnt about Arup’s agreement with Copilot and why the company holds a Copilot licence. This ensures that any data entered into the system is not used to train the AI, which protects our confidentiality commitments. I also found out that while other chatbot services can be used, all confidential information must be removed before entering data. In some cases, Arup has blocked access to certain sites to stop staff from accidentally sharing sensitive information. This experience has highlighted the professional duty to stay aware of the ethical issues around AI, to question its results, and to promote its responsible use in line with industry standards.",
     images: [CopilotWhy, CopilotExample, CopilotLicenseInfo, GDPR, aimessageScreenshot],
+    headerImage: RLogo,
     ksbs: {
       knowledge: ['K1', 'K2', 'K6', 'K8', 'K9', 'K10', 'K13', 'K14', 'K16', 'K17', 'K18'],
       skills: ['S5', 'S6', 'S10', 'S11', 'S13', 'S14', 'S18'],
@@ -86,6 +91,7 @@ The conclusion was that Concepts was the best solution for Arup, mainly because 
     description: "This university project was about learning to use R Studio for data analysis and visualisation. As I was new to the language, I was encouraged to use generative AI to help me understand difficult functions and syntax, and to build my knowledge of R. One of the main things I learnt was how to write clear prompts to get accurate and useful guidance from the AI, which made the learning process much quicker.",
     processDescription: "A key part of this project was learning how to check and improve AI‑generated code. I found that copying and pasting code directly from the AI often caused errors that needed fixing. Instead of being frustrated, I used this as a chance to understand why the code was wrong and how to correct it. Over time, I started spotting mistakes even before running the script, as the guidance was not always completely accurate. This process of reviewing and refining was very useful in building my coding skills. It showed me that, when used carefully and with a critical approach, AI can be a powerful tool for speeding up learning in technical subjects. I also learnt that different programming languages are better suited to different tasks. For example, R is especially good for data analysis and visualising information.",
     images: [RStudioScreenshot, RStudioScreenshot2],
+    headerImage: RLogo,
     ksbs: {
       knowledge: ['K7', 'K13', 'K17', 'K18', ],
       skills: ['S5', 'S6', 'S10', 'S11', 'S17', 'S18'],
@@ -178,7 +184,7 @@ The conclusion was that Concepts was the best solution for Arup, mainly because 
     category: '3D modelling & printing',
     description: 'This project looked at how 3D printing technology, using the Bambu Lab P1S printer and its app, can support engineering work and make processes more efficient. The aim was to follow the printing process from start to finish, explore the app’s features, and see how 3D printing could be used within Arup’s geotechnics team. By testing a small print model, I was able to observe how the printer managed setup, calibration and production, while also considering the wider benefits of 3D printing for communication, design reviews and client engagement.',
     processDescription: 'I explored the Bambu Lab app and found it straightforward to browse designs shared by other users. I observed the printer setup and calibration, where a test line was used to check the nozzle, filament feed and bed levelling before the main print. I noted that CAD models can be customised, but poor preparation may lead to weak or failed prints. The printer’s safety features helped identify issues such as thin walls or poor adhesion and suggested ways to fix them. I watched the full process of printing a small fidget toggle switch using a print‑in‑place design, and learned about infill patterns, repeated prints, and how sharing designs through the app can save time. \n\nFrom this project I gained a better understanding of how modern 3D printers use smart features and simple apps to reduce errors and improve results. I saw how important bed levelling and calibration are, and learned that design quality is vital for strong prints. I also realised how infill patterns affect both strength and appearance. Overall, the project showed me how 3D printing can make everyday tasks easier and support engineering work by creating practical models that improve communication and design reviews.',
-    images: ['https://picsum.photos/seed/proj12a/800/600', 'https://picsum.photos/seed/proj12b/800/600'],
+    images: [Dprinting1, Dprinting2, Dprinting3],
     videos: ['https://youtube.com/shorts/xwoWwcZufM8','https://youtube.com/shorts/XOYg_JeFOlY'],
     ksbs: {
       knowledge: ['K1', 'K2','K8','K10','K11','K12','K8','K13','K14','K16','K20','K21'],
