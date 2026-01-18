@@ -20,6 +20,9 @@ import FigmaPhone from './assets/FigmaPhone.png';
 import FullimageFigma from './assets/FullimageFigma.png';
 import CopilotExample from './assets/Copilot example.png';
 import CopilotWhy from './assets/Copilot Why.png';
+import StoryboardConcept from './assets/Storyboard Concept.png';
+import Storyboard_inuse from './assets/Storyboard_inuse.png';
+import Concept_DigitalSketching from './assets/Concept_DigitalSketching.png';
 
 export const projects: Project[] = [
   {
@@ -95,7 +98,7 @@ The conclusion was that Concepts was the best solution for Arup, mainly because 
     category: 'Technical Illustration',
     description: "For this task, I was asked to update a Geotechnical Engineering graphic to show the team’s offshore expertise, which was missing from the original design. I used Procreate to sketch quick ideas and Illustrator to create a polished, brand‑compliant version. The project helped explain what geotechnical engineering actually involves, as many people even within the engineering department,  find it difficult to understand. This graphic also strengthened our professional image.",
     processDescription: "I learned the importance of being flexible and using feedback to make sure the final design met stakeholder needs. The process involved gathering comments, adjusting the design based on suggestions. I enjoyed using Procreate to produce quick sketches, as it allowed me to show different ideas and move through the review process faster. For example, I first sketched an offshore oil rig, but the engineer asked for a wind turbine instead. Because it was only a rough sketch, the change was easy to make and ensured the final version was correct. This approach saved time and made sure the final design was informative, visually appealing, and suitable for reports, presentations, and online use.",
-    images: [Illustration, Markup, ProcreateDrawing],
+    images: [Illustration, Markup, ProcreateDrawing, StoryboardConcept, Storyboard_inuse, Concept_DigitalSketching],
     ksbs: {
       knowledge: ['K1', 'K2', 'K7', 'K9', 'K10', 'K11', 'K13', 'K14', 'K15', 'K16', 'K17'],
       skills: ['S1','S2', 'S3', 'S4','S5', 'S6', 'S7', 'S12', 'S13', 'S14', 'S15', 'S16', 'S18'],
