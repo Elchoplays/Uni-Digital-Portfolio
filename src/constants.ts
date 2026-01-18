@@ -19,6 +19,7 @@ import aimessageScreenshot from './assets/aimessageScreenshot.jpg';
 import FigmaPhone from './assets/FigmaPhone.png';
 import FullimageFigma from './assets/FullimageFigma.png';
 import CopilotExample from './assets/Copilot example.png';
+import CopilotWhy from './assets/Copilot Why.png';
 
 export const projects: Project[] = [
   {
@@ -68,7 +69,7 @@ The conclusion was that Concepts was the best solution for Arup, mainly because 
     category: 'Artificial Intelligence',
     description: "This project shows how I’ve been learning to use AI Copilot to make everyday tasks faster and more efficient. It handles repetitive jobs, so people can spend more time on creative thinking and important decisions. I’ve used it to quickly check data, support decision-making, and help write things like PowerPoint slides and work emails. It’s helped save time, improve productivity, and keep projects on track. I’ve also realised it’s important to think carefully about the ethical issues that come with using AI in project work.",
     processDescription: "The use of AI Copilot in my work has shown both its big advantages and the ethical issues that come with it. While it makes tasks more efficient, it also raises concerns about data privacy, copyright, and bias. This is especially important because we sign many agreements about confidentiality with projects, and misuse could cause problems. Through this process, I learnt about Arup’s agreement with Copilot and why the company holds a Copilot licence. This ensures that any data entered into the system is not used to train the AI, which protects our confidentiality commitments. I also found out that while other chatbot services can be used, all confidential information must be removed before entering data. In some cases, Arup has blocked access to certain sites to stop staff from accidentally sharing sensitive information. This experience has highlighted the professional duty to stay aware of the ethical issues around AI, to question its results, and to promote its responsible use in line with industry standards.",
-    images: [CopilotExample, CopilotLicenseInfo, GDPR, aimessageScreenshot],
+    images: [CopilotWhy, CopilotExample, CopilotLicenseInfo, GDPR, aimessageScreenshot],
     ksbs: {
       knowledge: ['K1', 'K2', 'K6', 'K8', 'K9', 'K10', 'K13', 'K14', 'K16', 'K17', 'K18'],
       skills: ['S5', 'S6', 'S10', 'S11', 'S13', 'S14', 'S18'],
