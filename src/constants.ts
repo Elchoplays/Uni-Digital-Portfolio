@@ -59,7 +59,7 @@ export const projects: Project[] = [
     processDescription: `This research project explored which sketching software would be the best fit for Arup. I assessed applications based on ease of use, workflow compatibility, and the quality of results. Testing involved observing how users interacted with the software, how the features worked, and how well each tool integrated with others. The three main programmes I tested were Concepts, Procreate, and Sketchbook. I looked at how each performed on iPads, which are often used at Arup for site visits and office work, as well as on desktops, where most sketching still takes place. I gathered feedback from users with different levels of experience to understand their challenges, while ensuring feedback was handled fairly and ethically.
 
 The conclusion was that Concepts was the best solution for Arup, mainly because it is designed with engineering in mind, allowing drawings to be made to scale. It also offers both tablet and desktop versions, meeting many of the team’s requirements. As an extension to this project, I developed an asset library of scaled objects that Arup users could add to their sketches, helping speed up the process and produce more professional, standardised drawings.`,
-    images: [ipadmockupConcepts, ProcreateDrawing, Observationscreenshot],
+    images: [ipadmockupConcepts, ProcreateDrawing, Observationscreenshot, StoryboardConcept, Storyboard_inuse, Concept_DigitalSketching],
     ksbs: {
       knowledge: ['K1', 'K2', 'K6', 'K7', 'K8', 'K9', 'K10', 'K11', 'K14', 'K16', 'K17'],
       skills: ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8','S10', 'S11', 'S12', 'S13', 'S14', 'S15', 'S18'],
@@ -98,7 +98,7 @@ The conclusion was that Concepts was the best solution for Arup, mainly because 
     category: 'Technical Illustration',
     description: "For this task, I was asked to update a Geotechnical Engineering graphic to show the team’s offshore expertise, which was missing from the original design. I used Procreate to sketch quick ideas and Illustrator to create a polished, brand‑compliant version. The project helped explain what geotechnical engineering actually involves, as many people even within the engineering department,  find it difficult to understand. This graphic also strengthened our professional image.",
     processDescription: "I learned the importance of being flexible and using feedback to make sure the final design met stakeholder needs. The process involved gathering comments, adjusting the design based on suggestions. I enjoyed using Procreate to produce quick sketches, as it allowed me to show different ideas and move through the review process faster. For example, I first sketched an offshore oil rig, but the engineer asked for a wind turbine instead. Because it was only a rough sketch, the change was easy to make and ensured the final version was correct. This approach saved time and made sure the final design was informative, visually appealing, and suitable for reports, presentations, and online use.",
-    images: [Illustration, Markup, ProcreateDrawing, StoryboardConcept, Storyboard_inuse, Concept_DigitalSketching],
+    images: [Illustration, Markup, ProcreateDrawing],
     ksbs: {
       knowledge: ['K1', 'K2', 'K7', 'K9', 'K10', 'K11', 'K13', 'K14', 'K15', 'K16', 'K17'],
       skills: ['S1','S2', 'S3', 'S4','S5', 'S6', 'S7', 'S12', 'S13', 'S14', 'S15', 'S16', 'S18'],
