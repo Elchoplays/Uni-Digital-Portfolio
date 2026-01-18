@@ -39,9 +39,20 @@ const KSBsDisplay: React.FC<{ ksbs: KSBs }> = ({ ksbs }) => {
 }
 
 const getYouTubeEmbedUrl = (url: string): string => {
+    // Try to extract from YouTube Shorts format first: youtube.com/shorts/VIDEO_ID
+    const shortsMatch = url.match(/(?:youtube\.com|youtu\.be)\/shorts\/([^?&]+)/);
+    if (shortsMatch) {
+        return `https://www.youtube.com/embed/${shortsMatch[1]}`;
+    }
+    
+    // Try standard YouTube formats: watch?v=VIDEO_ID or youtu.be/VIDEO_ID
     const videoIdMatch = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&]+)/);
-    const videoId = videoIdMatch ? videoIdMatch[1] : '';
-    return `https://www.youtube.com/embed/${videoId}`;
+    if (videoIdMatch) {
+        return `https://www.youtube.com/embed/${videoIdMatch[1]}`;
+    }
+    
+    // Return as-is if already an embed URL
+    return url;
 };
 
 const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ project, onClose }) => {
