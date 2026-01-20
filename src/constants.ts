@@ -30,6 +30,10 @@ import RLogo from './assets/R-logo.png';
 import copilot_preview from './assets/Copilot header.png';
 import WhatsAppImage from './assets/WhatsAppImage.jpeg';
 import PythonCoding from './assets/PythonCoding.jpg';
+import Tutorial_Video_Complete_Guide from './assets/Tutorial_Video_Complete_Guide_2024_.jpg';
+import VideoTutorial1 from './assets/VideoTutorial1.jpg';
+import VideoTutorial2 from './assets/VideoTutorial2.jpeg'; 
+
 
 
 export const projects: Project[] = [
@@ -109,6 +113,7 @@ The conclusion was that Concepts was the best solution for Arup, mainly because 
     description: "For this task, I was asked to update a Geotechnical Engineering graphic to show the team’s offshore expertise, which was missing from the original design. I used Procreate to sketch quick ideas and Illustrator to create a polished, brand‑compliant version. The project helped explain what geotechnical engineering actually involves, as many people even within the engineering department,  find it difficult to understand. This graphic also strengthened our professional image.",
     processDescription: "I learned the importance of being flexible and using feedback to make sure the final design met stakeholder needs. The process involved gathering comments, adjusting the design based on suggestions. I enjoyed using Procreate to produce quick sketches, as it allowed me to show different ideas and move through the review process faster. For example, I first sketched an offshore oil rig, but the engineer asked for a wind turbine instead. Because it was only a rough sketch, the change was easy to make and ensured the final version was correct. This approach saved time and made sure the final design was informative, visually appealing, and suitable for reports, presentations, and online use.",
     images: [Illustration, Markup, ProcreateDrawing],
+    videos: ['https://www.youtube.com/watch?v=ssXQ9v3PYu8&t=1s','https://youtube.com/shorts/rOpkeKF1BgQ'],
     ksbs: {
       knowledge: ['K1', 'K2', 'K7', 'K9', 'K10', 'K11', 'K13', 'K14', 'K15', 'K16', 'K17'],
       skills: ['S1','S2', 'S3', 'S4','S5', 'S6', 'S7', 'S12', 'S13', 'S14', 'S15', 'S16', 'S18'],
@@ -176,8 +181,9 @@ The conclusion was that Concepts was the best solution for Arup, mainly because 
     category: 'Video & Audio',
     description: 'This project began after I finished a task using the OpenGround extension for Civil 3D, something no one else at Arup had done before. It was a great learning experience, as I had to quickly build up my skills and work out the best way to get it done. My mentor suggested I make a tutorial video to share what I’d learned, so other Arup users could follow the process themselves. I recorded the video and audio, edited everything, and uploaded it to Arup’s media space.',
     processDescription: 'One of the main challenges I faced during this project was making sure the audio quality of the tutorial video was clear and professional. From my own experience of watching tutorials, I know that sound quality is very important, poor audio makes it harder to take in the information and often makes me stop watching. Good sound was therefore essential so that viewers could follow the instructions without distraction or confusion. To achieve this, I tested two different headsets by recording short videos and comparing the audio quality, before choosing the one that gave the best results. I also worked on balancing the audio with the visuals, making sure the narration matched the pace of the demonstration and was easy to understand. \n\nOnce the recording was complete, I edited the video using Clipchamp, a free editing tool. I chose this software instead of Premiere Pro because the budget for the task was small and I needed a quick way to produce the video. With a larger budget, I could have put more time and effort into refining the final edit, but Clipchamp allowed me to create a clear and accessible tutorial efficiently.',
-    images: ['https://picsum.photos/seed/proj11a/800/600', 'https://picsum.photos/seed/proj11b/800/600'],
+    images: [VideoTutorial1, VideoTutorial2],
     videos: ['https://youtu.be/bSO4XNdvy1M'],
+    headerImage: Tutorial_Video_Complete_Guide,
     ksbs: {
       knowledge: ['K1','K2', 'K4', 'K5', 'K6', 'K7', 'K8', 'K7','K15' ,'K17'],
       skills: ['S1', 'S2', 'S4', 'S5', 'S6','S10','S14', 'S15','S18'],
