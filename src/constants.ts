@@ -102,7 +102,7 @@ The conclusion was that Concepts was the best solution for Arup, mainly because 
     headerImage: RLogo,
     ksbs: {
       knowledge: ['K7', 'K13', 'K17', 'K18', ],
-      skills: ['S5', 'S6', 'S10', 'S11', 'S17', 'S18'],
+      skills: ['S5', 'S6', 'S10', 'S11', 'S18'],
       behaviours: ['B1', 'B2', 'B5']
     }
   },
