@@ -129,7 +129,7 @@ The conclusion was that Concepts was the best solution for Arup, mainly because 
     images: ['https://picsum.photos/seed/proj7a/800/600', Before, After],
     headerImage: WhatsAppImage,
     ksbs: {
-      knowledge: ['K1', 'K2', 'K4', 'K7', 'K10', 'K19'],
+      knowledge: ['K1', 'K2', 'K4', 'K7', 'K10'],
       skills: ['S1', 'S2', 'S3', 'S4', 'S6', 'S8', 'S14', 'S15'],
       behaviours: ['B1', 'B3', 'B5']
     }
