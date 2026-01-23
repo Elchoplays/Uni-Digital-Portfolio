@@ -156,7 +156,7 @@ The conclusion was that Concepts was the best solution for Arup, mainly because 
     processDescription: 'The project started by comparing illustration-based learning with VR to see which worked best for the team’s skills and resources. Illustration was chosen because it was more practical and less demanding in terms of time and my expertise level. Using Figma, I created an interactive infographic with animations, clickable elements, and scrollable overlays, supported by a clear navigation flow from the homepage to the tutorial. A mobile‑first approach was used to match user behaviour and improve accessibility, with a clean layout that made the design easier to use on smaller screens. I worked with Arup’s Graphics team to follow brand guidelines, keeping the design clear and consistent for non‑technical audiences. Through this process, I gained valuable experience with Figma’s animation tools, strengthened my knowledge of UX design, and saw how interactive learning can be effective in practice.',
     images: [FigmaPhone, FullimageFigma],
     ksbs: {
-      knowledge: ['K1','K2', 'K4', 'K5', 'K6', 'K7', 'K8', 'K7', 'K10', 'K11', 'K12', 'K13', 'K15' ,'K17'],
+      knowledge: ['K1','K2', 'K4', 'K5', 'K6', 'K8', 'K7', 'K10', 'K11', 'K12', 'K13', 'K15' ,'K17'],
       skills: ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7','S12', 'S13', 'S14', 'S15', 'S16', 'S18'],
       behaviours: ['B1', 'B2', 'B4', 'B5']
     }
