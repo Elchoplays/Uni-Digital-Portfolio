@@ -202,7 +202,7 @@ The conclusion was that Concepts was the best solution for Arup, mainly because 
     images: [Dprinting1, Dprinting2, Dprinting3],
     videos: ['https://youtube.com/shorts/xwoWwcZufM8','https://youtube.com/shorts/XOYg_JeFOlY'],
     ksbs: {
-      knowledge: ['K1', 'K2','K8','K10','K11','K12','K8','K13','K14','K16','K20','K21'],
+      knowledge: ['K1', 'K2','K8','K10','K11','K12','K13','K14','K16','K20','K21'],
       skills: ['S1', 'S4', 'S5', 'S6','S10','S14','S18'],
       behaviours: ['B1', 'B2', 'B4', 'B5']
     }
