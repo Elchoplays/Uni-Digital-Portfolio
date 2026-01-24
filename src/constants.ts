@@ -26,6 +26,8 @@ import Concept_DigitalSketching from './assets/Concept_DigitalSketching.png';
 import Dprinting1 from './assets/3Dprinting1.png';
 import Dprinting2 from './assets/3dPrinting2.png';
 import Dprinting3 from './assets/3Dprinting3.png';
+import Dprinting4 from './assets/3D_Printing4.png';
+import Dprinting5 from './assets/3D_Printing5.png.jpg';
 import RLogo from './assets/R-logo.png';
 import copilot_preview from './assets/Copilot header.png';
 import WhatsAppImage from './assets/WhatsAppImage.jpeg';
@@ -199,7 +201,7 @@ The conclusion was that Concepts was the best solution for Arup, mainly because 
     category: '3D modelling & printing',
     description: 'This project looked at how 3D printing technology, using the Bambu Lab P1S printer and its app, can support engineering work and make processes more efficient. The aim was to follow the printing process from start to finish, explore the app’s features, and see how 3D printing could be used within Arup’s geotechnics team. By testing a small print model, I was able to observe how the printer managed setup, calibration and production, while also considering the wider benefits of 3D printing for communication, design reviews and client engagement.',
     processDescription: 'I explored the Bambu Lab app and found it straightforward to browse designs shared by other users. I observed the printer setup and calibration, where a test line was used to check the nozzle, filament feed and bed levelling before the main print. I noted that CAD models can be customised, but poor preparation may lead to weak or failed prints. The printer’s safety features helped identify issues such as thin walls or poor adhesion and suggested ways to fix them. I watched the full process of printing a small fidget toggle switch using a print‑in‑place design, and learned about infill patterns, repeated prints, and how sharing designs through the app can save time. \n\nFrom this project I gained a better understanding of how modern 3D printers use smart features and simple apps to reduce errors and improve results. I saw how important bed levelling and calibration are, and learned that design quality is vital for strong prints. I also realised how infill patterns affect both strength and appearance. Overall, the project showed me how 3D printing can make everyday tasks easier and support engineering work by creating practical models that improve communication and design reviews.',
-    images: [Dprinting1, Dprinting2, Dprinting3],
+    images: [Dprinting1, Dprinting2, Dprinting3, Dprinting4, Dprinting5],
     videos: ['https://youtube.com/shorts/xwoWwcZufM8','https://youtube.com/shorts/XOYg_JeFOlY'],
     ksbs: {
       knowledge: ['K1', 'K2','K8','K10','K11','K12','K13','K14','K16','K20','K21'],
