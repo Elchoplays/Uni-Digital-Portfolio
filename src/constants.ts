@@ -39,6 +39,8 @@ import VideoTutorial2 from './assets/VideoTutorial2.jpeg';
 import PythonScript from './assets/Pythoncoding_script.png'; 
 import PythonScript2 from './assets/Python coding_script2.png'; 
 import PythonScript3 from './assets/Python coding_script3.png'; 
+import VRDEMO from './assets/VR_DEMO.png'; 
+import VRDEMO2 from './assets/VR_DEMO2.png'; 
 
 
 
@@ -145,7 +147,7 @@ The conclusion was that Concepts was the best solution for Arup, mainly because 
     category: 'Digital Futures',
     description: 'This project explored how immersive technology could support engineering by improving client engagement and design reviews. It compared costly immersive dome setups with more practical options such as Virtual Reality (VR), Mixed Reality (MR) and Augmented Reality (AR). Domes provide impressive experiences but are expensive and difficult to justify for a single project, while VR, MR and AR are cheaper, portable and flexible, making them easier to use across offices and sites. The aim was to balance cost with benefits and find the most suitable technology to showcase Arup’s digital work and strengthen communication with clients.',
     processDescription: 'During the project I explored different immersive technologies, starting with high‑end dome systems, which I experienced at Sheffield Hallam in the Igloo, before moving on to more practical options like VR, MR and AR. I looked at the costs, ease of use and benefits of each, and how they could be applied to real engineering projects. Dome systems provide an impressive shared experience but require a lot of money, ongoing maintenance and dedicated space, which makes them unsuitable for everyday use. VR proved useful for walking through 3D models and spotting design issues early, MR showed strong potential for overlaying digital plans onto real spaces to support construction planning, and AR worked well for quick client presentations and making complex designs easier to understand. \n\nThrough this work I gained a clearer understanding of how immersive technology can improve teamwork, reduce errors and strengthen client engagement. I also learned the importance of balancing innovation with cost, making sure technology choices are practical as well as impressive. Overall, the project showed me that VR, MR and AR can provide flexible and affordable solutions that add real value to engineering projects without the large investment needed for dome systems. ',
-    images: [VREquipment, 'https://picsum.photos/seed/proj8b/800/600'],
+    images: [VREquipment, VRDEMO , VRDEMO2],
     videos: ['https://youtu.be/eNRhM7VkT2Q'],
     ksbs: {
       knowledge: ['K1', 'K2', 'K4', 'K5', 'K8','K10', 'K11', 'K12', 'K13', 'K14', 'K16', 'K19', 'K20', 'K21'],
