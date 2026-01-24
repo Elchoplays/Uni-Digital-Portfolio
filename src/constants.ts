@@ -33,6 +33,9 @@ import PythonCoding from './assets/PythonCoding.jpg';
 import Tutorial_Video_Complete_Guide from './assets/Tutorial_Video_Complete_Guide_2024_.jpg';
 import VideoTutorial1 from './assets/VideoTutorial1.jpg';
 import VideoTutorial2 from './assets/VideoTutorial2.jpeg'; 
+import PythonScript from './assets/Pythoncoding_script.png'; 
+import PythonScript2 from './assets/Python coding_script2.png'; 
+import PythonScript3 from './assets/Python coding_script3.png'; 
 
 
 
@@ -167,7 +170,7 @@ The conclusion was that Concepts was the best solution for Arup, mainly because 
     category: 'Coding',
     description: 'The SESRO project gave me the chance to use my Python skills in a real engineering setting, moving on from training exercises to practical problem-solving. My main tasks were to improve a Bill of Quantities script so it worked properly with the current dataset, and to create a new Python script that could automatically generate Legend codes for the OpenGround database. These jobs were important for making workflows smoother, organising data better, and supporting the wider geotechnical engineering team. The project also helped me build confidence in coding, learn more advanced techniques, and see how AI tools like Copilot could support my learning and development.',
     processDescription: 'In this project I started by reviewing the SESRO requirements and exploring the OpenGround database to understand how the data was set up. I then planned the logic for a new Legend Code script and worked on improving the Bill of Quantities script so it would run properly with the dataset. The main issue with the Bill of Quantities was that it had been built for one project and was not designed to handle multiple projects, so I had to adjust and fix it to make it work. The challenge with the Legend Code script was that it needed to read geology descriptions and match them to the most suitable legend codes, which was difficult because the descriptions were often slightly different. \n\nTo solve these problems I tested, rewrote and refined the code, explored new Python libraries to make my scripts cleaner, and used Copilot to troubleshoot and learn new approaches. I also made sure my documentation was clear so that others could reuse my work. Through this process I became more confident using Python in real engineering tasks, learned the importance of breaking problems into steps, saw how AI tools can support learning, and understood the value of good communication and feedback. Overall, the project gave me a stronger base in coding, problem‑solving and teamwork, and prepared me to take on bigger technical challenges in the future.',
-    images: ['https://picsum.photos/seed/proj10a/800/600', 'https://picsum.photos/seed/proj10b/800/600'],
+    images: [PythonScript, PythonScript2, PythonScript3],
     headerImage: PythonCoding,
     ksbs: {
       knowledge: ['K1', 'K9', 'K11', 'K12', 'K15' , 'K18'],
@@ -185,7 +188,7 @@ The conclusion was that Concepts was the best solution for Arup, mainly because 
     videos: ['https://youtu.be/bSO4XNdvy1M'],
     headerImage: Tutorial_Video_Complete_Guide,
     ksbs: {
-      knowledge: ['K1','K2', 'K4', 'K5', 'K6', 'K8', 'K7','K15' ,'K17'],
+      knowledge: ['K1','K2', 'K4', 'K5', 'K6', 'K7','K8', 'K15','K17'],
       skills: ['S1', 'S2', 'S4', 'S5', 'S6','S10','S14', 'S15','S18'],
       behaviours: ['B1', 'B2', 'B3', 'B5']
     }
