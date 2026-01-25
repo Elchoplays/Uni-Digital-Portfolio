@@ -163,7 +163,7 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
           <div className="p-8 md:p-12 lg:p-16">
             <span className="text-sm font-bold text-arup-red uppercase tracking-widest">{project.category}</span>
             <h2 className="text-4xl lg:text-5xl font-bold text-arup-dark-gray my-4">{project.title}</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-12">{project.description}</p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-12 whitespace-pre-line">{project.description}</p>
             
             <div className="space-y-12">
               <div className="border-t border-gray-200 pt-8">
