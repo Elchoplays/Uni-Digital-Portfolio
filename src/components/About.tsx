@@ -29,7 +29,8 @@ const About: React.FC<AboutProps> = ({ onReadMoreClick }) => {
           </div>
           <div className="md:col-span-3">
             <p className="text-lg text-arup-medium-gray mb-6 leading-relaxed">
-              As an Assistant Technician Designer at Arup, I am passionate about driving digital transformation within the civil engineering industry. My role focuses on identifying and implementing innovative solutions to streamline workflows, enhance efficiency, and solve complex technical challenges. By leveraging cutting-edge digital tools and new technologies, I help make engineering processes more effective and data-driven, contributing to the successful delivery of major infrastructure projects.
+              As an Assistant Technician Designer at Arup, I am committed to supporting digital transformation within the civil engineering industry. My role involves identifying and applying innovative digital solutions to improve workflows, enhance efficiency, and address complex technical challenges.<br /><br />
+              I take detailed engineering data and translate it into precise technical drawings and 3D models, enabling clients and engineers to better understand and visualise project outcomes. Through the use of advanced digital tools and emerging technologies, I help to make engineering processes more accurate, efficient, and data‑driven, contributing to the successful delivery of major infrastructure projects.
             </p>
             <button
               onClick={onReadMoreClick}
