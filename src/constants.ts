@@ -178,9 +178,9 @@ The conclusion was that Concepts was the best solution for Arup, mainly because 
     images: [PythonScript, PythonScript2, PythonScript3],
     headerImage: PythonCoding,
     ksbs: {
-      knowledge: ['K1', 'K9', 'K11', 'K12', 'K15' , 'K18'],
-      skills: ['S2', 'S3', 'S5', 'S6', 'S7', 'S12', 'S15', 'S16', 'S18'],
-      behaviours: ['B1', 'B2', 'B3']
+      knowledge: ['K7', 'K6','K7','K8','K9', 'K13', 'K17', 'K18'],
+      skills: ['S5', 'S6', 'S10', 'S12', 'S13', 'S14', 'S15', 'S16', 'S18'],
+      behaviours: ['B2', 'B3', 'B5']
     }
   },
   {
