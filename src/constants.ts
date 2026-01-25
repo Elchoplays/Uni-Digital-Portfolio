@@ -42,8 +42,8 @@ import PythonScript3 from './assets/Python coding_script3.png';
 import VRDEMO from './assets/VR_DEMO.png'; 
 import VRDEMO2 from './assets/VR_DEMO2.png'; 
 import Openground_BlackLogo from './assets/Openground_BlackLogo.png';
-
-
+import DMODEL_LEAPFROG from './assets/free_ipad_mockupBOREHOLE.png';
+import DMODEL_LEAPFROG2 from './assets/Leapfrog2.png';
 
 export const projects: Project[] = [
   {
@@ -65,7 +65,7 @@ export const projects: Project[] = [
     category: '3D Modelling',
     description: "This project involved developing a 3D ground model from real-world drilling data by digitising borehole geology. The resulting model provided critical information for foundation design. A key component of the project was a cut-and-fill analysis to evaluate the potential for reusing site geology, optimising material usage. The project presented technical challenges related to software limitations, task complexity, and performance optimisation.",
     processDescription: "To address the technical demands of this project and expand my proficiency in Leapfrog, I undertook a structured learning approach. This included studying technical documentation, completing a formal training course, and collaborating closely with project engineers to ensure a thorough understanding of all requirements. This proactive approach resulted in the successful delivery of the 3D model and accurate cut-and-fill calculations. These calculations were instrumental in assessing the feasibility of reusing on-site soil, aligning with sustainable construction practices by minimising landfill waste and the need for imported materials. The analysis also provided valuable data for the sustainability team's carbon impact assessment. This project significantly enhanced my 3D modelling skills and reinforced the importance of continuous learning and adaptation in digital design.",
-    images: [ipadmockup3dMODEL, 'https://picsum.photos/seed/proj2b/800/600'],
+    images: [ipadmockup3dMODEL, DMODEL_LEAPFROG, DMODEL_LEAPFROG2],
     ksbs: {
       knowledge: ['K7', 'K8', 'K16', 'K17', 'K19', 'K20'],
       skills: ['S2', 'S5', 'S7', 'S12', 'S14', 'S15', 'S17', 'S18'],
