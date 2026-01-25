@@ -94,13 +94,13 @@ const About: React.FC<AboutProps> = ({ onReadMoreClick }) => {
             </div>
              <div className="mt-8">
                 <SectionTitle>Digital Skills</SectionTitle>
-                <p className="text-base text-arup-medium-gray">Proficient in a range of industry-standard software, with strong capabilities in engineering design tools and creative applications. Key skills include:</p>
+                <p className="text-base text-arup-medium-gray">I am proficient in a wide range of industry‑standard software, with strong skills in engineering design tools and creative applications. My key capabilities include:</p>
                 <ul className="list-disc list-inside mt-2 text-arup-medium-gray">
-                    <li><strong>Geotechnical and Engineering Software:</strong> Extensive experience with gINT, GIS, OpenGround, and OpenGround Connectors for geotechnical data management and analysis.</li>
-                    <li><strong>Engineering CAD Tools:</strong> Advanced proficiency in industry-standard CAD tools: MicroStation, AutoCAD, and Civil 3D, applied to complex civil engineering design and drafting projects.</li>
+                    <li><strong>Geotechnical and Engineering Software:</strong> Experienced in using gINT, GIS, OpenGround and OpenGround Connectors for managing, analysing, and organising geotechnical data.</li>
+                    <li><strong>Engineering CAD Tools:</strong> Advanced proficiency in industry-standard CAD tools: MicroStation, AutoCAD, and Civil 3D, applying these tools to produce accurate and detailed drawings for complex civil engineering projects.</li>
                     <li><strong>Adobe Creative Suite:</strong> Skilled in Illustrator, Photoshop, and Procreate for technical illustrations, design concepts, and professional photo editing.</li>
-                    <li><strong>Data Analysis & Workflow Automation:</strong> Practical experience using Python and R Studio to streamline processes, enhance efficiency, and deliver data-driven insights.</li>
-                    <li><strong>3D Modelling:</strong> Proficient in Leapfrog and Civil 3D for developing, visualising, and interpreting complex 3D ground mode</li>
+                    <li><strong>Data Analysis & Workflow Automation:</strong> Practical experience using Python and R Studio  to automate tasks, improve efficiency, and support data‑driven decision‑making.</li>
+                    <li><strong>3D Modelling:</strong> Proficient in producing, visualising, and interpreting 3D ground models using Leapfrog and Civil 3D.</li>
                 </ul>
             </div>
           </div>

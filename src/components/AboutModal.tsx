@@ -34,7 +34,7 @@ const AboutModal: React.FC<AboutModalProps> = ({ onClose }) => {
         
         <div className="flex-grow overflow-y-auto p-6 md:p-8">
             <p className="text-lg text-gray-800 mb-6">
-                Based at One Centenary Way in Arup’s Birmingham office, I am a dedicated member of the Digital Geotechnical Engineering team, contributing to a wide range of design projects. Over the past eight years at Arup, I have developed strong technical expertise in advanced software applications and digital engineering practices. My motivation, work ethic, and commitment to excellence are consistently reflected in the quality of my contributions and the value I bring to each project.
+                Based at One Centenary Way in Arup’s Birmingham office, I am a committed member of the Digital Geotechnical Engineering team, supporting a variety of design projects. During my eight years at Arup, I have built strong technical skills in advanced software and digital engineering methods.
             </p>
 
             {/* Experience */}

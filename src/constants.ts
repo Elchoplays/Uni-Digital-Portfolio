@@ -41,6 +41,7 @@ import PythonScript2 from './assets/Python coding_script2.png';
 import PythonScript3 from './assets/Python coding_script3.png'; 
 import VRDEMO from './assets/VR_DEMO.png'; 
 import VRDEMO2 from './assets/VR_DEMO2.png'; 
+import Openground_BlackLogo from './assets/Openground_BlackLogo.png';
 
 
 
@@ -50,8 +51,8 @@ export const projects: Project[] = [
     title: 'Openground Infographic',
     category: 'Infographic Design',
     description: "This infographic was designed for Arup's internal GeoWiki to clearly explain the features of the new OpenGround software and its extension tools. The objective was to create a simple, user-friendly layout that enables team members to quickly understand the functionality of each connector and encourage the adoption of OpenGround in project workflows.",
-    processDescription: "The design process strictly adhered to Arup's brand guidelines to ensure the final infographic met corporate standards for quality, accessibility, and visual consistency. Key considerations included web accessibility compliance, such as appropriate fonts and colour contrasts, to ensure clarity for a diverse audience. An iterative design process, incorporating user testing and feedback, was fundamental to refining the layout. This user-centred approach ensured the final design was not only visually engaging but also highly functional, with feedback directly influencing practical design choices, such as using coloured logos for better recognition.",
-    images: [LaptopImage, OpengroundFinal, HandDrawing],
+    processDescription: "The design followed Arup’s brand guidelines throughout, ensuring the final infographic met the required standards for quality, accessibility, and visual consistency. Key considerations included compliance with web accessibility guidance, such as choosing readable fonts and ensuring strong colour contrast to make the content clear for all users. \n\nAn iterative, user centred approach was used, with testing and feedback helping to refine the layout at each stage. This ensured the final design was both visually appealing and practical, with user feedback directly shaping decisions such as using coloured logos to improve recognition; although black logos looked visually cleaner, people found the coloured versions easier to identify.",
+    images: [LaptopImage, OpengroundFinal, HandDrawing, Openground_BlackLogo],
     ksbs: {
       knowledge: ['K1', 'K2', 'K6', 'K7','K11', 'K13', 'K14', 'K16',],
       skills: ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S10', 'S11', 'S12', 'S13', 'S14', 'S15', 'S16'],
