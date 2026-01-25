@@ -44,6 +44,10 @@ import VRDEMO2 from './assets/VR_DEMO2.png';
 import Openground_BlackLogo from './assets/Openground_BlackLogo.png';
 import DMODEL_LEAPFROG from './assets/free_ipad_mockupBOREHOLE.png';
 import DMODEL_LEAPFROG2 from './assets/Leapfrog2.png';
+import AbiWedding1 from './assets/AbiWedding1.jpg';
+import AbiWedding2 from './assets/AbiWedding2.jpg';
+
+
 
 export const projects: Project[] = [
   {
@@ -131,8 +135,8 @@ export const projects: Project[] = [
     title: 'Photography',
     category: 'Photography & Editing',
     description: "As part of my ongoing development in photography, I keep improving my skills through workshops and hands‑on practice. A recent commission to photograph a big birthday celebration and a wedding gave me the chance to use my technical knowledge in a real setting, focusing on lighting, composition, and capturing important moments.",
-    processDescription: "Each commission came with its own challenges. At the wedding, the focus was on capturing the bridal party as they got ready. The 80th birthday celebration brought together guests from different places, and the client wanted lots of photos of people they don’t often see, which meant paying close attention to group shots and key moments. One of the main problems at the birthday party was the cake cutting, which took place outside under a green gazebo because of the weather. This gave the photos a strong green tint. The main technical challenge was fixing this colour cast caused by the lighting. \n\nUsing professional editing software, I corrected the colours to bring back natural tones and improve the overall look of the images. The project finished with the design and delivery of a commemorative photo album, giving me valuable experience in managing the whole process from client consultation to final delivery.",
-    images: [Before, After],
+    processDescription: "Each commission came with its own challenges. At the wedding, the focus was on capturing the bridal party as they got ready, while working in a small space and managing indoor lighting. The 80th birthday celebration brought together guests from different places, and the client wanted plenty of photos of people they do not often see, which meant paying close attention to group shots and key moments. \n\nOne of the main issues at the birthday party was the cake‑cutting, which took place outside under a green gazebo because of the poor weather. This created a strong green tint in the photos. The main technical challenge was correcting this colour cast. Using professional editing software such as Photoshop and Lightroom, I restored natural tones and improved the overall appearance of the images. \n\nThe project ended with the design and delivery of a commemorative photo album, giving me valuable experience in managing the whole process from client consultation through to final delivery.",
+    images: [AbiWedding1, AbiWedding2, Before, After],
     headerImage: WhatsAppImage,
     ksbs: {
       knowledge: ['K1', 'K2', 'K4', 'K7', 'K10'],
