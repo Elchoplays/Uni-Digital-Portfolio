@@ -105,7 +105,7 @@ export const projects: Project[] = [
   },
   {
     id: '05',
-    title: 'Data Economics with R',
+    title: 'RStudio for Data Economics',
     category: 'Data Analysis & Coding',
     description: "This university project was about learning to use R Studio for data analysis and visualisation. As I was new to the language, I was encouraged to use generative AI to help me understand difficult functions and syntax, and to build my knowledge of R. One of the main things I learnt was how to write clear prompts to get accurate and useful guidance from the AI, which made the learning process much quicker.",
     processDescription: "A key part of this project was learning how to review and improve AI‑generated code. I found that copying code directly from the AI often led to errors that needed fixing. Rather than getting frustrated, I used this as an opportunity to understand why the code was wrong and how to correct it. Over time, I started spotting issues before running the script, as the guidance was not always fully accurate. \n\nThis process of checking and refining code was very useful in building my programming skills. It showed that, when used carefully and with a critical approach, AI can be a powerful tool for accelerating learning in technical subjects. I also learned that different programming languages suit different tasks, for example, R is particularly strong for data analysis and visualisation.",
@@ -134,7 +134,7 @@ export const projects: Project[] = [
     id: '07',
     title: 'Photography',
     category: 'Photography & Editing',
-    description: "As part of my ongoing development in photography, I keep improving my skills through workshops and hands‑on practice. A recent commission to photograph a big birthday celebration and a wedding gave me the chance to use my technical knowledge in a real setting, focusing on lighting, composition, and capturing important moments.",
+    description: "As part of my ongoing development in photography, I kept improving my skills through workshops and hands‑on practice. A recent commission to photograph a big birthday celebration and a wedding gave me the chance to use my technical knowledge in a real setting, focusing on lighting, composition, and capturing important moments.",
     processDescription: "Each commission came with its own challenges. At the wedding, the focus was on capturing the bridal party as they got ready, while working in a small space and managing indoor lighting. The 80th birthday celebration brought together guests from different places, and the client wanted plenty of photos of people they do not often see, which meant paying close attention to group shots and key moments. \n\nOne of the main issues at the birthday party was the cake‑cutting, which took place outside under a green gazebo because of the poor weather. This created a strong green tint in the photos. The main technical challenge was correcting this colour cast. Using professional editing software such as Photoshop and Lightroom, I restored natural tones and improved the overall appearance of the images. \n\nThe project ended with the design and delivery of a commemorative photo album, giving me valuable experience in managing the whole process from client consultation through to final delivery.",
     images: [AbiWedding1, AbiWedding2, Before, After],
     headerImage: WhatsAppImage,
