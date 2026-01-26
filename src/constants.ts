@@ -46,6 +46,9 @@ import DMODEL_LEAPFROG from './assets/free_ipad_mockupBOREHOLE.png';
 import DMODEL_LEAPFROG2 from './assets/Leapfrog2.png';
 import AbiWedding1 from './assets/AbiWedding1.jpg';
 import AbiWedding2 from './assets/AbiWedding2.jpg';
+import PieChart from './assets/PieChart.png';
+import scatterGraph from './assets/ScatterGraph.png';
+import scatterGraph2 from './assets/ScatterGraphPlot.png';
 
 
 
@@ -109,7 +112,7 @@ export const projects: Project[] = [
     category: 'Data Analysis & Coding',
     description: "This university project was about learning to use R Studio for data analysis and visualisation. As I was new to the language, I was encouraged to use generative AI to help me understand difficult functions and syntax, and to build my knowledge of R. One of the main things I learnt was how to write clear prompts to get accurate and useful guidance from the AI, which made the learning process much quicker.",
     processDescription: "A key part of this project was learning how to review and improve AI‑generated code. I found that copying code directly from the AI often led to errors that needed fixing. Rather than getting frustrated, I used this as an opportunity to understand why the code was wrong and how to correct it. Over time, I started spotting issues before running the script, as the guidance was not always fully accurate. \n\nThis process of checking and refining code was very useful in building my programming skills. It showed that, when used carefully and with a critical approach, AI can be a powerful tool for accelerating learning in technical subjects. I also learned that different programming languages suit different tasks, for example, R is particularly strong for data analysis and visualisation.",
-    images: [RStudioScreenshot, RStudioScreenshot2],
+    images: [RStudioScreenshot, scatterGraph, scatterGraph2, RStudioScreenshot2, PieChart],
     headerImage: RLogo,
     ksbs: {
       knowledge: ['K7', 'K13', 'K17', 'K18', ],
