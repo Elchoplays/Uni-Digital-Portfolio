@@ -49,6 +49,8 @@ import AbiWedding2 from './assets/AbiWedding2.jpg';
 import PieChart from './assets/PieChart.png';
 import scatterGraph from './assets/ScatterGraph.png';
 import scatterGraph2 from './assets/ScatterGraphPlot.png';
+import Process from './assets/Process.png';
+import Process2 from './assets/Process2.png';
 
 
 
@@ -59,7 +61,7 @@ export const projects: Project[] = [
     category: 'Infographic Design',
     description: "This infographic was designed for Arup's internal GeoWiki to clearly explain the features of the new OpenGround software and its extension tools. The objective was to create a simple, user-friendly layout that enables team members to quickly understand the functionality of each connector and encourage the adoption of OpenGround in project workflows.",
     processDescription: "The design followed Arup’s brand guidelines throughout, ensuring the final infographic met the required standards for quality, accessibility, and visual consistency. Key considerations included compliance with web accessibility guidance, such as choosing readable fonts and ensuring strong colour contrast to make the content clear for all users. \n\nAn iterative, user centred approach was used, with testing and feedback helping to refine the layout at each stage. This ensured the final design was both visually appealing and practical, with user feedback directly shaping decisions such as using coloured logos to improve recognition; although black logos looked visually cleaner, people found the coloured versions easier to identify.",
-    images: [LaptopImage, OpengroundFinal, HandDrawing, Openground_BlackLogo],
+    images: [LaptopImage, OpengroundFinal, HandDrawing, Process, Process2, Openground_BlackLogo],
     ksbs: {
       knowledge: ['K1', 'K2', 'K6', 'K7','K11', 'K13', 'K14', 'K16',],
       skills: ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S10', 'S11', 'S12', 'S13', 'S14', 'S15', 'S16'],
