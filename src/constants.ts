@@ -34,7 +34,7 @@ import copilot_preview from './assets/Copilot header.png';
 import WhatsAppImage from './assets/WhatsAppImage.jpeg';
 import PythonCoding from './assets/PythonCoding.jpg';
 import Tutorial_Video_Complete_Guide from './assets/Tutorial_Video_Complete_Guide_2024_.jpg';
-import VideoTutorial1 from './assets/VideoTutorial1.jpg';
+import VideoTutorial1 from './assets/Arup_MediaSpace_Video_.png';
 import VideoTutorial2 from './assets/VideoTutorial2.jpeg'; 
 import PythonScript from './assets/Pythoncoding_script.png'; 
 import PythonScript2 from './assets/Python coding_script2.png'; 
@@ -51,6 +51,10 @@ import scatterGraph from './assets/ScatterGraph.png';
 import scatterGraph2 from './assets/ScatterGraphPlot.png';
 import Process from './assets/Process.png';
 import Process2 from './assets/Process2.png';
+import ProcessFigma from './assets/ProcessFigma.png';
+import ProcessFigma2 from './assets/ProcessFigma2.png';
+import ProcessFigma3 from './assets/ProcessFIGMA3.png';
+import ClipChamp from './assets/ClipChamp.png';
 
 
 
@@ -169,7 +173,7 @@ export const projects: Project[] = [
     category: 'UI/UX Design',
     description: 'The aim of this project was to create an interactive infographic that makes geotechnical engineering easier to understand and more engaging for a wider audience. It was designed to support training, client education, and internal communication. The goal was to develop an interactive experience that explains why geotechnical work is important in engineering. \n\nUsing Figma, I transformed a static illustration into a clickable, animated infographic that allows users to explore geotechnical processes, infrastructure, and techniques. The design also follows Arup’s brand and accessibility guidelines.',
     processDescription: 'The project began by comparing illustration‑based learning with VR to see which approach best suited the team’s skills and available resources. Illustration was chosen because it was more practical, required less time, and matched my level of experience. With the tools available at Arup at the time, it was also quicker and easier to implement an interactive illustration on a website. \n\nUsing Figma, I created an interactive infographic with animations, clickable elements, and scrollable overlays, supported by a clear navigation flow from the homepage through to the tutorial. A mobile‑first design approach was selected because it reflects how people usually access this type of content. Taking this approach also improved accessibility, helping to keep the layout clean and easy to use on smaller screens. I worked closely with Arup’s Graphics team to follow brand guidelines, ensuring the design was clear, consistent, and suitable for non‑technical audiences. \n\nThrough this process, I gained valuable experience with Figma’s animation tools, strengthened my understanding of UX design, and saw how effective interactive learning can be in practice.',
-    images: [FigmaPhone, FullimageFigma],
+    images: [FigmaPhone, FullimageFigma, ProcessFigma, ProcessFigma2, ProcessFigma3],
     videos: ['https://www.youtube.com/watch?v=ssXQ9v3PYu8&t=1s','https://youtube.com/shorts/rOpkeKF1BgQ'],
     ksbs: {
       knowledge: ['K1','K2', 'K4', 'K5', 'K6', 'K8', 'K7', 'K10', 'K11', 'K12', 'K13', 'K15' ,'K17'],
@@ -197,7 +201,7 @@ export const projects: Project[] = [
     category: 'Video & Audio',
     description: 'This project began after I completed a task using the OpenGround extension for Civil 3D, something no one else at Arup had done before. It was a valuable learning experience, as I had to quickly develop my skills and work out the best way to approach it. My mentor suggested creating a tutorial video to share what I had learned so other Arup users could follow the process themselves. I recorded the video and audio, edited the content, and uploaded it to Arup’s media space.',
     processDescription: 'One of the main challenges in this project was ensuring the audio quality of the tutorial video was clear and professional. From my own experience of watching tutorials, I know that poor sound quality makes it harder to follow instructions and often discourages viewers from continuing. Good audio was therefore essential so that users could understand the steps without distraction. \n\nTo achieve this, I tested two different headsets by recording short clips and comparing the sound quality before choosing the one that performed best. I also focused on balancing the audio with the visuals, making sure the narration matched the pace of the demonstration and was easy to follow. \n\nAfter recording, I edited the video using Clipchamp, a free editing tool. I chose Clipchamp instead of Premiere Pro because the project had a small budget and I needed a quick, efficient way to produce the tutorial. With a larger budget, I could have spent more time refining the final edit, but Clipchamp allowed me to create a clear and accessible video effectively.',
-    images: [VideoTutorial1, VideoTutorial2],
+    images: [VideoTutorial1, ClipChamp, VideoTutorial2],
     videos: ['https://youtu.be/bSO4XNdvy1M'],
     headerImage: Tutorial_Video_Complete_Guide,
     ksbs: {
