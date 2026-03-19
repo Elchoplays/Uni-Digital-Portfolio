@@ -39,7 +39,7 @@ const Skills: React.FC = () => {
 
         <div className="mt-12">
           <motion.div className="p-6 sm:p-8 bg-white/90 backdrop-blur rounded-2xl border border-white shadow-lg text-left" {...reveal(0.16)} whileHover={{ y: -4 }} transition={{ ...reveal(0.16).transition, y: { duration: 0.24 } }}>
-              <h3 className="text-xl font-bold mb-4 text-arup-dark-gray">How to read the KSBs in my portfolio</h3>
+              <h3 className="text-xl font-bold text-arup-dark-gray border-b-2 border-arup-red pb-2 mb-4">How to read the KSBs</h3>
               <p className="text-gray-700 leading-relaxed">
                   Each project in my portfolio is linked to specific KSB codes, which match directly with the criteria set out in the official standard. For example, a tag like
                   <span className="mx-1 inline-flex align-middle"><KSBTooltipBadge code="K1" compact /></span>
@@ -61,8 +61,8 @@ const Skills: React.FC = () => {
           className="mt-8 rounded-2xl border border-white bg-white/95 p-6 sm:p-8 shadow-lg"
           {...reveal(0.28)}
         >
-          <h3 className="text-2xl font-bold text-arup-dark-gray">KSB Glossary</h3>
-          <p className="mt-2 text-gray-600">
+          <h3 className="text-2xl font-bold text-arup-dark-gray border-b-2 border-arup-red pb-2 mb-4">KSB Glossary</h3>
+          <p className="text-gray-600">
             Click any code for the matching standard definition.
           </p>
 

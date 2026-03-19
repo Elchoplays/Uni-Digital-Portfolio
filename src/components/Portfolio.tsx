@@ -29,21 +29,20 @@ const ProjectCard: React.FC<{ project: Project; onSelect: () => void; index: num
       <motion.img src={displayImage} alt={project.title} className="w-full h-80 object-cover" whileHover={shouldReduceMotion ? { scale: 1.02 } : { scale: 1.1 }} transition={{ duration: 0.7, ease: 'easeOut' }} />
       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/20 group-hover:from-black/90 transition-all duration-300" />
 
-      <div className="absolute inset-x-0 bottom-0 p-6 min-h-[10.5rem] flex flex-col justify-end">
+      <div className="absolute inset-x-0 bottom-0 p-6 min-h-[7.5rem] flex flex-col justify-end">
         <span className="inline-flex w-fit rounded-full bg-arup-red/90 px-3 py-1 text-[10px] uppercase font-semibold text-white tracking-[0.2em]">{project.category}</span>
         <h3 className="text-white font-bold mt-3 text-2xl leading-tight">{project.title}</h3>
-        <p className="text-gray-200 leading-relaxed text-sm mt-2 min-h-[2.5rem]" style={{
-          display: '-webkit-box',
-          WebkitLineClamp: 2,
-          WebkitBoxOrient: 'vertical',
-          overflow: 'hidden'
-        }}>
+        <p
+          className="mt-2 overflow-hidden text-sm leading-relaxed text-gray-200 opacity-0 max-h-0 transition-all duration-300 group-hover:opacity-100 group-hover:max-h-16"
+          style={{
+            display: '-webkit-box',
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: 'vertical',
+            overflow: 'hidden'
+          }}
+        >
           {project.description.substring(0, 110)}...
         </p>
-      </div>
-
-      <div className="absolute top-4 left-4 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 z-10">
-        <span className="inline-flex rounded-full bg-black/55 px-3 py-1 text-[10px] uppercase tracking-[0.18em] font-bold text-white">Open Project Case Study</span>
       </div>
 
       <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-transparent via-arup-red to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

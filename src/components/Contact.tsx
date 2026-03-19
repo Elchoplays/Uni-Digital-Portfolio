@@ -15,11 +15,12 @@ const Contact: React.FC = () => {
     <section id="contact" className="py-20 lg:py-28">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         <motion.div
-          className="relative overflow-hidden rounded-3xl border border-white/20 bg-gradient-to-br from-arup-medium-gray via-arup-dark-gray to-black text-white p-8 sm:p-12 lg:p-14 shadow-2xl"
+          className="relative overflow-hidden rounded-3xl border border-arup-red/15 bg-[linear-gradient(135deg,#36363a_0%,#26262a_62%,#1b1b1e_100%)] text-white p-8 sm:p-12 lg:p-14 shadow-2xl shadow-black/20"
           {...reveal(0)}
         >
-          <div className="absolute -top-20 -right-20 h-52 w-52 rounded-full bg-arup-red/40 blur-3xl"></div>
-          <div className="absolute -bottom-16 -left-10 h-48 w-48 rounded-full bg-cyan-300/20 blur-3xl"></div>
+          <div className="absolute -top-20 -right-16 h-52 w-52 rounded-full bg-arup-red/35 blur-3xl"></div>
+          <div className="absolute bottom-0 left-12 h-40 w-40 rounded-full bg-arup-red/12 blur-3xl"></div>
+          <div className="absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-arup-red/50 to-transparent"></div>
 
           <div className="relative z-10 text-center">
             <motion.div {...reveal(0.06)}>
@@ -34,7 +35,7 @@ const Contact: React.FC = () => {
             <motion.div className="mt-8" {...reveal(0.14)}>
               <motion.a 
                 href="mailto:eleanor.seaton@student.shu.ac.uk"
-                className="inline-block bg-white text-arup-red font-bold py-3.5 px-8 rounded-xl shadow-lg hover:bg-arup-light-gray transition-colors duration-300 text-base sm:text-lg"
+                className="inline-block bg-arup-red text-white font-bold py-3.5 px-8 rounded-xl shadow-lg shadow-arup-red/25 hover:bg-red-700 transition-colors duration-300 text-base sm:text-lg"
                 whileHover={{ y: -2, scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
