@@ -230,7 +230,7 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
 
               <div className="border-t border-gray-200 pt-8">
                   <h3 className="text-2xl font-bold text-arup-dark-gray mb-4">KSB Framework</h3>
-                  <p className="mb-4 text-sm text-gray-600">Click each code to view the official ST0625 definition.</p>
+                  <p className="mb-4 text-sm text-gray-600">Click each code to view the KSB definition.</p>
                   <KSBsDisplay ksbs={project.ksbs} />
               </div>
             </div>

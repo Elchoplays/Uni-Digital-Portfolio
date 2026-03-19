@@ -88,7 +88,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ projects, onProjectSelect }) => {
           <span className="inline-flex items-center rounded-full bg-arup-red/10 text-arup-red px-4 py-1 text-xs font-bold tracking-[0.2em] uppercase">
             Featured Work
           </span>
-          <h2 className="text-4xl lg:text-5xl font-black text-arup-medium-gray uppercase tracking-wider">Portfolio</h2>
+          <h2 className="mt-4 text-4xl lg:text-5xl font-black text-arup-medium-gray uppercase tracking-wider">Portfolio</h2>
           <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">This is the core of the portfolio: selected projects with process evidence, outcomes, and KSB mapping. Click any tile to explore the full case study.</p>
         </motion.div>
 

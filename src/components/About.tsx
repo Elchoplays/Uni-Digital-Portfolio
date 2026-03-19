@@ -58,7 +58,7 @@ const About: React.FC<AboutProps> = ({ onReadMoreClick }) => {
           </motion.div>
           <div className="md:col-span-3 md:mt-6 lg:mt-8">
             <motion.div className="bg-white/90 backdrop-blur rounded-2xl border border-white p-6 sm:p-8 shadow-lg" {...reveal(0.12)} whileHover={{ y: -4 }} transition={{ ...reveal(0.12).transition, y: { duration: 0.24 } }}>
-              <p className="text-lg text-arup-medium-gray mb-6 leading-relaxed">
+              <p className="text-lg text-arup-medium-gray mb-5 leading-relaxed">
               As an Assistant Technician Designer at Arup, I am committed to supporting digital transformation within the civil engineering industry. My role involves identifying and applying innovative digital solutions to improve workflows, enhance efficiency, and address complex technical challenges.<br /><br />
               I take detailed engineering data and translate it into precise technical drawings and 3D models, enabling clients and engineers to better understand and visualise project outcomes. Through the use of advanced digital tools and emerging technologies, I help to make engineering processes more accurate, efficient, and data‑driven, contributing to the successful delivery of major infrastructure projects.
               </p>
