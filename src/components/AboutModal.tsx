@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
 
 interface AboutModalProps {
   onClose: () => void;
@@ -18,21 +19,31 @@ const ExperienceItem: React.FC<{ title: string; duration: string; description: s
 
 
 const AboutModal: React.FC<AboutModalProps> = ({ onClose }) => {
+    const shouldReduceMotion = useReducedMotion();
+
   return (
-    <div 
-      className="fixed inset-0 bg-black bg-opacity-75 z-50 flex justify-center items-center p-4"
+        <motion.div
+                        className="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 flex justify-center items-center p-4"
       onClick={onClose}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={shouldReduceMotion ? { duration: 0.16 } : { duration: 0.3, ease: 'easeOut' }}
     >
-      <div 
-        className="bg-white rounded-lg shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col overflow-hidden"
+            <motion.div
+                                className="bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col overflow-hidden border border-white/20"
         onClick={(e) => e.stopPropagation()}
+                initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 24, scale: 0.985 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 14, scale: 0.992 }}
+                transition={shouldReduceMotion ? { duration: 0.16 } : { duration: 0.42, ease: 'easeOut' }}
       >
-        <div className="p-4 flex justify-between items-center border-b bg-arup-light-gray">
+                <div className="p-4 sm:p-5 flex justify-between items-center border-b bg-arup-light-gray">
           <h2 className="text-2xl font-bold text-arup-dark-gray">Professional Project Experience</h2>
-          <button onClick={onClose} className="text-gray-500 hover:text-arup-red text-3xl font-light">&times;</button>
+                                        <motion.button onClick={onClose} className="text-gray-500 hover:text-arup-red text-3xl font-light leading-none" aria-label="Close about modal" whileHover={shouldReduceMotion ? { scale: 1.02 } : { scale: 1.08, rotate: 90 }} whileTap={shouldReduceMotion ? { scale: 0.98 } : { scale: 0.94 }}>&times;</motion.button>
         </div>
         
-        <div className="flex-grow overflow-y-auto p-6 md:p-8">
+                <div className="flex-grow overflow-y-auto p-6 md:p-8 lg:p-10 bg-white">
             <p className="text-lg text-gray-800 mb-6">
                 Based at One Centenary Way in Arup’s Birmingham office, I am a committed member of the Digital Geotechnical Engineering team, supporting a variety of design projects. During my eight years at Arup, I have built strong technical skills in advanced software and digital engineering methods.
             </p>
@@ -117,8 +128,8 @@ const AboutModal: React.FC<AboutModalProps> = ({ onClose }) => {
                 />
             </div>
         </div>
-      </div>
-    </div>
+            </motion.div>
+        </motion.div>
   );
 };
 
