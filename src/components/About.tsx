@@ -36,26 +36,35 @@ const About: React.FC<AboutProps> = ({ onReadMoreClick }) => {
           <motion.div className="md:col-span-2" {...reveal(0.08)}>
             <div className="sticky top-24">
                 <motion.img src={profileImage} alt="Eleanor Seaton" loading="lazy" className="rounded-2xl shadow-2xl shadow-black/20 w-full object-cover aspect-[3/4] border border-white" whileHover={{ scale: 1.02, y: -2 }} transition={{ duration: 0.24, ease: 'easeOut' }} />
-              <div className="mt-4 text-left bg-white/90 backdrop-blur rounded-2xl border border-white p-5 shadow-lg">
-                  <p className="font-black text-xl text-arup-dark-gray">Eleanor Seaton</p>
-                  <div className="mt-3 space-y-2 text-sm text-arup-medium-gray">
+              <div className="mt-4 text-left rounded-2xl border border-arup-red/20 bg-gradient-to-br from-white to-red-50/40 p-5 shadow-lg shadow-black/10 backdrop-blur">
+                  <p className="font-black text-xl text-arup-dark-gray border-b-2 border-arup-red pb-2 mb-4">Eleanor Seaton</p>
+                  <div className="mt-4 space-y-2 text-sm text-arup-medium-gray">
                     <p><span className="font-bold text-arup-dark-gray">Profession:</span> Civil and Ground Engineer</p>
                     <p><span className="font-bold text-arup-dark-gray">Current Position:</span> Assistant Technician</p>
                     <p><span className="font-bold text-arup-dark-gray">Years of Experience:</span> 8</p>
                     <p><span className="font-bold text-arup-dark-gray">Student ID:</span> 27020329</p>
                   </div>
                 </div>
+              <motion.div className="mt-4 rounded-2xl border border-white bg-white/90 backdrop-blur p-6 shadow-lg" {...reveal(0.16)} whileHover={{ y: -4 }} transition={{ ...reveal(0.16).transition, y: { duration: 0.24 } }}>
+                <SectionTitle>Hobbies</SectionTitle>
+                <ul className="list-disc list-inside space-y-2 text-sm text-arup-medium-gray">
+                  <li>Horse Riding</li>
+                  <li>Photography</li>
+                  <li>Doing too much Uni work</li>
+                  <li>Spending time with my amazing and handsome boyfriend</li>
+                </ul>
+              </motion.div>
             </div>
           </motion.div>
-          <div className="md:col-span-3">
+          <div className="md:col-span-3 md:mt-6 lg:mt-8">
             <motion.div className="bg-white/90 backdrop-blur rounded-2xl border border-white p-6 sm:p-8 shadow-lg" {...reveal(0.12)} whileHover={{ y: -4 }} transition={{ ...reveal(0.12).transition, y: { duration: 0.24 } }}>
               <p className="text-lg text-arup-medium-gray mb-6 leading-relaxed">
               As an Assistant Technician Designer at Arup, I am committed to supporting digital transformation within the civil engineering industry. My role involves identifying and applying innovative digital solutions to improve workflows, enhance efficiency, and address complex technical challenges.<br /><br />
               I take detailed engineering data and translate it into precise technical drawings and 3D models, enabling clients and engineers to better understand and visualise project outcomes. Through the use of advanced digital tools and emerging technologies, I help to make engineering processes more accurate, efficient, and data‑driven, contributing to the successful delivery of major infrastructure projects.
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-              <motion.div className="rounded-2xl border border-white bg-white/90 backdrop-blur p-6 shadow-lg" {...reveal(0.16)} whileHover={{ y: -4 }} transition={{ ...reveal(0.16).transition, y: { duration: 0.24 } }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-[52px]">
+              <motion.div className="rounded-2xl border border-white bg-white/90 backdrop-blur p-6 shadow-lg" {...reveal(0.2)} whileHover={{ y: -4 }} transition={{ ...reveal(0.2).transition, y: { duration: 0.24 } }}>
                 <SectionTitle>Education</SectionTitle>
                 <ul className="space-y-4">
                   <li>
@@ -82,7 +91,7 @@ const About: React.FC<AboutProps> = ({ onReadMoreClick }) => {
                   </li>
                 </ul>
               </motion.div>
-              <motion.div className="rounded-2xl border border-white bg-white/90 backdrop-blur p-6 shadow-lg" {...reveal(0.22)} whileHover={{ y: -4 }} transition={{ ...reveal(0.22).transition, y: { duration: 0.24 } }}>
+              <motion.div className="rounded-2xl border border-white bg-white/90 backdrop-blur p-6 shadow-lg" {...reveal(0.26)} whileHover={{ y: -4 }} transition={{ ...reveal(0.26).transition, y: { duration: 0.24 } }}>
                 <SectionTitle>Project Experience</SectionTitle>
                 <ul className="space-y-4">
                   <li>
@@ -116,18 +125,18 @@ const About: React.FC<AboutProps> = ({ onReadMoreClick }) => {
                 </motion.button>
               </motion.div>
             </div>
-             <motion.div className="mt-8 rounded-2xl border border-white bg-white/90 backdrop-blur p-6 sm:p-8 shadow-lg" {...reveal(0.28)} whileHover={{ y: -4 }} transition={{ ...reveal(0.28).transition, y: { duration: 0.24 } }}>
-                <SectionTitle>Digital Skills</SectionTitle>
-                <p className="text-base text-arup-medium-gray">I am proficient in a wide range of industry‑standard software, with strong skills in engineering design tools and creative applications. My key capabilities include:</p>
-                <ul className="list-disc list-inside mt-3 text-arup-medium-gray space-y-2">
-                    <li><strong>Geotechnical and Engineering Software:</strong> Experienced in gINT, GIS, OpenGround, and OpenGround Connectors for managing and analysing geotechnical data.</li>
-                    <li><strong>Engineering CAD Tools:</strong> Advanced proficiency in MicroStation, AutoCAD, and Civil 3D for accurate drawings across complex civil engineering projects.</li>
-                    <li><strong>Adobe Creative Suite:</strong> Skilled in Illustrator, Photoshop, and Procreate for technical visuals, design concepts, and professional editing.</li>
-                    <li><strong>Data Analysis & Workflow Automation:</strong> Practical experience using Python and R Studio to automate tasks and support data-driven decision-making.</li>
-                    <li><strong>3D Modelling:</strong> Proficient in producing and interpreting 3D ground models using Leapfrog and Civil 3D.</li>
-                </ul>
-            </motion.div>
           </div>
+          <motion.div className="md:col-span-5 rounded-2xl border border-white bg-white/90 backdrop-blur p-6 sm:p-8 shadow-lg" {...reveal(0.28)} whileHover={{ y: -4 }} transition={{ ...reveal(0.28).transition, y: { duration: 0.24 } }}>
+            <SectionTitle>Digital Skills</SectionTitle>
+            <p className="text-base text-arup-medium-gray">I am proficient in a wide range of industry-standard software, with strong skills in engineering design tools and creative applications. My key capabilities include:</p>
+            <ul className="list-disc list-inside mt-3 text-arup-medium-gray space-y-2">
+              <li><strong>Geotechnical and Engineering Software:</strong> Experienced in gINT, GIS, OpenGround, and OpenGround Connectors for managing and analysing geotechnical data.</li>
+              <li><strong>Engineering CAD Tools:</strong> Advanced proficiency in MicroStation, AutoCAD, and Civil 3D for accurate drawings across complex civil engineering projects.</li>
+              <li><strong>Adobe Creative Suite:</strong> Skilled in Illustrator, Photoshop, and Procreate for technical visuals, design concepts, and professional editing.</li>
+              <li><strong>Data Analysis & Workflow Automation:</strong> Practical experience using Python and R Studio to automate tasks and support data-driven decision-making.</li>
+              <li><strong>3D Modelling:</strong> Proficient in producing and interpreting 3D ground models using Leapfrog and Civil 3D.</li>
+            </ul>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import testImage from '../assets/test-image.jpg';
+import { scrollToSection } from '../utils/scrollToSection';
 
 const Hero: React.FC = () => {
   const shouldReduceMotion = useReducedMotion();
@@ -11,12 +12,9 @@ const Hero: React.FC = () => {
     transition: shouldReduceMotion ? { duration: 0.12 } : { duration: 0.62, ease: 'easeOut', delay },
   });
 
-  const handleScrollClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleSectionClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: 'about' | 'portfolio') => {
     e.preventDefault();
-    const aboutSection = document.getElementById('about');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    scrollToSection(targetId);
   };
   
   return (
@@ -63,31 +61,16 @@ const Hero: React.FC = () => {
           initial={shouldReduceMotion ? false : { opacity: 0, y: 14 }}
           animate={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
           transition={shouldReduceMotion ? { duration: 0.14 } : { delay: 0.4, duration: 0.56 }}
-          className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="mt-8 flex items-center justify-center"
         >
           <motion.a
-            href="#about"
-            onClick={handleScrollClick}
+            href="#portfolio"
+            onClick={(e) => handleSectionClick(e, 'portfolio')}
             className="bg-arup-red text-white font-bold py-3 px-10 rounded-full shadow-lg shadow-arup-red/30 hover:bg-red-700 transform hover:scale-[1.03] transition-all duration-300 text-sm sm:text-base uppercase tracking-wider cursor-pointer"
             whileHover={{ y: -2, scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
           >
             Explore Portfolio
-          </motion.a>
-          <motion.a
-            href="#portfolio"
-            onClick={(e) => {
-              e.preventDefault();
-              const portfolioSection = document.getElementById('portfolio');
-              if (portfolioSection) {
-                portfolioSection.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
-            className="border border-white/60 bg-white/10 text-white font-semibold py-3 px-8 rounded-full hover:bg-white/20 transition-colors duration-300 uppercase tracking-wider text-sm sm:text-base"
-            whileHover={{ y: -2, scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            View Work
           </motion.a>
         </motion.div>
         
@@ -119,7 +102,12 @@ const Hero: React.FC = () => {
             transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
             className="mt-5 flex justify-center"
           >
-            <a href="#about" aria-label="Scroll to about section" onClick={handleScrollClick} className="cursor-pointer">
+            <a
+              href="#about"
+              aria-label="Scroll to about section"
+              onClick={(e) => handleSectionClick(e, 'about')}
+              className="cursor-pointer"
+            >
               <svg className="w-8 h-8 text-white/90" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
               </svg>

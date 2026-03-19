@@ -37,42 +37,23 @@ const Skills: React.FC = () => {
           </p>
         </motion.div>
 
-        <motion.div className="mt-8 text-center" {...reveal(0.08)}>
-          <motion.a 
-                href="https://skillsengland.education.gov.uk/apprenticeships/st0625-v1-0" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-block bg-arup-red text-white font-bold py-3 px-6 rounded-xl shadow-md hover:bg-red-700 transition-colors duration-300"
-            whileHover={{ y: -2, scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            >
-                View Official KSB Standard
-          </motion.a>
-        </motion.div>
-
-        <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+        <div className="mt-12">
           <motion.div className="p-6 sm:p-8 bg-white/90 backdrop-blur rounded-2xl border border-white shadow-lg text-left" {...reveal(0.16)} whileHover={{ y: -4 }} transition={{ ...reveal(0.16).transition, y: { duration: 0.24 } }}>
               <h3 className="text-xl font-bold mb-4 text-arup-dark-gray">How to read the KSBs in my portfolio</h3>
               <p className="text-gray-700 leading-relaxed">
-                  Each project in my portfolio is linked to specific KSB codes, which match directly with the criteria in the official standard. Click any code to open the full official definition.
+                  Each project in my portfolio is linked to specific KSB codes, which match directly with the criteria set out in the official standard. For example, a tag like
+                  <span className="mx-1 inline-flex align-middle"><KSBTooltipBadge code="K1" compact /></span>
+                  refers to the first Knowledge requirement, while
+                  <span className="mx-1 inline-flex align-middle"><KSBTooltipBadge code="S5" compact /></span>
+                  refers to the fifth Skill, and
+                  <span className="mx-1 inline-flex align-middle"><KSBTooltipBadge code="B2" compact /></span>
+                  refers to the second Behaviour. This system provides a clear and transparent way to see how my work meets the academic and professional requirements of my course.
               </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                <KSBTooltipBadge code="K1" compact />
-                <KSBTooltipBadge code="S5" compact />
-                <KSBTooltipBadge code="B2" compact />
-                <KSBTooltipBadge code="K3" compact />
+              <div className="mt-5 flex flex-wrap gap-2">
+                <span className="font-mono bg-blue-100 text-blue-800 rounded-full px-3 py-1 text-sm">Knowledge</span>
+                <span className="font-mono bg-green-100 text-green-800 rounded-full px-3 py-1 text-sm">Skills</span>
+                <span className="font-mono bg-yellow-100 text-yellow-800 rounded-full px-3 py-1 text-sm">Behaviours</span>
               </div>
-          </motion.div>
-          <motion.div className="p-6 sm:p-8 rounded-2xl border border-arup-red/20 bg-gradient-to-br from-arup-red/5 via-white to-white shadow-lg text-left" {...reveal(0.22)} whileHover={{ y: -4 }} transition={{ ...reveal(0.22).transition, y: { duration: 0.24 } }}>
-            <h3 className="text-xl font-bold mb-4 text-arup-dark-gray">Why this framework matters</h3>
-            <p className="text-gray-700 leading-relaxed">
-              The framework creates a transparent bridge between creative output and professional capability. It makes it easy to see where each piece of work demonstrates technical depth, collaboration, and practical impact.
-            </p>
-            <div className="mt-5 flex flex-wrap gap-2">
-              <span className="font-mono bg-blue-100 text-blue-800 rounded-full px-3 py-1 text-sm">Knowledge</span>
-              <span className="font-mono bg-green-100 text-green-800 rounded-full px-3 py-1 text-sm">Skills</span>
-              <span className="font-mono bg-yellow-100 text-yellow-800 rounded-full px-3 py-1 text-sm">Behaviours</span>
-            </div>
           </motion.div>
         </div>
 
@@ -80,7 +61,7 @@ const Skills: React.FC = () => {
           className="mt-8 rounded-2xl border border-white bg-white/95 p-6 sm:p-8 shadow-lg"
           {...reveal(0.28)}
         >
-          <h3 className="text-2xl font-bold text-arup-dark-gray">Official ST0625 KSB Glossary</h3>
+          <h3 className="text-2xl font-bold text-arup-dark-gray">KSB Glossary</h3>
           <p className="mt-2 text-gray-600">
             Click any code for the matching standard definition.
           </p>

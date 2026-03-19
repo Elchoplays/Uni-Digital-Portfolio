@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AnimatePresence, motion, useReducedMotion, useScroll, useSpring } from 'framer-motion';
+import { scrollToSection } from '../utils/scrollToSection';
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -48,23 +49,6 @@ const Header: React.FC = () => {
       window.removeEventListener('scroll', updateHeaderState);
       window.removeEventListener('resize', updateHeaderState);
     };
-  }, []);
-
-  const scrollToSection = useCallback((targetId: string) => {
-    const element = document.getElementById(targetId);
-    if (!element) {
-      return;
-    }
-
-    const fixedHeader = document.querySelector('header');
-    const headerOffset = fixedHeader instanceof HTMLElement ? fixedHeader.offsetHeight + 12 : 88;
-    const elementTop = element.getBoundingClientRect().top + window.scrollY;
-
-    window.history.replaceState(null, '', `#${targetId}`);
-    window.scrollTo({
-      top: Math.max(elementTop - headerOffset, 0),
-      behavior: 'smooth',
-    });
   }, []);
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
