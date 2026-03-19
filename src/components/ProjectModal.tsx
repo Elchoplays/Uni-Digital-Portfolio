@@ -2,16 +2,10 @@
 import React, { useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import type { Project, KSBs } from '../types';
+import KSBTooltipBadge from './KSBTooltipBadge';
 
 const KSBBadge: React.FC<{ type: 'K' | 'S' | 'B'; code: string }> = ({ type, code }) => {
-  const colors = {
-    K: 'bg-blue-100 text-blue-800',
-    S: 'bg-green-100 text-green-800',
-    B: 'bg-yellow-100 text-yellow-800',
-  };
-  return (
-    <span className={`inline-block rounded-full px-3 py-1 text-sm font-semibold ${colors[type]}`}>{code}</span>
-  );
+  return <KSBTooltipBadge code={code} type={type} align="start" />;
 };
 
 const KSBsDisplay: React.FC<{ ksbs: KSBs }> = ({ ksbs }) => {
@@ -174,12 +168,20 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
           
           {allMedia > 1 && (
             <>
-              <motion.button onClick={prevImage} className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 text-white rounded-full p-3 hover:bg-black/60 transition-colors" aria-label="Previous media" whileHover={shouldReduceMotion ? { scale: 1.02 } : { scale: 1.08, x: -2 }} whileTap={shouldReduceMotion ? { scale: 0.98 } : { scale: 0.95 }}>
+              <button
+                onClick={prevImage}
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 text-white rounded-full p-3 transition-transform transition-colors duration-200 hover:bg-black/60 hover:scale-105 active:scale-95"
+                aria-label="Previous media"
+              >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" /></svg>
-              </motion.button>
-              <motion.button onClick={nextImage} className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 text-white rounded-full p-3 hover:bg-black/60 transition-colors" aria-label="Next media" whileHover={shouldReduceMotion ? { scale: 1.02 } : { scale: 1.08, x: 2 }} whileTap={shouldReduceMotion ? { scale: 0.98 } : { scale: 0.95 }}>
+              </button>
+              <button
+                onClick={nextImage}
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 text-white rounded-full p-3 transition-transform transition-colors duration-200 hover:bg-black/60 hover:scale-105 active:scale-95"
+                aria-label="Next media"
+              >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
-              </motion.button>
+              </button>
               <div className="absolute bottom-4 right-4 bg-black/60 text-white px-4 py-2 rounded-full text-sm font-semibold">
                 {activeMediaType === 'image' ? currentImageIndex + 1 : currentVideoIndex + 1} / {activeMediaType === 'image' ? project.images.length : project.videos?.length || 0}
               </div>
@@ -188,7 +190,7 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
         </div>
 
         {/* --- Content Section --- */}
-        <div className="w-full lg:w-[40%] h-1/2 lg:h-full overflow-y-auto bg-white">
+        <div className="relative isolate w-full lg:w-[40%] h-1/2 lg:h-full overflow-y-auto overflow-x-clip bg-white">
           <div className="p-8 md:p-12 lg:p-16">
             <span className="inline-flex rounded-full bg-arup-red/10 px-3 py-1 text-xs font-bold text-arup-red uppercase tracking-[0.2em]">{project.category}</span>
             <h2 className="text-4xl lg:text-5xl font-bold text-arup-dark-gray my-4">{project.title}</h2>
@@ -202,6 +204,7 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
 
               <div className="border-t border-gray-200 pt-8">
                   <h3 className="text-2xl font-bold text-arup-dark-gray mb-4">KSB Framework</h3>
+                  <p className="mb-4 text-sm text-gray-600">Click each code to view the official ST0625 definition.</p>
                   <KSBsDisplay ksbs={project.ksbs} />
               </div>
             </div>

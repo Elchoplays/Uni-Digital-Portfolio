@@ -1,6 +1,18 @@
 
 import React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
+import KSBTooltipBadge from './KSBTooltipBadge';
+import { KSB_DEFINITIONS } from '../ksbDefinitions';
+
+const getCodesByPrefix = (prefix: 'K' | 'S' | 'B'): string[] => {
+  return Object.keys(KSB_DEFINITIONS)
+    .filter((code) => code.startsWith(prefix))
+    .sort((a, b) => Number(a.slice(1)) - Number(b.slice(1)));
+};
+
+const knowledgeCodes = getCodesByPrefix('K');
+const skillCodes = getCodesByPrefix('S');
+const behaviourCodes = getCodesByPrefix('B');
 
 const Skills: React.FC = () => {
   const shouldReduceMotion = useReducedMotion();
@@ -42,8 +54,14 @@ const Skills: React.FC = () => {
           <motion.div className="p-6 sm:p-8 bg-white/90 backdrop-blur rounded-2xl border border-white shadow-lg text-left" {...reveal(0.16)} whileHover={{ y: -4 }} transition={{ ...reveal(0.16).transition, y: { duration: 0.24 } }}>
               <h3 className="text-xl font-bold mb-4 text-arup-dark-gray">How to read the KSBs in my portfolio</h3>
               <p className="text-gray-700 leading-relaxed">
-                  Each project in my portfolio is linked to specific KSB codes, which match directly with the criteria in the official standard. For example, a tag like <span className="font-mono bg-blue-100 text-blue-800 rounded px-1.5 py-0.5 text-sm">K1</span> refers to the first Knowledge requirement, while <span className="font-mono bg-green-100 text-green-800 rounded px-1.5 py-0.5 text-sm">S5</span> refers to the fifth Skill.
+                  Each project in my portfolio is linked to specific KSB codes, which match directly with the criteria in the official standard. Click any code to open the full official definition.
               </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                <KSBTooltipBadge code="K1" compact />
+                <KSBTooltipBadge code="S5" compact />
+                <KSBTooltipBadge code="B2" compact />
+                <KSBTooltipBadge code="K3" compact />
+              </div>
           </motion.div>
           <motion.div className="p-6 sm:p-8 rounded-2xl border border-arup-red/20 bg-gradient-to-br from-arup-red/5 via-white to-white shadow-lg text-left" {...reveal(0.22)} whileHover={{ y: -4 }} transition={{ ...reveal(0.22).transition, y: { duration: 0.24 } }}>
             <h3 className="text-xl font-bold mb-4 text-arup-dark-gray">Why this framework matters</h3>
@@ -57,6 +75,45 @@ const Skills: React.FC = () => {
             </div>
           </motion.div>
         </div>
+
+        <motion.div
+          className="mt-8 rounded-2xl border border-white bg-white/95 p-6 sm:p-8 shadow-lg"
+          {...reveal(0.28)}
+        >
+          <h3 className="text-2xl font-bold text-arup-dark-gray">Official ST0625 KSB Glossary</h3>
+          <p className="mt-2 text-gray-600">
+            Click any code for the matching standard definition.
+          </p>
+
+          <div className="mt-6 space-y-6">
+            <div>
+              <h4 className="font-bold text-arup-medium-gray mb-3">Knowledge</h4>
+              <div className="flex flex-wrap gap-2">
+                {knowledgeCodes.map((code) => (
+                  <KSBTooltipBadge key={code} code={code} />
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-bold text-arup-medium-gray mb-3">Skills</h4>
+              <div className="flex flex-wrap gap-2">
+                {skillCodes.map((code) => (
+                  <KSBTooltipBadge key={code} code={code} />
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-bold text-arup-medium-gray mb-3">Behaviours</h4>
+              <div className="flex flex-wrap gap-2">
+                {behaviourCodes.map((code) => (
+                  <KSBTooltipBadge key={code} code={code} />
+                ))}
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

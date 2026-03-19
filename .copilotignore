@@ -1,2 +1,7 @@
+# Ignore any assets directory and all nested files.
+assets/
 assets/**
+src/assets/
 src/assets/**
+**/assets/
+**/assets/**
