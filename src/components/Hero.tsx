@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
           Creative Digital Design Portfolio
         </motion.p>
         <motion.p className="mt-6 text-base sm:text-lg text-gray-200/95 max-w-2xl mx-auto leading-relaxed" {...reveal(0.28, 14)}>
-          Assistant Technician Designer focused on digital workflows, technical visualisation, and human-centred communication for complex infrastructure projects.
+          Technician Designer focused on digital workflows, technical visualisation, and human-centred communication for complex infrastructure projects.
         </motion.p>
         <motion.div className="w-28 h-1 bg-arup-red mx-auto my-8 rounded-full" {...reveal(0.34, 10)}></motion.div>
 

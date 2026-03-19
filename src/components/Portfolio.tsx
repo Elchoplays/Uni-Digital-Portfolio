@@ -22,11 +22,11 @@ const ProjectCard: React.FC<{ project: Project; onSelect: () => void; index: num
       whileInView={shouldReduceMotion ? {} : { opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: shouldReduceMotion ? 0.24 : 0.62, ease: 'easeOut', delay: index * 0.08 }}
-      whileHover={shouldReduceMotion ? { y: -3 } : { y: -12, scale: 1.01 }}
+      whileHover={shouldReduceMotion ? { y: -3, transition: { duration: 0.14, ease: 'easeOut' } } : { y: -12, scale: 1.01, transition: { duration: 0.18, ease: 'easeOut' } }}
       className="group relative overflow-hidden rounded-2xl border border-white/80 shadow-xl shadow-black/10 cursor-pointer transition-all duration-300 bg-white will-change-transform"
       onClick={onSelect}
     >
-      <motion.img src={displayImage} alt={project.title} className="w-full h-80 object-cover" whileHover={shouldReduceMotion ? { scale: 1.02 } : { scale: 1.1 }} transition={{ duration: 0.7, ease: 'easeOut' }} />
+      <motion.img src={displayImage} alt={project.title} className="w-full h-80 object-cover" whileHover={shouldReduceMotion ? { scale: 1.02, transition: { duration: 0.16, ease: 'easeOut' } } : { scale: 1.1, transition: { duration: 0.28, ease: 'easeOut' } }} transition={{ duration: 0.7, ease: 'easeOut' }} />
       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/20 group-hover:from-black/90 transition-all duration-300" />
 
       <div className="absolute inset-x-0 bottom-0 p-6 min-h-[7.5rem] flex flex-col justify-end">

@@ -43,7 +43,7 @@ const About: React.FC<AboutProps> = ({ onReadMoreClick }) => {
               <SectionTitle>About Me</SectionTitle>
               <div className="flex flex-1 items-center">
                 <p className="text-lg text-arup-medium-gray leading-relaxed">
-                As an Assistant Technician Designer at Arup, I am committed to supporting digital transformation within the civil engineering industry. My role involves identifying and applying innovative digital solutions to improve workflows, enhance efficiency, and address complex technical challenges.<br /><br />
+                As a Technician Designer at Arup, I am committed to supporting digital transformation within the civil engineering industry. My role involves identifying and applying innovative digital solutions to improve workflows, enhance efficiency, and address complex technical challenges.<br /><br />
                 I take detailed engineering data and translate it into precise technical drawings and 3D models, enabling clients and engineers to better understand and visualise project outcomes. Through the use of advanced digital tools and emerging technologies, I help to make engineering processes more accurate, efficient, and data‑driven, contributing to the successful delivery of major infrastructure projects.
                 </p>
               </div>
@@ -55,7 +55,7 @@ const About: React.FC<AboutProps> = ({ onReadMoreClick }) => {
                 <p className="font-black text-xl text-arup-dark-gray border-b-2 border-arup-red pb-2 mb-4">Eleanor Seaton</p>
                 <div className="mt-4 space-y-2 text-sm text-arup-medium-gray">
                   <p><span className="font-bold text-arup-dark-gray">Profession:</span> Civil and Ground Engineer</p>
-                  <p><span className="font-bold text-arup-dark-gray">Current Position:</span> Assistant Technician</p>
+                  <p><span className="font-bold text-arup-dark-gray">Current Position:</span> Technician</p>
                   <p><span className="font-bold text-arup-dark-gray">Years of Experience:</span> 8</p>
                   <p><span className="font-bold text-arup-dark-gray">Student ID:</span> 27020329</p>
                 </div>
@@ -65,8 +65,8 @@ const About: React.FC<AboutProps> = ({ onReadMoreClick }) => {
                 <ul className="list-disc list-inside space-y-2 text-sm text-arup-medium-gray">
                   <li>Horse Riding</li>
                   <li>Photography</li>
-                  <li>Doing too much Uni work</li>
-                  <li>Spending time with my amazing and handsome boyfriend</li>
+                  <li>Learning Spanish</li>
+                  <li>Travelling the world with my boyfriend</li>
                 </ul>
               </motion.div>
             </div>
