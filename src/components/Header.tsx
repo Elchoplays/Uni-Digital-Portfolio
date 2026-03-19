@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 
 const Header: React.FC = () => {
@@ -21,13 +21,36 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToSection = useCallback((targetId: string) => {
+    const element = document.getElementById(targetId);
+    if (!element) {
+      return;
+    }
+
+    const fixedHeader = document.querySelector('header');
+    const headerOffset = fixedHeader instanceof HTMLElement ? fixedHeader.offsetHeight + 12 : 88;
+    const elementTop = element.getBoundingClientRect().top + window.scrollY;
+
+    window.history.replaceState(null, '', `#${targetId}`);
+    window.scrollTo({
+      top: Math.max(elementTop - headerOffset, 0),
+      behavior: 'smooth',
+    });
+  }, []);
+
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
-    const element = document.getElementById(targetId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+
+    if (mobileMenuOpen) {
       setMobileMenuOpen(false);
+      // Let the dropdown close first so section offsets are stable on mobile.
+      window.requestAnimationFrame(() => {
+        window.requestAnimationFrame(() => scrollToSection(targetId));
+      });
+      return;
     }
+
+    scrollToSection(targetId);
   };
 
   return (
@@ -99,6 +122,7 @@ const Header: React.FC = () => {
         <AnimatePresence initial={false}>
           {mobileMenuOpen && (
             <motion.nav
+              id="mobile-navigation"
               className={`md:hidden border-t px-4 pb-4 pt-2 overflow-hidden ${
                 scrolled ? 'border-white/40 bg-white/20' : 'border-white/30 bg-black/20'
               }`}

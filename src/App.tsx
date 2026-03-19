@@ -70,11 +70,6 @@ const App: React.FC = () => {
       </a>
       <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
         <motion.div
-          className="absolute -top-24 -left-20 h-72 w-72 rounded-full bg-arup-red/15 blur-3xl"
-          animate={shouldReduceMotion ? undefined : { x: [0, 16, 0], y: [0, 14, 0] }}
-          transition={shouldReduceMotion ? undefined : { duration: 10, repeat: Infinity, ease: 'easeInOut' }}
-        ></motion.div>
-        <motion.div
           className="absolute top-[20%] -right-20 h-80 w-80 rounded-full bg-indigo-300/15 blur-3xl"
           animate={shouldReduceMotion ? undefined : { x: [0, -18, 0], y: [0, -12, 0] }}
           transition={shouldReduceMotion ? undefined : { duration: 12, repeat: Infinity, ease: 'easeInOut' }}
