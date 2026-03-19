@@ -95,7 +95,18 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
         exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 14, scale: 0.99 }}
         transition={shouldReduceMotion ? { duration: 0.16 } : { duration: 0.42, ease: 'easeOut' }}
       >
-      <div className="w-full h-full rounded-3xl overflow-hidden border border-white/20 bg-white flex flex-col lg:flex-row">
+      <div className="relative w-full h-full rounded-3xl overflow-hidden border border-white/20 bg-white flex flex-col lg:flex-row">
+        <motion.button
+          onClick={onClose}
+          className="absolute top-3 right-3 lg:top-4 lg:right-4 bg-black/45 text-white rounded-full p-2 hover:bg-black/65 transition-colors z-20"
+          aria-label="Close project details"
+          whileHover={shouldReduceMotion ? { scale: 1.02 } : { scale: 1.08, rotate: 90 }}
+          whileTap={shouldReduceMotion ? { scale: 0.98 } : { scale: 0.94 }}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </motion.button>
         {/* --- Image Gallery Section --- */}
         <div className="relative w-full lg:w-[60%] h-1/2 lg:h-full bg-arup-light-gray flex flex-col justify-center items-center overflow-hidden">
           {/* Media Tabs */}
@@ -228,18 +239,6 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
       </div>
       </motion.div>
 
-      {/* --- Close Button --- */}
-      <motion.button
-        onClick={onClose} 
-        className="absolute top-5 right-5 lg:top-8 lg:right-8 bg-black/40 text-white rounded-full p-3 hover:bg-black/60 transition-colors z-10"
-        aria-label="Close project details"
-        whileHover={shouldReduceMotion ? { scale: 1.02 } : { scale: 1.08, rotate: 90 }}
-        whileTap={shouldReduceMotion ? { scale: 0.98 } : { scale: 0.94 }}
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </motion.button>
     </motion.div>
   );
 };
