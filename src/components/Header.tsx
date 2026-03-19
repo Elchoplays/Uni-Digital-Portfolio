@@ -1,10 +1,17 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
+import { AnimatePresence, motion, useReducedMotion, useScroll, useSpring } from 'framer-motion';
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [useLightText, setUseLightText] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const shouldReduceMotion = useReducedMotion();
+  const { scrollYProgress } = useScroll();
+  const smoothScrollProgress = useSpring(scrollYProgress, {
+    stiffness: 140,
+    damping: 28,
+    mass: 0.34,
+  });
 
   const navLinks = [
     { id: 'about', label: 'About Me' },
@@ -14,11 +21,33 @@ const Header: React.FC = () => {
   ];
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
+    const updateHeaderState = () => {
+      const isScrolled = window.scrollY > 10;
+      setScrolled(isScrolled);
+
+      const heroSection = document.getElementById('home');
+      const headerElement = document.querySelector('header');
+
+      if (!(heroSection instanceof HTMLElement) || !(headerElement instanceof HTMLElement)) {
+        setUseLightText(!isScrolled);
+        return;
+      }
+
+      const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+      const headerBottom = window.scrollY + headerElement.offsetHeight;
+
+      // Keep white text until the header has fully moved onto the lighter sections.
+      setUseLightText(headerBottom < heroBottom + 36);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    updateHeaderState();
+    window.addEventListener('scroll', updateHeaderState, { passive: true });
+    window.addEventListener('resize', updateHeaderState);
+
+    return () => {
+      window.removeEventListener('scroll', updateHeaderState);
+      window.removeEventListener('resize', updateHeaderState);
+    };
   }, []);
 
   const scrollToSection = useCallback((targetId: string) => {
@@ -60,7 +89,7 @@ const Header: React.FC = () => {
           scrolled
             ? 'bg-white/5 border-white/30 shadow-xl backdrop-blur-xl'
             : 'bg-white/5 border-white/30 shadow-lg backdrop-blur-xl'
-        }`}
+        } relative overflow-hidden`}
       >
         <div className="flex items-center justify-between h-16 px-4 sm:px-6">
           <div className="flex-shrink-0">
@@ -86,9 +115,9 @@ const Header: React.FC = () => {
                   href={`#${link.id}`}
                   onClick={(e) => handleNavClick(e, link.id)}
                   className={`px-3 py-2 rounded-lg text-sm font-semibold transition-colors duration-300 ${
-                    scrolled
-                      ? 'text-arup-dark-gray hover:text-arup-red hover:bg-white/40'
-                      : 'text-white hover:text-white hover:bg-white/20 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]'
+                    useLightText
+                      ? 'text-white hover:text-white hover:bg-white/20 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]'
+                      : 'text-arup-dark-gray hover:text-arup-red hover:bg-white/40'
                   }`}
                   whileHover={shouldReduceMotion ? { y: -1 } : { y: -2 }}
                   whileTap={shouldReduceMotion ? { scale: 0.99 } : { scale: 0.98 }}
@@ -101,9 +130,9 @@ const Header: React.FC = () => {
           <motion.button
             type="button"
             className={`md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg transition-colors ${
-              scrolled
-                ? 'text-arup-dark-gray hover:text-arup-red hover:bg-white/40'
-                : 'text-white hover:text-white hover:bg-white/20'
+              useLightText
+                ? 'text-white hover:text-white hover:bg-white/20'
+                : 'text-arup-dark-gray hover:text-arup-red hover:bg-white/40'
             }`}
             onClick={() => setMobileMenuOpen((prev) => !prev)}
             aria-expanded={mobileMenuOpen}
@@ -124,7 +153,7 @@ const Header: React.FC = () => {
             <motion.nav
               id="mobile-navigation"
               className={`md:hidden border-t px-4 pb-4 pt-2 overflow-hidden ${
-                scrolled ? 'border-white/40 bg-white/20' : 'border-white/30 bg-black/20'
+                useLightText ? 'border-white/30 bg-black/20' : 'border-white/40 bg-white/20'
               }`}
               aria-label="Mobile navigation"
               initial={shouldReduceMotion ? { opacity: 1, height: 'auto' } : { opacity: 0, height: 0, y: -8 }}
@@ -154,9 +183,9 @@ const Header: React.FC = () => {
                     href={`#${link.id}`}
                     onClick={(e) => handleNavClick(e, link.id)}
                     className={`rounded-lg px-3 py-2 text-sm font-semibold transition-colors ${
-                      scrolled
-                        ? 'bg-white/40 text-arup-dark-gray hover:text-arup-red'
-                        : 'bg-white/15 text-white hover:bg-white/25'
+                      useLightText
+                        ? 'bg-white/15 text-white hover:bg-white/25'
+                        : 'bg-white/40 text-arup-dark-gray hover:text-arup-red'
                     }`}
                     variants={{
                       hidden: shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 },
@@ -173,6 +202,16 @@ const Header: React.FC = () => {
             </motion.nav>
           )}
         </AnimatePresence>
+        <motion.div
+          className={`pointer-events-none absolute bottom-0 left-0 h-[2px] origin-left ${
+            useLightText ? 'bg-white/80' : 'bg-arup-red/80'
+          }`}
+          style={{
+            scaleX: shouldReduceMotion ? scrollYProgress : smoothScrollProgress,
+            width: '100%',
+          }}
+          aria-hidden="true"
+        />
       </div>
     </header>
   );
