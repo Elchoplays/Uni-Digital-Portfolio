@@ -100,36 +100,51 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
         <div className="relative w-full lg:w-[60%] h-1/2 lg:h-full bg-arup-light-gray flex flex-col justify-center items-center overflow-hidden">
           {/* Media Tabs */}
           {hasVideos && (
-            <div className="absolute top-4 left-4 right-4 flex gap-2 z-10">
+            <div className="absolute top-4 left-4 right-4 flex flex-wrap gap-2 z-10">
               <motion.button
                 onClick={(e) => {
                   e.stopPropagation();
                   setActiveMediaType('image');
                 }}
-                className={`px-4 py-2 rounded-full font-semibold transition-colors ${
+                aria-pressed={activeMediaType === 'image'}
+                className={`inline-flex items-center gap-2 px-4 py-2 rounded-full font-bold text-xs sm:text-sm uppercase tracking-[0.08em] backdrop-blur-sm border transition-all duration-200 ${
                   activeMediaType === 'image'
-                    ? 'bg-arup-red text-white'
-                    : 'bg-white/90 text-arup-dark-gray hover:bg-white'
+                    ? 'bg-arup-red text-white border-arup-red shadow-lg shadow-arup-red/25'
+                    : 'bg-white/88 text-arup-medium-gray border-white/70 hover:bg-white hover:text-arup-dark-gray'
                 }`}
                 whileHover={shouldReduceMotion ? { scale: 1.01 } : { scale: 1.04, y: -1 }}
                 whileTap={shouldReduceMotion ? { scale: 0.99 } : { scale: 0.98 }}
               >
-                Images ({project.images.length})
+                <span className={`grid h-5 w-5 place-items-center rounded-full ${activeMediaType === 'image' ? 'bg-white/20' : 'bg-arup-red/10'}`}>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 7a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H6a2 2 0 01-2-2V7z" />
+                    <circle cx="9" cy="10" r="1.5" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M20 16l-5.25-5.25a1.5 1.5 0 00-2.12 0L7 16" />
+                  </svg>
+                </span>
+                <span>Images ({project.images.length})</span>
               </motion.button>
               <motion.button
                 onClick={(e) => {
                   e.stopPropagation();
                   setActiveMediaType('video');
                 }}
-                className={`px-4 py-2 rounded-full font-semibold transition-colors ${
+                aria-pressed={activeMediaType === 'video'}
+                className={`inline-flex items-center gap-2 px-4 py-2 rounded-full font-bold text-xs sm:text-sm uppercase tracking-[0.08em] backdrop-blur-sm border transition-all duration-200 ${
                   activeMediaType === 'video'
-                    ? 'bg-arup-red text-white'
-                    : 'bg-white/90 text-arup-dark-gray hover:bg-white'
+                    ? 'bg-arup-red text-white border-arup-red shadow-lg shadow-arup-red/25'
+                    : 'bg-white/88 text-arup-medium-gray border-white/70 hover:bg-white hover:text-arup-dark-gray'
                 }`}
                 whileHover={shouldReduceMotion ? { scale: 1.01 } : { scale: 1.04, y: -1 }}
                 whileTap={shouldReduceMotion ? { scale: 0.99 } : { scale: 0.98 }}
               >
-                Videos ({project.videos?.length || 0})
+                <span className={`grid h-5 w-5 place-items-center rounded-full ${activeMediaType === 'video' ? 'bg-white/20' : 'bg-arup-red/10'}`}>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 8.5A2.5 2.5 0 015.5 6h8A2.5 2.5 0 0116 8.5v7a2.5 2.5 0 01-2.5 2.5h-8A2.5 2.5 0 013 15.5v-7z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M16 10l4-2v8l-4-2" />
+                  </svg>
+                </span>
+                <span>Videos ({project.videos?.length || 0})</span>
               </motion.button>
             </div>
           )}
