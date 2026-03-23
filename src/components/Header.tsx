@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { AnimatePresence, motion, useReducedMotion, useScroll, useSpring } from 'framer-motion';
 import { scrollToSection } from '../utils/scrollToSection';
 import { useTheme } from '../theme/ThemeContext';
+import esLogo from '../../es-logo.png';
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -110,14 +111,29 @@ const Header: React.FC = () => {
             <motion.a
               href="#home"
               onClick={(e) => handleNavClick(e, 'home')}
-              className="group relative inline-flex items-center justify-center h-11 w-11 rounded-xl bg-arup-red text-white font-black text-sm tracking-wider shadow-md shadow-arup-red/30"
+              className="group relative inline-flex items-center justify-center overflow-visible"
               aria-label="Back to home"
               whileHover={shouldReduceMotion ? { y: -1, scale: 1.01 } : { y: -2, scale: 1.03 }}
               whileTap={shouldReduceMotion ? { scale: 0.99 } : { scale: 0.97 }}
             >
-              <span className="relative z-10">ES</span>
-              <span className="pointer-events-none absolute -inset-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="absolute inset-0 rounded-2xl bg-arup-red/35 blur-md"></span>
+              <span
+                className={`pointer-events-none absolute left-1/2 top-1/2 h-10 w-20 -translate-x-1/2 -translate-y-[20%] rounded-full blur-lg transition-opacity duration-300 ${
+                  useLightNavigation
+                    ? 'bg-transparent opacity-0'
+                    : 'bg-[radial-gradient(circle,rgba(15,23,42,0.38)_0%,rgba(15,23,42,0.24)_38%,rgba(15,23,42,0)_80%)] opacity-100'
+                }`}
+              ></span>
+              <img
+                src={esLogo}
+                alt="ES logo"
+                className={`relative top-[7px] z-10 h-11 w-auto object-contain transition-[filter] duration-300 ${
+                  useLightNavigation
+                    ? 'drop-shadow-[0_2px_6px_rgba(0,0,0,0.32)]'
+                    : 'drop-shadow-[0_3px_10px_rgba(15,23,42,0.34)]'
+                }`}
+              />
+              <span className="pointer-events-none absolute left-1/2 top-1/2 h-9 w-16 -translate-x-1/2 -translate-y-[18%] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <span className="absolute inset-0 rounded-full bg-arup-red/30 blur-md"></span>
               </span>
             </motion.a>
           </div>
