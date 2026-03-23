@@ -31,16 +31,16 @@ const Skills: React.FC = () => {
           <span className="inline-flex items-center rounded-full bg-arup-red/10 text-arup-red px-4 py-1 text-xs font-bold tracking-[0.2em] uppercase">
             Development
           </span>
-          <h2 className="mt-4 text-4xl lg:text-5xl font-black text-arup-medium-gray uppercase tracking-wider">Skills Framework</h2>
-          <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+          <h2 className="mt-4 text-4xl lg:text-5xl font-black uppercase tracking-wider text-arup-medium-gray dark:text-slate-100">Skills Framework</h2>
+          <p className="mx-auto mt-4 max-w-3xl text-lg text-gray-600 dark:text-slate-300">
           Throughout my university projects, I have developed and demonstrated a range of competencies that align with the Creative Digital Design professional apprenticeship standard. These are grouped into Knowledge (K), Skills (S), and Behaviours (B).
           </p>
         </motion.div>
 
         <div className="mt-12">
-          <motion.div className="p-6 sm:p-8 bg-white/90 backdrop-blur rounded-2xl border border-white shadow-lg text-left" {...reveal(0.16)} whileHover={{ y: -4 }} transition={{ ...reveal(0.16).transition, y: { duration: 0.24 } }}>
-              <h3 className="text-xl font-bold text-arup-dark-gray border-b-2 border-arup-red pb-2 mb-4">How to read the KSBs</h3>
-              <p className="text-gray-700 leading-relaxed">
+          <motion.div className="rounded-2xl border border-white bg-white/90 p-6 text-left shadow-lg backdrop-blur dark:border-white/10 dark:bg-slate-900/85 dark:shadow-black/30 sm:p-8" {...reveal(0.16)} whileHover={{ y: -4 }} transition={{ ...reveal(0.16).transition, y: { duration: 0.24 } }}>
+              <h3 className="mb-4 border-b-2 border-arup-red pb-2 text-xl font-bold text-arup-dark-gray dark:text-white">How to read the KSBs</h3>
+              <p className="leading-relaxed text-gray-700 dark:text-slate-300">
                   Each project in my portfolio is linked to specific KSB codes, which match directly with the criteria set out in the official standard. For example, a tag like
                   <span className="mx-1 inline-flex align-middle"><KSBTooltipBadge code="K1" compact /></span>
                   refers to the first Knowledge requirement, while
@@ -50,25 +50,35 @@ const Skills: React.FC = () => {
                   refers to the second Behaviour. This system provides a clear and transparent way to see how my work meets the academic and professional requirements of my course.
               </p>
               <div className="mt-5 flex flex-wrap gap-2">
-                <span className="font-mono bg-blue-100 text-blue-800 rounded-full px-3 py-1 text-sm">Knowledge</span>
-                <span className="font-mono bg-green-100 text-green-800 rounded-full px-3 py-1 text-sm">Skills</span>
-                <span className="font-mono bg-yellow-100 text-yellow-800 rounded-full px-3 py-1 text-sm">Behaviours</span>
+                <span className="rounded-full bg-blue-100 px-3 py-1 text-sm font-mono text-blue-800 dark:bg-blue-950/70 dark:text-blue-200">Knowledge</span>
+                <span className="rounded-full bg-green-100 px-3 py-1 text-sm font-mono text-green-800 dark:bg-emerald-950/70 dark:text-emerald-200">Skills</span>
+                <span className="rounded-full bg-yellow-100 px-3 py-1 text-sm font-mono text-yellow-800 dark:bg-amber-950/70 dark:text-amber-200">Behaviours</span>
+              </div>
+              <div className="mt-6">
+                <a
+                  href="https://skillsengland.education.gov.uk/apprenticeships/st0625-v1-0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center rounded-xl bg-arup-red px-4 py-2.5 text-sm font-bold text-white shadow-md transition-colors duration-300 hover:bg-red-700"
+                >
+                  View KSB Standards
+                </a>
               </div>
           </motion.div>
         </div>
 
         <motion.div
-          className="mt-8 rounded-2xl border border-white bg-white/95 p-6 sm:p-8 shadow-lg"
+          className="mt-8 rounded-2xl border border-white bg-white/95 p-6 shadow-lg dark:border-white/10 dark:bg-slate-900/90 dark:shadow-black/30 sm:p-8"
           {...reveal(0.28)}
         >
-          <h3 className="text-2xl font-bold text-arup-dark-gray border-b-2 border-arup-red pb-2 mb-4">KSB Glossary</h3>
-          <p className="text-gray-600">
+          <h3 className="mb-4 border-b-2 border-arup-red pb-2 text-2xl font-bold text-arup-dark-gray dark:text-white">KSB Glossary</h3>
+          <p className="text-gray-600 dark:text-slate-300">
             Click any code for the matching standard definition.
           </p>
 
           <div className="mt-6 space-y-6">
             <div>
-              <h4 className="font-bold text-arup-medium-gray mb-3">Knowledge</h4>
+              <h4 className="mb-3 font-bold text-arup-medium-gray dark:text-slate-200">Knowledge</h4>
               <div className="flex flex-wrap gap-2">
                 {knowledgeCodes.map((code) => (
                   <KSBTooltipBadge key={code} code={code} />
@@ -77,7 +87,7 @@ const Skills: React.FC = () => {
             </div>
 
             <div>
-              <h4 className="font-bold text-arup-medium-gray mb-3">Skills</h4>
+              <h4 className="mb-3 font-bold text-arup-medium-gray dark:text-slate-200">Skills</h4>
               <div className="flex flex-wrap gap-2">
                 {skillCodes.map((code) => (
                   <KSBTooltipBadge key={code} code={code} />
@@ -86,7 +96,7 @@ const Skills: React.FC = () => {
             </div>
 
             <div>
-              <h4 className="font-bold text-arup-medium-gray mb-3">Behaviours</h4>
+              <h4 className="mb-3 font-bold text-arup-medium-gray dark:text-slate-200">Behaviours</h4>
               <div className="flex flex-wrap gap-2">
                 {behaviourCodes.map((code) => (
                   <KSBTooltipBadge key={code} code={code} />

@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
+        darkMode: 'class',
         theme: {
           extend: {
             colors: {
@@ -26,14 +27,29 @@
         }
       }
     </script>
+    <script>
+      const storedTheme = localStorage.getItem('portfolio-theme');
+      if (storedTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+    </script>
     <style>
       /* For smooth scrolling */
       html {
         scroll-behavior: smooth;
+        color-scheme: light;
+      }
+      html.dark {
+        color-scheme: dark;
       }
       body {
         margin: 0;
         background: linear-gradient(180deg, #f7f8fb 0%, #f4f5f8 100%);
+        transition: background 0.3s ease, color 0.3s ease;
+      }
+      html.dark body {
+        background: linear-gradient(180deg, #0f172a 0%, #020617 100%);
+        color: #f8fafc;
       }
       * {
         box-sizing: border-box;

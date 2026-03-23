@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <footer className="bg-[#202124] text-gray-400 py-8">
+    <footer className="border-t border-black/5 bg-[#202124] py-8 text-gray-400 dark:border-white/5 dark:bg-[#111827] dark:text-slate-400">
       <motion.div
         className="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm max-w-6xl"
         initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}

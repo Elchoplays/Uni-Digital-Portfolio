@@ -23,17 +23,17 @@ const ProjectCard: React.FC<{ project: Project; onSelect: () => void; index: num
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: shouldReduceMotion ? 0.24 : 0.62, ease: 'easeOut', delay: index * 0.08 }}
       whileHover={shouldReduceMotion ? { y: -3, transition: { duration: 0.14, ease: 'easeOut' } } : { y: -12, scale: 1.01, transition: { duration: 0.18, ease: 'easeOut' } }}
-      className="group relative overflow-hidden rounded-2xl border border-white/80 shadow-xl shadow-black/10 cursor-pointer transition-all duration-300 bg-white will-change-transform"
+      className="group relative overflow-hidden rounded-2xl border border-white/80 bg-white shadow-xl shadow-black/10 transition-all duration-300 will-change-transform dark:border-white/10 dark:bg-slate-900 dark:shadow-black/30 cursor-pointer"
       onClick={onSelect}
     >
       <motion.img src={displayImage} alt={project.title} className="w-full h-80 object-cover" whileHover={shouldReduceMotion ? { scale: 1.02, transition: { duration: 0.16, ease: 'easeOut' } } : { scale: 1.1, transition: { duration: 0.28, ease: 'easeOut' } }} transition={{ duration: 0.7, ease: 'easeOut' }} />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/20 group-hover:from-black/90 transition-all duration-300" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/20 transition-all duration-300 group-hover:from-black/90 dark:from-black/90 dark:via-black/45 dark:to-black/25" />
 
       <div className="absolute inset-x-0 bottom-0 p-6 min-h-[7.5rem] flex flex-col justify-end">
         <span className="inline-flex w-fit rounded-full bg-arup-red/90 px-3 py-1 text-[10px] uppercase font-semibold text-white tracking-[0.2em]">{project.category}</span>
         <h3 className="text-white font-bold mt-3 text-2xl leading-tight">{project.title}</h3>
         <p
-          className="mt-2 overflow-hidden text-sm leading-relaxed text-gray-200 opacity-0 max-h-0 transition-all duration-300 group-hover:opacity-100 group-hover:max-h-16"
+          className="mt-2 max-h-0 overflow-hidden text-sm leading-relaxed text-slate-100 opacity-0 transition-all duration-300 group-hover:max-h-16 group-hover:opacity-100"
           style={{
             display: '-webkit-box',
             WebkitLineClamp: 2,
@@ -87,8 +87,8 @@ const Portfolio: React.FC<PortfolioProps> = ({ projects, onProjectSelect }) => {
           <span className="inline-flex items-center rounded-full bg-arup-red/10 text-arup-red px-4 py-1 text-xs font-bold tracking-[0.2em] uppercase">
             Featured Work
           </span>
-          <h2 className="mt-4 text-4xl lg:text-5xl font-black text-arup-medium-gray uppercase tracking-wider">Portfolio</h2>
-          <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">This is the core of the portfolio: selected projects with process evidence, outcomes, and KSB mapping. Click any tile to explore the full case study.</p>
+          <h2 className="mt-4 text-4xl lg:text-5xl font-black uppercase tracking-wider text-arup-medium-gray dark:text-slate-100">Portfolio</h2>
+          <p className="mx-auto mt-4 max-w-3xl text-lg text-gray-600 dark:text-slate-300">This is the core of the portfolio: selected projects with process evidence, outcomes, and KSB mapping. Click any tile to explore the full case study.</p>
         </motion.div>
 
         <motion.div

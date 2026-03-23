@@ -4,9 +4,9 @@ import { getKSBDescription } from '../ksbDefinitions';
 type KSBType = 'K' | 'S' | 'B';
 
 const TYPE_COLORS: Record<KSBType, string> = {
-  K: 'bg-blue-100 text-blue-800',
-  S: 'bg-green-100 text-green-800',
-  B: 'bg-yellow-100 text-yellow-800',
+  K: 'bg-blue-100 text-blue-800 dark:bg-blue-950/70 dark:text-blue-200',
+  S: 'bg-green-100 text-green-800 dark:bg-emerald-950/70 dark:text-emerald-200',
+  B: 'bg-yellow-100 text-yellow-800 dark:bg-amber-950/70 dark:text-amber-200',
 };
 
 interface KSBTooltipBadgeProps {
@@ -19,7 +19,7 @@ interface KSBTooltipBadgeProps {
 const KSBTooltipBadge: React.FC<KSBTooltipBadgeProps> = ({ code, type, compact = false, align = 'center' }) => {
   const resolvedType = (type || code.charAt(0)) as KSBType;
   const description = getKSBDescription(code);
-  const colorClass = TYPE_COLORS[resolvedType] || 'bg-gray-100 text-gray-800';
+  const colorClass = TYPE_COLORS[resolvedType] || 'bg-gray-100 text-gray-800 dark:bg-slate-800 dark:text-slate-200';
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLSpanElement | null>(null);
 
@@ -70,7 +70,7 @@ const KSBTooltipBadge: React.FC<KSBTooltipBadgeProps> = ({ code, type, compact =
         id={tooltipId}
         role="tooltip"
         aria-hidden={!isOpen}
-        className={`pointer-events-none absolute top-full z-20 mt-2 w-72 max-w-[calc(100vw-3rem)] rounded-xl border border-arup-dark-gray/15 bg-arup-dark-gray px-3 py-2 text-left text-xs leading-relaxed text-white shadow-xl transition-opacity duration-150 ${tooltipAlignmentClass} ${isOpen ? 'opacity-100' : 'opacity-0'}`}
+        className={`pointer-events-none absolute top-full z-20 mt-2 w-72 max-w-[calc(100vw-3rem)] rounded-xl border border-arup-dark-gray/15 bg-arup-dark-gray px-3 py-2 text-left text-xs leading-relaxed text-white shadow-xl transition-opacity duration-150 dark:border-white/10 dark:bg-slate-950 ${tooltipAlignmentClass} ${isOpen ? 'opacity-100' : 'opacity-0'}`}
       >
         <span className="font-bold">{code}</span>: {description}
       </span>

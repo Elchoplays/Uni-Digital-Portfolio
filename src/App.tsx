@@ -11,8 +11,9 @@ import ProjectModal from './components/ProjectModal';
 import AboutModal from './components/AboutModal'; // Import the new modal
 import { projects } from './constants';
 import type { Project } from './types';
+import { ThemeProvider } from './theme/ThemeContext';
 
-const App: React.FC = () => {
+const AppContent: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isAboutModalOpen, setAboutModalOpen] = useState(false); // State for the new modal
   const shouldReduceMotion = useReducedMotion();
@@ -61,21 +62,21 @@ const App: React.FC = () => {
 
 
   return (
-    <div className="relative bg-[#f7f8fb] text-arup-dark-gray font-sans antialiased overflow-x-hidden">
+    <div className="relative overflow-x-hidden bg-[#e8edf2] font-sans text-arup-dark-gray antialiased transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:bg-white focus:text-arup-dark-gray focus:px-4 focus:py-2 focus:rounded-md focus:shadow-lg"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-arup-dark-gray focus:shadow-lg dark:focus:bg-slate-900 dark:focus:text-white"
       >
         Skip to content
       </a>
       <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
         <motion.div
-          className="absolute top-[20%] -right-20 h-80 w-80 rounded-full bg-indigo-300/15 blur-3xl"
+          className="absolute -right-20 top-[20%] h-80 w-80 rounded-full bg-slate-500/14 blur-3xl dark:bg-sky-400/10"
           animate={shouldReduceMotion ? undefined : { x: [0, -18, 0], y: [0, -12, 0] }}
           transition={shouldReduceMotion ? undefined : { duration: 12, repeat: Infinity, ease: 'easeInOut' }}
         ></motion.div>
         <motion.div
-          className="absolute bottom-[-8rem] left-1/3 h-80 w-80 rounded-full bg-cyan-300/15 blur-3xl"
+          className="absolute bottom-[-8rem] left-1/3 h-80 w-80 rounded-full bg-arup-red/10 blur-3xl dark:bg-arup-red/15"
           animate={shouldReduceMotion ? undefined : { x: [0, 10, 0], y: [0, -14, 0] }}
           transition={shouldReduceMotion ? undefined : { duration: 11, repeat: Infinity, ease: 'easeInOut' }}
         ></motion.div>
@@ -100,6 +101,14 @@ const App: React.FC = () => {
         )}
       </AnimatePresence>
     </div>
+  );
+};
+
+const App: React.FC = () => {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
   );
 };
 
