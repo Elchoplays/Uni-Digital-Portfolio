@@ -1,10 +1,41 @@
-import React from 'react';
-import { motion, useReducedMotion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import testImage from '../assets/test-image.jpg';
 import { scrollToSection } from '../utils/scrollToSection';
 
+const heroBackgrounds = [
+  {
+    image: testImage,
+    alt: 'Aerial tropical coastline',
+    position: 'center center',
+  },
+  {
+    image: 'https://upload.wikimedia.org/wikipedia/commons/2/22/Antelope_Canyon.jpg',
+    alt: 'Smooth layered sandstone canyon walls of Antelope Canyon',
+    position: 'center center',
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop',
+    alt: 'Striking mountain landscape showing distinct rock stratigraphy',
+    position: 'center center',
+  },
+  {
+    image: 'https://upload.wikimedia.org/wikipedia/commons/f/f5/Grand_prismatic_spring.jpg',
+    alt: 'Vibrant geothermal features of the Grand Prismatic Spring',
+    position: 'center center',
+  },
+  {
+    image: 'https://upload.wikimedia.org/wikipedia/commons/5/58/Badlands_at_Sunset.jpg',
+    alt: 'Striking layered geological formations of the Badlands at sunset',
+    position: 'center center',
+  }
+];
+
 const Hero: React.FC = () => {
   const shouldReduceMotion = useReducedMotion();
+  const [activeBackgroundIndex, setActiveBackgroundIndex] = useState(0);
+
+  const activeBackground = heroBackgrounds[activeBackgroundIndex];
 
   const reveal = (delay = 0, distance = 18) => ({
     initial: shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: distance },
@@ -16,19 +47,57 @@ const Hero: React.FC = () => {
     e.preventDefault();
     scrollToSection(targetId);
   };
-  
+
+  const goToBackground = (index: number) => {
+    setActiveBackgroundIndex(index);
+  };
+
+  const stepBackground = (direction: 1 | -1) => {
+    setActiveBackgroundIndex((currentIndex) => {
+      const nextIndex = currentIndex + direction;
+
+      if (nextIndex < 0) {
+        return heroBackgrounds.length - 1;
+      }
+
+      if (nextIndex >= heroBackgrounds.length) {
+        return 0;
+      }
+
+      return nextIndex;
+    });
+  };
+
+  useEffect(() => {
+    if (shouldReduceMotion) return;
+
+    const interval = setInterval(() => {
+      setActiveBackgroundIndex((currentIndex) => {
+        const nextIndex = currentIndex + 1;
+        return nextIndex >= heroBackgrounds.length ? 0 : nextIndex;
+      });
+    }, 30000);
+
+    return () => clearInterval(interval);
+  }, [shouldReduceMotion]);
+
   return (
     <section id="home" className="relative min-h-screen flex flex-col justify-center items-center text-white text-center overflow-hidden px-4">
       {/* Background Image */}
       <div className="absolute top-0 left-0 w-full h-full z-0">
-        <motion.img
-          src={testImage}
-          alt="Abstract digital art background"
-          className="w-full h-full object-cover scale-105 filter brightness-[0.45]"
-          initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0.6, scale: 1.12 }}
-          animate={shouldReduceMotion ? { opacity: 1 } : { opacity: 1, scale: 1.05 }}
-          transition={shouldReduceMotion ? { duration: 0.2 } : { duration: 1.4, ease: 'easeOut' }}
-        />
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.img
+            key={activeBackground.image}
+            src={activeBackground.image}
+            alt={activeBackground.alt}
+            className="w-full h-full object-cover scale-105 filter brightness-[0.45]"
+            style={{ objectPosition: activeBackground.position }}
+            initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, scale: 1.1 }}
+            animate={{ opacity: 1, scale: 1.05 }}
+            exit={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, scale: 1.02 }}
+            transition={shouldReduceMotion ? { duration: 0.01 } : { duration: 0.75, ease: 'easeOut' }}
+          />
+        </AnimatePresence>
         {/* Overlay */}
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-black/75 via-slate-900/45 to-slate-950/35"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.18),transparent_35%),radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.22),transparent_40%)]"></div>
@@ -37,6 +106,47 @@ const Hero: React.FC = () => {
           animate={shouldReduceMotion ? undefined : { y: [0, -12, 0], x: [0, 10, 0] }}
           transition={shouldReduceMotion ? undefined : { duration: 8.5, repeat: Infinity, ease: 'easeInOut' }}
         />
+        <div className="absolute bottom-6 right-4 z-10 flex items-center gap-2 sm:bottom-8 sm:right-8">
+          <motion.button
+            type="button"
+            onClick={() => stepBackground(-1)}
+            className="grid h-11 w-11 place-items-center rounded-full border border-white/30 bg-black/25 text-white backdrop-blur-sm transition-colors duration-300 hover:bg-black/40"
+            aria-label="Show previous hero background"
+            whileHover={shouldReduceMotion ? { scale: 1.01 } : { y: -2, scale: 1.03 }}
+            whileTap={shouldReduceMotion ? { scale: 0.98 } : { scale: 0.95 }}
+          >
+            <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </motion.button>
+          <div className="flex items-center gap-2 rounded-full border border-white/20 bg-black/20 px-3 py-2 backdrop-blur-sm">
+            {heroBackgrounds.map((background, index) => (
+              <button
+                key={background.image}
+                type="button"
+                onClick={() => goToBackground(index)}
+                className={`h-2.5 rounded-full transition-all duration-300 ${index === activeBackgroundIndex
+                  ? 'w-8 bg-white'
+                  : 'w-2.5 bg-white/45 hover:bg-white/70'
+                  }`}
+                aria-label={`Show hero background ${index + 1}`}
+                aria-pressed={index === activeBackgroundIndex}
+              />
+            ))}
+          </div>
+          <motion.button
+            type="button"
+            onClick={() => stepBackground(1)}
+            className="grid h-11 w-11 place-items-center rounded-full border border-white/30 bg-black/25 text-white backdrop-blur-sm transition-colors duration-300 hover:bg-black/40"
+            aria-label="Show next hero background"
+            whileHover={shouldReduceMotion ? { scale: 1.01 } : { y: -2, scale: 1.03 }}
+            whileTap={shouldReduceMotion ? { scale: 0.98 } : { scale: 0.95 }}
+          >
+            <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </motion.button>
+        </div>
       </div>
 
       {/* Main Content */}
@@ -73,7 +183,7 @@ const Hero: React.FC = () => {
             Explore Portfolio
           </motion.a>
         </motion.div>
-        
+
         <motion.div
           initial={shouldReduceMotion ? false : { opacity: 0 }}
           animate={shouldReduceMotion ? {} : { opacity: 1 }}
@@ -82,12 +192,12 @@ const Hero: React.FC = () => {
         >
           <div className="flex justify-center gap-4 sm:gap-6">
             <motion.a href="https://github.com/Elchoplays" target="_blank" rel="noopener noreferrer" className="grid h-12 w-12 place-items-center rounded-full border border-white/30 bg-white/10 text-white transition-colors duration-300 hover:bg-white/25 dark:border-white/20 dark:bg-slate-900/35 dark:hover:bg-slate-800/55" aria-label="GitHub Profile" whileHover={{ y: -3, scale: 1.06 }} whileTap={{ scale: 0.96 }}>
-                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fillRule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.738 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.03-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clipRule="evenodd" /></svg>
-                <span className="sr-only">GitHub</span>
+              <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fillRule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.738 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.03-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clipRule="evenodd" /></svg>
+              <span className="sr-only">GitHub</span>
             </motion.a>
             <motion.a href="https://www.linkedin.com/in/eleanor-seaton/" target="_blank" rel="noopener noreferrer" className="grid h-12 w-12 place-items-center rounded-full border border-white/30 bg-white/10 text-white transition-colors duration-300 hover:bg-white/25 dark:border-white/20 dark:bg-slate-900/35 dark:hover:bg-slate-800/55" aria-label="LinkedIn Profile" whileHover={{ y: -3, scale: 1.06 }} whileTap={{ scale: 0.96 }}>
-                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                <span className="sr-only">LinkedIn</span>
+              <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
+              <span className="sr-only">LinkedIn</span>
             </motion.a>
             <motion.a href="https://arup-my.sharepoint.com/personal/eleanor_seaton_arup_com/documents/documents/cv/cv%20final%20verision%202025.docx" target="_blank" rel="noopener noreferrer" className="grid h-12 w-12 place-items-center rounded-full border border-white/30 bg-white/10 text-white transition-colors duration-300 hover:bg-white/25 dark:border-white/20 dark:bg-slate-900/35 dark:hover:bg-slate-800/55" aria-label="View CV" whileHover={{ y: -3, scale: 1.06 }} whileTap={{ scale: 0.96 }}>
               <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
