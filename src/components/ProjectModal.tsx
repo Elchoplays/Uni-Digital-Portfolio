@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
-import type { Project, KSBs } from '../types';
+import type { Project, ProjectSection, KSBs } from '../types';
 import KSBTooltipBadge from './KSBTooltipBadge';
 
 const KSBBadge: React.FC<{ type: 'K' | 'S' | 'B'; code: string }> = ({ type, code }) => {
@@ -54,25 +54,33 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
     const [activeMediaType, setActiveMediaType] = useState<'image' | 'video'>('image');
-  const shouldReduceMotion = useReducedMotion();
-    const hasVideos = project.videos && project.videos.length > 0;
-    const allMedia = project.images.length + (hasVideos ? project.videos.length : 0);
+    const shouldReduceMotion = useReducedMotion();
+
+    // Handle sections
+    const hasSections = project.sections && project.sections.length > 0;
+    const defaultSection = hasSections ? (project.sections.find(s => s.isDefault) || project.sections[0]) : null;
+    const [activeSection, setActiveSection] = useState<ProjectSection | null>(defaultSection);
+
+    // Use section data if sections exist, otherwise use project data
+    const displayData = activeSection || project;
+    const hasVideos = displayData.videos && displayData.videos.length > 0;
+    const allMedia = displayData.images.length + (hasVideos ? displayData.videos.length : 0);
 
     const nextImage = (e: React.MouseEvent) => {
         e.stopPropagation();
         if (activeMediaType === 'image') {
-            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % project.images.length);
+            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % displayData.images.length);
         } else {
-            setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % (project.videos?.length || 1));
+            setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % (displayData.videos?.length || 1));
         }
     };
 
     const prevImage = (e: React.MouseEvent) => {
         e.stopPropagation();
         if (activeMediaType === 'image') {
-            setCurrentImageIndex((prevIndex) => (prevIndex - 1 + project.images.length) % project.images.length);
+            setCurrentImageIndex((prevIndex) => (prevIndex - 1 + displayData.images.length) % displayData.images.length);
         } else {
-            setCurrentVideoIndex((prevIndex) => (prevIndex - 1 + (project.videos?.length || 1)) % (project.videos?.length || 1));
+            setCurrentVideoIndex((prevIndex) => (prevIndex - 1 + (displayData.videos?.length || 1)) % (displayData.videos?.length || 1));
         }
     };
     
@@ -133,7 +141,7 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
                     <path strokeLinecap="round" strokeLinejoin="round" d="M20 16l-5.25-5.25a1.5 1.5 0 00-2.12 0L7 16" />
                   </svg>
                 </span>
-                <span>Images ({project.images.length})</span>
+                <span>Images ({displayData.images.length})</span>
               </motion.button>
               <motion.button
                 onClick={(e) => {
@@ -155,7 +163,7 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
                     <path strokeLinecap="round" strokeLinejoin="round" d="M16 10l4-2v8l-4-2" />
                   </svg>
                 </span>
-                <span>Videos ({project.videos?.length || 0})</span>
+                <span>Videos ({displayData.videos?.length || 0})</span>
               </motion.button>
             </div>
           )}
@@ -164,10 +172,10 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
           <AnimatePresence mode="wait" initial={false}>
             {activeMediaType === 'image' ? (
               <motion.img
-                src={project.images[currentImageIndex]}
+                src={displayData.images[currentImageIndex]}
                 alt={`${project.title} - image ${currentImageIndex + 1}`}
                 className="max-w-full max-h-full object-contain"
-                key={`image-${project.images[currentImageIndex]}`}
+                key={`image-${displayData.images[currentImageIndex]}`}
                 initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, scale: 1.03 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, scale: 0.98 }}
@@ -177,13 +185,13 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
               <motion.iframe
                 width="100%"
                 height="87%"
-                src={getYouTubeEmbedUrl(project.videos?.[currentVideoIndex] || '')}
+                src={getYouTubeEmbedUrl(displayData.videos?.[currentVideoIndex] || '')}
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
                 className="max-w-full max-h-full"
-                key={`video-${project.videos?.[currentVideoIndex] || currentVideoIndex}`}
+                key={`video-${displayData.videos?.[currentVideoIndex] || currentVideoIndex}`}
                 initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: -10 }}
@@ -209,7 +217,7 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
               </button>
               <div className="absolute bottom-4 right-4 bg-black/60 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                {activeMediaType === 'image' ? currentImageIndex + 1 : currentVideoIndex + 1} / {activeMediaType === 'image' ? project.images.length : project.videos?.length || 0}
+                {activeMediaType === 'image' ? currentImageIndex + 1 : currentVideoIndex + 1} / {activeMediaType === 'image' ? displayData.images.length : displayData.videos?.length || 0}
               </div>
             </>
           )}
@@ -219,19 +227,51 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
         <div className="relative isolate h-1/2 w-full overflow-x-clip overflow-y-auto bg-white dark:bg-slate-900 lg:h-full lg:w-[40%]">
           <div className="p-8 md:p-12 lg:p-16">
             <span className="inline-flex rounded-full bg-arup-red/10 px-3 py-1 text-xs font-bold text-arup-red uppercase tracking-[0.2em]">{project.category}</span>
+
+            {/* Section Tabs */}
+            {hasSections && project.sections && (
+              <div className="flex flex-wrap gap-2 my-4">
+                {project.sections.map((section) => (
+                  <motion.button
+                    key={section.id}
+                    onClick={() => {
+                      setActiveSection(section);
+                      setCurrentImageIndex(0);
+                      setCurrentVideoIndex(0);
+                    }}
+                    aria-pressed={activeSection?.id === section.id}
+                    className={`inline-flex items-center px-4 py-2 rounded-full font-bold text-xs sm:text-sm uppercase tracking-[0.08em] backdrop-blur-sm border transition-all duration-200 ${
+                      activeSection?.id === section.id
+                        ? section.color === 'red'
+                          ? 'bg-arup-red text-white border-arup-red shadow-lg shadow-arup-red/25'
+                          : 'bg-white text-arup-dark-gray border-white shadow-lg shadow-black/10 dark:bg-white dark:text-arup-dark-gray dark:border-white dark:shadow-lg dark:shadow-white/10'
+                        : 'bg-white/60 text-arup-medium-gray border-white/70 hover:bg-white hover:text-arup-dark-gray dark:border-white/10 dark:bg-slate-900/60 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white'
+                    }`}
+                    whileHover={shouldReduceMotion ? { scale: 1.01 } : { scale: 1.04, y: -1 }}
+                    whileTap={shouldReduceMotion ? { scale: 0.99 } : { scale: 0.98 }}
+                  >
+                    {section.title}
+                  </motion.button>
+                ))}
+              </div>
+            )}
+
             <h2 className="my-4 text-4xl font-bold text-arup-dark-gray dark:text-white lg:text-5xl">{project.title}</h2>
-            <p className="mb-12 whitespace-pre-line text-lg leading-relaxed text-gray-700 dark:text-slate-300">{project.description}</p>
-            
+            {activeSection?.subtitle && (
+              <p className="text-lg text-gray-600 dark:text-slate-400 mb-4">{activeSection.subtitle}</p>
+            )}
+            <p className="mb-12 whitespace-pre-line text-lg leading-relaxed text-gray-700 dark:text-slate-300">{displayData.description}</p>
+
             <div className="space-y-12">
                 <div className="border-t-2 border-arup-red pt-8">
                   <h3 className="mb-4 text-2xl font-bold text-arup-dark-gray dark:text-white">Process & Learnings</h3>
-                  <p className="whitespace-pre-line text-base leading-relaxed text-gray-600 dark:text-slate-300">{project.processDescription}</p>
+                  <p className="whitespace-pre-line text-base leading-relaxed text-gray-600 dark:text-slate-300">{displayData.processDescription}</p>
               </div>
 
                 <div className="border-t-2 border-arup-red pt-8">
                   <h3 className="mb-4 text-2xl font-bold text-arup-dark-gray dark:text-white">KSB Framework</h3>
                   <p className="mb-4 text-sm text-gray-600 dark:text-slate-400">Click each code to view the KSB definition.</p>
-                  <KSBsDisplay ksbs={project.ksbs} />
+                  <KSBsDisplay ksbs={displayData.ksbs} />
               </div>
             </div>
           </div>

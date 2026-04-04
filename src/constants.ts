@@ -114,17 +114,48 @@ export const projects: Project[] = [
   },
   {
     id: '05',
-    title: 'RStudio for Data Economics',
-    category: 'Data Analysis & Coding',
-    description: "This university project was about learning to use R Studio for data analysis and visualisation. As I was new to the language, I was encouraged to use generative AI to help me understand difficult functions and syntax, and to build my knowledge of R. One of the main things I learnt was how to write clear prompts to get accurate and useful guidance from the AI, which made the learning process much quicker.",
-    processDescription: "A key part of this project was learning how to review and improve AI‑generated code. I found that copying code directly from the AI often led to errors that needed fixing. Rather than getting frustrated, I used this as an opportunity to understand why the code was wrong and how to correct it. Over time, I started spotting issues before running the script, as the guidance was not always fully accurate. \n\nThis process of checking and refining code was very useful in building my programming skills. It showed that, when used carefully and with a critical approach, AI can be a powerful tool for accelerating learning in technical subjects. I also learned that different programming languages suit different tasks, for example, R is particularly strong for data analysis and visualisation.",
-    images: [RStudioScreenshot, scatterGraph, scatterGraph2, RStudioScreenshot2, PieChart],
+    title: 'Coding',
+    category: 'Coding',
+    description: "This section combines two distinct coding experiences: university work using R Studio for data analysis and visualisation, and project work using Python for real engineering applications. Each project enhanced my programming skills and understanding of how different languages serve different purposes.",
+    processDescription: "My coding journey began with R Studio in a university context, where I was new to the language and used generative AI to help understand difficult functions and syntax. A key learning was how to review and improve AI‑generated code. I found that copying code directly from the AI often led to errors that needed fixing. Rather than getting frustrated, I used this as an opportunity to understand why the code was wrong and how to correct it. Over time, I started spotting issues before running the script. This process of checking and refining code was very useful in building my programming skills, showing that when used carefully and with a critical approach, AI can be a powerful tool for accelerating learning in technical subjects.\n\nI also learned that different programming languages suit different tasks, for example, R is particularly strong for data analysis and visualisation. This understanding directly transferred to my project work using Python. The Reservoir project gave me the opportunity to use my Python skills in a real engineering context, moving from training exercises to practical problem‑solving. My main tasks were to improve a Bill of Quantities calculation script so that it worked reliably with the current dataset, and to create a new Python script that automatically generated legend codes based on the data available in the OpenGround database.\n\nWith Python, I began by reviewing the project requirements and exploring the OpenGround database to understand how the data was structured. I then planned the logic for a new legend code script and improved the Bill of Quantities script so it would run reliably with the current dataset. The challenge with the legend code script was to read geology descriptions and match them to the most suitable legend codes, despite variations in how the descriptions were written. To address these issues, I tested, rewrote, and refined the code, explored new Python libraries to make the script cleaner, and used Copilot to troubleshoot and learn alternative approaches. I also added clear comments to the code so others could reuse my work. Through this process, I became more confident using Python in real engineering tasks, learned the value of breaking problems into steps, and saw how AI tools can support learning. Overall, both projects strengthened my coding, problem‑solving, and teamwork skills, and prepared me to take on larger technical challenges.",
+    images: [RStudioScreenshot, scatterGraph, scatterGraph2, RStudioScreenshot2, PieChart, PythonScript, PythonScript2, PythonScript3],
     headerImage: RLogo,
     ksbs: {
-      knowledge: ['K7', 'K13', 'K17', 'K18', ],
-      skills: ['S5', 'S6', 'S10', 'S11', 'S18'],
-      behaviours: ['B1', 'B2', 'B5']
-    }
+      knowledge: ['K6', 'K7', 'K8', 'K9', 'K13', 'K14', 'K17', 'K18'],
+      skills: ['S5', 'S6', 'S10', 'S11', 'S12', 'S13', 'S14', 'S15', 'S16', 'S18'],
+      behaviours: ['B1', 'B2', 'B3', 'B5']
+    },
+    sections: [
+      {
+        id: 'uni',
+        title: 'Uni Work',
+        subtitle: 'R studio',
+        color: 'white',
+        description: "This university project was about learning to use R Studio for data analysis and visualisation. As I was new to the language, I was encouraged to use generative AI to help me understand difficult functions and syntax, and to build my knowledge of R. One of the main things I learnt was how to write clear prompts to get accurate and useful guidance from the AI, which made the learning process much quicker.",
+        processDescription: "A key part of this project was learning how to review and improve AI‑generated code. I found that copying code directly from the AI often led to errors that needed fixing. Rather than getting frustrated, I used this as an opportunity to understand why the code was wrong and how to correct it. Over time, I started spotting issues before running the script, as the guidance was not always fully accurate.\n\n This process of checking and refining code was very useful in building my programming skills. It showed that, when used carefully and with a critical approach, AI can be a powerful tool for accelerating learning in technical subjects. I also learned that different programming languages suit different tasks, for example, R is particularly strong for data analysis and visualisation.",
+        images: [RStudioScreenshot, scatterGraph, scatterGraph2, RStudioScreenshot2, PieChart],
+        ksbs: {
+          knowledge: ['K7', 'K13', 'K17', 'K18'],
+          skills: ['S5', 'S6', 'S10', 'S11', 'S18'],
+          behaviours: ['B1', 'B2', 'B5']
+        }
+      },
+      {
+        id: 'project',
+        title: 'Project Work',
+        subtitle: 'python',
+        color: 'red',
+        isDefault: true,
+        description: "The Reservoir project gave me the opportunity to use my Python skills in a real engineering context, moving from training exercises to practical problem‑solving. My main tasks were to improve a Bill of Quantities calculation script so that it worked reliably with the current dataset, and to create a new Python script that automatically generated legend codes based on the data available in the OpenGround database. \n\nThe project helped build my confidence in coding, introduced me to more advanced techniques, and showed how AI tools like Copilot can support learning and development.",
+        processDescription: "I began by reviewing the project requirements and exploring the OpenGround database to understand how the data was structured. I then planned the logic for a new legend code script and improved the Bill of Quantities script so it would run reliably with the current dataset. The Bill of Quantities script had been built for another project and was not designed to handle multiple projects, so I redesigned and fixed it to work more broadly. The challenge with the legend code script was to read geology descriptions and match them to the most suitable legend codes, despite variations in how the descriptions were written. \n\nTo address these issues, I tested, rewrote, and refined the code, explored new Python libraries to make the script cleaner, and used Copilot to troubleshoot and learn alternative approaches. I also added clear comments to the code so others could reuse my work. Through this process, I became more confident using Python in real engineering tasks, learned the value of breaking problems into steps, and saw how AI tools can support learning. Overall, the project strengthened my coding, problem‑solving, and teamwork skills, and prepared me to take on larger technical challenges.",
+        images: [PythonScript, PythonScript2, PythonScript3],
+        ksbs: {
+          knowledge: ['K6', 'K7', 'K8', 'K9', 'K13', 'K14', 'K17', 'K18'],
+          skills: ['S5', 'S6', 'S10', 'S12', 'S13', 'S14', 'S15', 'S16', 'S18'],
+          behaviours: ['B2', 'B3', 'B5']
+        }
+      }
+    ]
   },
   {
     id: '06',
@@ -179,20 +210,6 @@ export const projects: Project[] = [
       knowledge: ['K1','K2', 'K4', 'K5', 'K6', 'K8', 'K7', 'K10', 'K11', 'K12', 'K13', 'K15' ,'K17'],
       skills: ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7','S12', 'S13', 'S14', 'S15', 'S16', 'S18'],
       behaviours: ['B1', 'B2', 'B4', 'B5']
-    }
-  },
-  {
-    id: '10',
-    title: 'Python',
-    category: 'Coding',
-    description: 'The Reservoir project gave me the opportunity to use my Python skills in a real engineering context, moving from training exercises to practical problem‑solving. My main tasks were to improve a Bill of Quantities calculation script so that it worked reliably with the current dataset, and to create a new Python script that automatically generated legend codes based on the data available in the OpenGround database. \n\nThe project helped build my confidence in coding, introduced me to more advanced techniques, and showed how AI tools like Copilot can support learning and development.',
-    processDescription: 'I began by reviewing the project requirements and exploring the OpenGround database to understand how the data was structured. I then planned the logic for a new legend code script and improved the Bill of Quantities script so it would run reliably with the current dataset. The Bill of Quantities script had been built for another project and was not designed to handle multiple projects, so I redesigned and fixed it to work more broadly. The challenge with the legend code script was to read geology descriptions and match them to the most suitable legend codes, despite variations in how the descriptions were written. \n\nTo address these issues, I tested, rewrote, and refined the code, explored new Python libraries to make the script cleaner, and used Copilot to troubleshoot and learn alternative approaches. I also added clear comments to the code so others could reuse my work. Through this process, I became more confident using Python in real engineering tasks, learned the value of breaking problems into steps, and saw how AI tools can support learning. Overall, the project strengthened my coding, problem‑solving, and teamwork skills, and prepared me to take on larger technical challenges.',
-    images: [PythonScript, PythonScript2, PythonScript3],
-    headerImage: PythonCoding,
-    ksbs: {
-      knowledge: ['K6', 'K7', 'K8', 'K9', 'K13', 'K14', 'K17', 'K18'],
-      skills: ['S5', 'S6', 'S10', 'S12', 'S13', 'S14', 'S15', 'S16', 'S18'],
-      behaviours: ['B2', 'B3', 'B5']
     }
   },
   {

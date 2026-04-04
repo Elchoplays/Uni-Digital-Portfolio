@@ -5,6 +5,19 @@ export interface KSBs {
   behaviours: string[];
 }
 
+export interface ProjectSection {
+  id: string;
+  title: string;
+  subtitle?: string;
+  isDefault?: boolean;
+  color?: string;
+  description: string;
+  processDescription: string;
+  images: string[];
+  videos?: string[];
+  ksbs: KSBs;
+}
+
 export interface Project {
   id: string;
   title: string;
@@ -15,4 +28,5 @@ export interface Project {
   videos?: string[];
   headerImage?: string;
   ksbs: KSBs;
+  sections?: ProjectSection[];
 }
