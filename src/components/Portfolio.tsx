@@ -10,6 +10,7 @@ interface PortfolioProps {
 
 const ProjectCard: React.FC<{ project: Project; onSelect: () => void; index: number }> = ({ project, onSelect, index }) => {
   const displayImage = project.headerImage || project.images[0];
+  const isCombinedSection = (project.sections?.length ?? 0) > 0;
   const hasImages = project.images.length > 0;
   const hasVideos = project.videos && project.videos.length > 0;
   const imageCount = project.images.length;
@@ -28,6 +29,25 @@ const ProjectCard: React.FC<{ project: Project; onSelect: () => void; index: num
     >
       <motion.img src={displayImage} alt={project.title} className="w-full h-80 object-cover" whileHover={shouldReduceMotion ? { scale: 1.02, transition: { duration: 0.16, ease: 'easeOut' } } : { scale: 1.1, transition: { duration: 0.28, ease: 'easeOut' } }} transition={{ duration: 0.7, ease: 'easeOut' }} />
       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/20 transition-all duration-300 group-hover:from-black/90 dark:from-black/90 dark:via-black/45 dark:to-black/25" />
+
+      <div className="absolute top-4 left-4 z-10">
+        <span
+          aria-label={isCombinedSection ? 'Combined section project' : 'Single section project'}
+          title={isCombinedSection ? 'Combined section project' : 'Single section project'}
+          className="inline-flex items-center rounded-full border-2 border-white/85 bg-black/35 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white backdrop-blur-sm"
+        >
+          {isCombinedSection ? (
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+              <rect x="9" y="9" width="10" height="10" rx="2" />
+              <rect x="5" y="5" width="10" height="10" rx="2" />
+            </svg>
+          ) : (
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+              <rect x="7" y="7" width="10" height="10" rx="2" />
+            </svg>
+          )}
+        </span>
+      </div>
 
       <div className="absolute inset-x-0 bottom-0 p-6 min-h-[7.5rem] flex flex-col justify-end">
         <span className="inline-flex w-fit rounded-full bg-arup-red/90 px-3 py-1 text-[10px] uppercase font-semibold text-white tracking-[0.2em]">{project.category}</span>

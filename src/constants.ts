@@ -115,11 +115,11 @@ export const projects: Project[] = [
   {
     id: '05',
     title: 'Coding',
-    category: 'Coding',
+    category: 'R Studio & Python',
     description: "This section combines two distinct coding experiences: university work using R Studio for data analysis and visualisation, and project work using Python for real engineering applications. Each project enhanced my programming skills and understanding of how different languages serve different purposes.",
     processDescription: "My coding journey began with R Studio in a university context, where I was new to the language and used generative AI to help understand difficult functions and syntax. A key learning was how to review and improve AI‑generated code. I found that copying code directly from the AI often led to errors that needed fixing. Rather than getting frustrated, I used this as an opportunity to understand why the code was wrong and how to correct it. Over time, I started spotting issues before running the script. This process of checking and refining code was very useful in building my programming skills, showing that when used carefully and with a critical approach, AI can be a powerful tool for accelerating learning in technical subjects.\n\nI also learned that different programming languages suit different tasks, for example, R is particularly strong for data analysis and visualisation. This understanding directly transferred to my project work using Python. The Reservoir project gave me the opportunity to use my Python skills in a real engineering context, moving from training exercises to practical problem‑solving. My main tasks were to improve a Bill of Quantities calculation script so that it worked reliably with the current dataset, and to create a new Python script that automatically generated legend codes based on the data available in the OpenGround database.\n\nWith Python, I began by reviewing the project requirements and exploring the OpenGround database to understand how the data was structured. I then planned the logic for a new legend code script and improved the Bill of Quantities script so it would run reliably with the current dataset. The challenge with the legend code script was to read geology descriptions and match them to the most suitable legend codes, despite variations in how the descriptions were written. To address these issues, I tested, rewrote, and refined the code, explored new Python libraries to make the script cleaner, and used Copilot to troubleshoot and learn alternative approaches. I also added clear comments to the code so others could reuse my work. Through this process, I became more confident using Python in real engineering tasks, learned the value of breaking problems into steps, and saw how AI tools can support learning. Overall, both projects strengthened my coding, problem‑solving, and teamwork skills, and prepared me to take on larger technical challenges.",
     images: [RStudioScreenshot, scatterGraph, scatterGraph2, RStudioScreenshot2, PieChart, PythonScript, PythonScript2, PythonScript3],
-    headerImage: RLogo,
+    headerImage: PythonCoding,
     ksbs: {
       knowledge: ['K6', 'K7', 'K8', 'K9', 'K13', 'K14', 'K17', 'K18'],
       skills: ['S5', 'S6', 'S10', 'S11', 'S12', 'S13', 'S14', 'S15', 'S16', 'S18'],
@@ -129,7 +129,7 @@ export const projects: Project[] = [
       {
         id: 'uni',
         title: 'Uni Work',
-        subtitle: 'R studio',
+        subtitle: 'R Studio',
         color: 'white',
         description: "This university project was about learning to use R Studio for data analysis and visualisation. As I was new to the language, I was encouraged to use generative AI to help me understand difficult functions and syntax, and to build my knowledge of R. One of the main things I learnt was how to write clear prompts to get accurate and useful guidance from the AI, which made the learning process much quicker.",
         processDescription: "A key part of this project was learning how to review and improve AI‑generated code. I found that copying code directly from the AI often led to errors that needed fixing. Rather than getting frustrated, I used this as an opportunity to understand why the code was wrong and how to correct it. Over time, I started spotting issues before running the script, as the guidance was not always fully accurate.\n\n This process of checking and refining code was very useful in building my programming skills. It showed that, when used carefully and with a critical approach, AI can be a powerful tool for accelerating learning in technical subjects. I also learned that different programming languages suit different tasks, for example, R is particularly strong for data analysis and visualisation.",
@@ -143,7 +143,7 @@ export const projects: Project[] = [
       {
         id: 'project',
         title: 'Project Work',
-        subtitle: 'python',
+        subtitle: 'Python',
         color: 'red',
         isDefault: true,
         description: "The Reservoir project gave me the opportunity to use my Python skills in a real engineering context, moving from training exercises to practical problem‑solving. My main tasks were to improve a Bill of Quantities calculation script so that it worked reliably with the current dataset, and to create a new Python script that automatically generated legend codes based on the data available in the OpenGround database. \n\nThe project helped build my confidence in coding, introduced me to more advanced techniques, and showed how AI tools like Copilot can support learning and development.",
@@ -159,16 +159,49 @@ export const projects: Project[] = [
   },
   {
     id: '06',
-    title: 'Geotechnics Illustration',
-    category: 'Technical Illustration',
-    description: "For this task, I was asked to update a Geotechnical Engineering graphic to include the team’s offshore expertise, which was missing from the original design. I used Procreate to sketch initial ideas and Illustrator to create a polished, brand compliant version. The project also helped explain what geotechnical engineering involves, as many people, even within the engineering department find it difficult to understand. The updated graphic strengthened our professional image and provided a clearer overview of the team’s capabilities.",
-    processDescription: "I learned the importance of being flexible and using feedback to make sure the final design met stakeholder needs. The process involved gathering comments and adjusting the design based on their suggestions. I enjoyed using Procreate for quick sketches, as it allowed me to show different ideas and move through the review process more quickly. \n\nFor example, I first sketched an offshore oil rig, but the engineer asked for a wind turbine instead. Because it was only a rough sketch, the change was easy to make and ensured the final version matched what the engineers needed. This approach saved time and ensured the final design was informative, visually appealing, and suitable for reports, presentations, and online use.",
-    images: [Illustration, Markup, ProcreateDrawing],
+    title: 'Geotechnical Design',
+    category: 'Illustration & UI/UX Design',
+    description: 'This section brings together two related design projects focused on making geotechnical engineering easier to understand. The project work centred on updating a technical illustration for Arup, while the university work explored how the same subject could be communicated through an interactive Figma mobile app. Together, they show how illustration and interface design can support clearer communication for technical audiences and the wider public.',
+    processDescription: 'Across both projects, the main challenge was translating technical geotechnical content into formats that felt clear, engaging, and accessible. One project used illustration and stakeholder feedback to improve a professional engineering graphic, while the other applied UX principles and interactive design to create a mobile-first educational experience. Both strengthened my ability to adapt technical information for different audiences and platforms.',
+    images: [Illustration, FigmaPhone, FullimageFigma],
+    headerImage: FigmaPhone,
     ksbs: {
-      knowledge: ['K1', 'K2', 'K7', 'K9', 'K10', 'K11', 'K13', 'K14', 'K15', 'K16', 'K17'],
-      skills: ['S1','S2', 'S3', 'S4','S5', 'S6', 'S7', 'S12', 'S13', 'S14', 'S15', 'S16', 'S18'],
+      knowledge: ['K1', 'K2', 'K4', 'K5', 'K6', 'K7', 'K8', 'K9', 'K10', 'K11', 'K12', 'K13', 'K14', 'K15', 'K16', 'K17'],
+      skills: ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S12', 'S13', 'S14', 'S15', 'S16', 'S18'],
       behaviours: ['B1', 'B2', 'B4', 'B5']
-    }
+    },
+    sections: [
+      {
+        id: 'project',
+        title: 'Project Work',
+        subtitle: 'Geotechnics Illustration',
+        color: 'red',
+        isDefault: true,
+        description: "For this task, I was asked to update a Geotechnical Engineering graphic to include the team’s offshore expertise, which was missing from the original design. I used Procreate to sketch initial ideas and Illustrator to create a polished, brand compliant version. The project also helped explain what geotechnical engineering involves, as many people, even within the engineering department find it difficult to understand. The updated graphic strengthened our professional image and provided a clearer overview of the team’s capabilities.",
+        processDescription: "I learned the importance of being flexible and using feedback to make sure the final design met stakeholder needs. The process involved gathering comments and adjusting the design based on their suggestions. I enjoyed using Procreate for quick sketches, as it allowed me to show different ideas and move through the review process more quickly. \n\nFor example, I first sketched an offshore oil rig, but the engineer asked for a wind turbine instead. Because it was only a rough sketch, the change was easy to make and ensured the final version matched what the engineers needed. This approach saved time and ensured the final design was informative, visually appealing, and suitable for reports, presentations, and online use.",
+        images: [Illustration, Markup, ProcreateDrawing],
+        ksbs: {
+          knowledge: ['K1', 'K2', 'K7', 'K9', 'K10', 'K11', 'K13', 'K14', 'K15', 'K16', 'K17'],
+          skills: ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S12', 'S13', 'S14', 'S15', 'S16', 'S18'],
+          behaviours: ['B1', 'B2', 'B4', 'B5']
+        }
+      },
+      {
+        id: 'uni',
+        title: 'Uni Work',
+        subtitle: 'Figma Mobile App UI/UX Design',
+        color: 'white',
+        description: 'The aim of this project was to create an interactive infographic that makes geotechnical engineering easier to understand and more engaging for a wider audience. It was designed to support training, client education, and internal communication. The goal was to develop an interactive experience that explains why geotechnical work is important in engineering. \n\nUsing Figma, I transformed a static illustration into a clickable, animated infographic that allows users to explore geotechnical processes, infrastructure, and techniques. The design also follows Arup’s brand and accessibility guidelines.',
+        processDescription: 'The project began by comparing illustration‑based learning with VR to see which approach best suited the team’s skills and available resources. Illustration was chosen because it was more practical, required less time, and matched my level of experience. With the tools available at Arup at the time, it was also quicker and easier to implement an interactive illustration on a website. \n\nUsing Figma, I created an interactive infographic with animations, clickable elements, and scrollable overlays, supported by a clear navigation flow from the homepage through to the tutorial. A mobile‑first design approach was selected because it reflects how people usually access this type of content. Taking this approach also improved accessibility, helping to keep the layout clean and easy to use on smaller screens. I worked closely with Arup’s Graphics team to follow brand guidelines, ensuring the design was clear, consistent, and suitable for non‑technical audiences. \n\nThrough this process, I gained valuable experience with Figma’s animation tools, strengthened my understanding of UX design, and saw how effective interactive learning can be in practice.',
+        images: [FigmaPhone, FullimageFigma, ProcessFigma, ProcessFigma2, ProcessFigma3],
+        videos: ['https://www.youtube.com/watch?v=ssXQ9v3PYu8&t=1s', 'https://youtube.com/shorts/rOpkeKF1BgQ'],
+        ksbs: {
+          knowledge: ['K1', 'K2', 'K4', 'K5', 'K6', 'K8', 'K7', 'K10', 'K11', 'K12', 'K13', 'K15', 'K17'],
+          skills: ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S12', 'S13', 'S14', 'S15', 'S16', 'S18'],
+          behaviours: ['B1', 'B2', 'B4', 'B5']
+        }
+      }
+    ]
   },
   {
     id: '07',
@@ -186,31 +219,49 @@ export const projects: Project[] = [
   },
   {
     id: '08',
-    title: 'Immersive technology',
+    title: 'Immersive Technology',
     category: 'Digital Futures',
     description: 'This project explored the immersive technologies available and how they could support engineering by improving client engagement and design reviews. I was able to experience a range of advanced tools during my time at Sheffield Hallam, and some of my understanding also came from my workplace environment. \n\nThe aim was to balance cost with benefits and identify the most suitable technology to showcase Arup’s digital work and strengthen communication with clients.',
-    processDescription: 'During this project, I explored a range of immersive technologies, starting with high‑end dome systems, which I experienced at Sheffield Hallam in the Igloo before moving on to more practical options like VR, MR, and AR. I compared the costs, ease of use, and benefits of each, and considered how they could be applied to real engineering projects. \n\nDome systems provide an impressive shared experience but require significant investment, ongoing maintenance, and dedicated space, making them impractical for everyday use. VR proved useful for walking through 3D models and spotting design issues early. MR showed strong potential for overlaying digital plans onto real environments to support construction planning, and AR worked well for quick client presentations and helping people understand complex designs more easily. \n\nThrough this work, I gained a clearer understanding of how immersive technology can improve teamwork, reduce errors, and strengthen client engagement. I also learned the importance of balancing innovation with cost, ensuring that technology choices are practical as well as impactful. Overall, the project showed that VR, MR, and AR offer flexible and affordable solutions that add real value to engineering projects without the large investment required for dome systems.',
+    processDescription: 'During this project, I explored a range of immersive technologies, starting with high‑end dome systems, which I experienced at Sheffield Hallam in the Igloo before moving on to more practical options like VR, MR, and AR. I compared the costs, ease of use, and benefits of each, and considered how they could be applied to real engineering projects. \n\nDome systems provide an impressive shared experience but require significant investment, ongoing maintenance, and dedicated space, making them impractical for everyday use. VR proved useful for walking through 3D models and spotting design issues early. MR showed strong potential for overlaying digital plans onto real environments to support construction planning, and AR worked well for quick client presentations and helping people understand complex designs more easily.',
     images: [VREquipment, VRDEMO , VRDEMO2],
     videos: ['https://youtu.be/eNRhM7VkT2Q'],
     ksbs: {
       knowledge: ['K1', 'K2', 'K4', 'K5', 'K8','K10', 'K11', 'K12', 'K13', 'K14', 'K16', 'K19', 'K20', 'K21'],
       skills: ['S5', 'S6', 'S10', 'S12', 'S13','S17','S18'],
       behaviours: ['B1', 'B2', 'B4', 'B5']
-    }
-  },
-  {
-    id: '09',
-    title: 'Figma Mobile App UI/UX Design',
-    category: 'UI/UX Design',
-    description: 'The aim of this project was to create an interactive infographic that makes geotechnical engineering easier to understand and more engaging for a wider audience. It was designed to support training, client education, and internal communication. The goal was to develop an interactive experience that explains why geotechnical work is important in engineering. \n\nUsing Figma, I transformed a static illustration into a clickable, animated infographic that allows users to explore geotechnical processes, infrastructure, and techniques. The design also follows Arup’s brand and accessibility guidelines.',
-    processDescription: 'The project began by comparing illustration‑based learning with VR to see which approach best suited the team’s skills and available resources. Illustration was chosen because it was more practical, required less time, and matched my level of experience. With the tools available at Arup at the time, it was also quicker and easier to implement an interactive illustration on a website. \n\nUsing Figma, I created an interactive infographic with animations, clickable elements, and scrollable overlays, supported by a clear navigation flow from the homepage through to the tutorial. A mobile‑first design approach was selected because it reflects how people usually access this type of content. Taking this approach also improved accessibility, helping to keep the layout clean and easy to use on smaller screens. I worked closely with Arup’s Graphics team to follow brand guidelines, ensuring the design was clear, consistent, and suitable for non‑technical audiences. \n\nThrough this process, I gained valuable experience with Figma’s animation tools, strengthened my understanding of UX design, and saw how effective interactive learning can be in practice.',
-    images: [FigmaPhone, FullimageFigma, ProcessFigma, ProcessFigma2, ProcessFigma3],
-    videos: ['https://www.youtube.com/watch?v=ssXQ9v3PYu8&t=1s','https://youtube.com/shorts/rOpkeKF1BgQ'],
-    ksbs: {
-      knowledge: ['K1','K2', 'K4', 'K5', 'K6', 'K8', 'K7', 'K10', 'K11', 'K12', 'K13', 'K15' ,'K17'],
-      skills: ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7','S12', 'S13', 'S14', 'S15', 'S16', 'S18'],
-      behaviours: ['B1', 'B2', 'B4', 'B5']
-    }
+    },
+    sections: [
+      {
+        id: 'uni',
+        title: 'Uni Work',
+        subtitle: 'Immersive Technology',
+        color: 'white',
+        isDefault: true,
+        description: 'This project explored the immersive technologies available and how they could support engineering by improving client engagement and design reviews. I was able to experience a range of advanced tools during my time at Sheffield Hallam, and some of my understanding also came from my workplace environment. \n\nThe aim was to balance cost with benefits and identify the most suitable technology to showcase Arup’s digital work and strengthen communication with clients.',
+        processDescription: 'During this project, I explored a range of immersive technologies, starting with high‑end dome systems, which I experienced at Sheffield Hallam in the Igloo before moving on to more practical options like VR, MR, and AR. I compared the costs, ease of use, and benefits of each, and considered how they could be applied to real engineering projects. \n\nDome systems provide an impressive shared experience but require significant investment, ongoing maintenance, and dedicated space, making them impractical for everyday use. VR proved useful for walking through 3D models and spotting design issues early. MR showed strong potential for overlaying digital plans onto real environments to support construction planning, and AR worked well for quick client presentations and helping people understand complex designs more easily.',
+        images: [VREquipment],
+        videos: ['https://youtu.be/eNRhM7VkT2Q'],
+        ksbs: {
+          knowledge: ['K1', 'K2', 'K4', 'K5', 'K8', 'K10', 'K11', 'K12', 'K13', 'K14', 'K16', 'K19', 'K20', 'K21'],
+          skills: ['S5', 'S6', 'S10', 'S12', 'S13', 'S17', 'S18'],
+          behaviours: ['B1', 'B2', 'B4', 'B5']
+        }
+      },
+      {
+        id: 'project',
+        title: 'Project Work',
+        subtitle: 'VR Ground Model Demo',
+        color: 'red',
+        description: 'Dummy description for project work content.',
+        processDescription: 'Through this work, I gained a clearer understanding of how immersive technology can improve teamwork, reduce errors, and strengthen client engagement. I also learned the importance of balancing innovation with cost, ensuring that technology choices are practical as well as impactful. Overall, the project showed that VR, MR, and AR offer flexible and affordable solutions that add real value to engineering projects without the large investment required for dome systems.',
+        images: [VRDEMO, VRDEMO2],
+        ksbs: {
+          knowledge: ['K1', 'K2', 'K4', 'K5', 'K8', 'K10', 'K11', 'K12', 'K13', 'K14', 'K16', 'K19', 'K20', 'K21'],
+          skills: ['S5', 'S6', 'S10', 'S12', 'S13', 'S17', 'S18'],
+          behaviours: ['B1', 'B2', 'B4', 'B5']
+        }
+      }
+    ]
   },
   {
     id: '11',
@@ -239,6 +290,38 @@ export const projects: Project[] = [
       knowledge: ['K1', 'K2','K8','K10','K11','K12','K13','K14','K16','K20','K21'],
       skills: ['S1', 'S4', 'S5', 'S6','S10','S14','S18'],
       behaviours: ['B1', 'B2', 'B4', 'B5']
-    }
+    },
+    sections: [
+      {
+        id: 'uni',
+        title: 'Uni Work',
+        subtitle: '3D Printing',
+        color: 'white',
+        isDefault: true,
+        description: 'This project explored how 3D printing technology, using the Bambu Lab P1S printer and its app, can support engineering work and make processes more efficient. The aim was to follow the printing process from start to finish, explore the app’s features, and understand how 3D printing could be used within Arup’s geotechnics team. By testing a small print model, I was able to observe how the printer handled setup, calibration, and production, while also considering the wider benefits of 3D printing for communication, design reviews, and client engagement.',
+        processDescription: 'I explored the Bambu Lab app, which was the user’s preferred choice as it matched the Bambu printer. I found it easy to browse designs created and shared by other users. I also observed the printer as it completed its setup and calibration, including the test line used to check the nozzle, filament feed, and bed levelling before starting a print. I learned that CAD models can be customised, but poor preparation can lead to weak or failed prints. The printer’s built‑in safety checks helped highlight issues such as thin walls or poor adhesion, and provided suggestions on how to fix them. \n\nI then watched the full process of printing a small print‑in‑place fidget toggle switch. Although it was a small print, it was a very good choice because it was quick to produce while still showing all the key steps involved in 3D printing. \n\nFrom this project, I gained a clearer understanding of how modern 3D printers operate and how many calibration features are built in to reduce errors and improve print quality. I saw how important accurate bed levelling and calibration are, and learned that strong, reliable prints depend heavily on good design. I also realised how different infill patterns affect both the strength and appearance of a model. Overall, this project showed me how 3D printing can support everyday tasks and engineering work by creating practical models that improve communication and design reviews.',
+        images: [Dprinting1, Dprinting2, Dprinting3],
+        videos: ['https://youtube.com/shorts/xwoWwcZufM8','https://youtube.com/shorts/XOYg_JeFOlY'],
+        ksbs: {
+          knowledge: ['K1', 'K2', 'K8', 'K10', 'K11', 'K12', 'K13', 'K14', 'K16', 'K20', 'K21'],
+          skills: ['S1', 'S4', 'S5', 'S6', 'S10', 'S14', 'S18'],
+          behaviours: ['B1', 'B2', 'B4', 'B5']
+        }
+      },
+      {
+        id: 'project',
+        title: 'Project Work',
+        subtitle: 'Applied 3D Printing',
+        color: 'red',
+        description: 'Dummy description for project work content.',
+        processDescription: 'Dummy process description for project work content.',
+        images: [Dprinting4, Dprinting5, Dprinting6],
+        ksbs: {
+          knowledge: ['K1', 'K2', 'K8', 'K10', 'K11', 'K12', 'K13', 'K14', 'K16', 'K20', 'K21'],
+          skills: ['S1', 'S4', 'S5', 'S6', 'S10', 'S14', 'S18'],
+          behaviours: ['B1', 'B2', 'B4', 'B5']
+        }
+      }
+    ]
   },
 ];

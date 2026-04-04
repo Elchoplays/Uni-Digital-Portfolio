@@ -57,14 +57,27 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
     const shouldReduceMotion = useReducedMotion();
 
     // Handle sections
-    const hasSections = project.sections && project.sections.length > 0;
-    const defaultSection = hasSections ? (project.sections.find(s => s.isDefault) || project.sections[0]) : null;
+    const sections = project.sections ?? [];
+    const hasSections = sections.length > 0;
+    const defaultSection = hasSections ? (sections.find(s => s.isDefault) || sections[0]) : null;
     const [activeSection, setActiveSection] = useState<ProjectSection | null>(defaultSection);
 
     // Use section data if sections exist, otherwise use project data
     const displayData = activeSection || project;
-    const hasVideos = displayData.videos && displayData.videos.length > 0;
-    const allMedia = displayData.images.length + (hasVideos ? displayData.videos.length : 0);
+    const displayTitle = activeSection?.subtitle || activeSection?.title || project.title;
+    const orderedSections = [...sections].sort((a, b) => {
+      const getRank = (section: ProjectSection) => {
+        const key = `${section.id} ${section.title}`.toLowerCase();
+        if (key.includes('project')) return 0;
+        if (key.includes('uni')) return 1;
+        return 2;
+      };
+
+      return getRank(a) - getRank(b);
+    });
+    const videoCount = displayData.videos?.length ?? 0;
+    const hasVideos = videoCount > 0;
+    const allMedia = displayData.images.length + videoCount;
 
     const nextImage = (e: React.MouseEvent) => {
         e.stopPropagation();
@@ -97,7 +110,7 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
     >
       <motion.div
         className="w-full h-full p-2 sm:p-4 lg:p-6"
-        onClick={(e) => e.stopPropagation()}
+        onClick={(e: React.MouseEvent<HTMLDivElement>) => e.stopPropagation()}
         initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 20, scale: 0.985 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 14, scale: 0.99 }}
@@ -121,7 +134,7 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
           {hasVideos && (
             <div className="absolute top-4 left-4 right-4 flex flex-wrap gap-2 z-10">
               <motion.button
-                onClick={(e) => {
+                onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
                   e.stopPropagation();
                   setActiveMediaType('image');
                 }}
@@ -144,7 +157,7 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
                 <span>Images ({displayData.images.length})</span>
               </motion.button>
               <motion.button
-                onClick={(e) => {
+                onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
                   e.stopPropagation();
                   setActiveMediaType('video');
                 }}
@@ -229,9 +242,9 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
             <span className="inline-flex rounded-full bg-arup-red/10 px-3 py-1 text-xs font-bold text-arup-red uppercase tracking-[0.2em]">{project.category}</span>
 
             {/* Section Tabs */}
-            {hasSections && project.sections && (
+            {hasSections && (
               <div className="flex flex-wrap gap-2 my-4">
-                {project.sections.map((section) => (
+                {orderedSections.map((section) => (
                   <motion.button
                     key={section.id}
                     onClick={() => {
@@ -240,12 +253,10 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
                       setCurrentVideoIndex(0);
                     }}
                     aria-pressed={activeSection?.id === section.id}
-                    className={`inline-flex items-center px-4 py-2 rounded-full font-bold text-xs sm:text-sm uppercase tracking-[0.08em] backdrop-blur-sm border transition-all duration-200 ${
+                    className={`inline-flex items-center px-4 py-2 rounded-full font-bold text-xs sm:text-sm uppercase tracking-[0.08em] backdrop-blur-sm border-2 transition-all duration-200 ${
                       activeSection?.id === section.id
-                        ? section.color === 'red'
-                          ? 'bg-arup-red text-white border-arup-red shadow-lg shadow-arup-red/25'
-                          : 'bg-white text-arup-dark-gray border-white shadow-lg shadow-black/10 dark:bg-white dark:text-arup-dark-gray dark:border-white dark:shadow-lg dark:shadow-white/10'
-                        : 'bg-white/60 text-arup-medium-gray border-white/70 hover:bg-white hover:text-arup-dark-gray dark:border-white/10 dark:bg-slate-900/60 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white'
+                        ? 'bg-arup-red text-white border-arup-red shadow-lg shadow-arup-red/25'
+                        : 'bg-white/70 text-arup-medium-gray border-arup-medium-gray/45 hover:bg-white hover:text-arup-dark-gray dark:border-slate-500 dark:bg-slate-900/70 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white'
                     }`}
                     whileHover={shouldReduceMotion ? { scale: 1.01 } : { scale: 1.04, y: -1 }}
                     whileTap={shouldReduceMotion ? { scale: 0.99 } : { scale: 0.98 }}
@@ -256,8 +267,8 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
               </div>
             )}
 
-            <h2 className="my-4 text-4xl font-bold text-arup-dark-gray dark:text-white lg:text-5xl">{project.title}</h2>
-            {activeSection?.subtitle && (
+            <h2 className="my-4 text-4xl font-bold text-arup-dark-gray dark:text-white lg:text-5xl">{displayTitle}</h2>
+            {activeSection?.subtitle && activeSection.subtitle !== displayTitle && (
               <p className="text-lg text-gray-600 dark:text-slate-400 mb-4">{activeSection.subtitle}</p>
             )}
             <p className="mb-12 whitespace-pre-line text-lg leading-relaxed text-gray-700 dark:text-slate-300">{displayData.description}</p>
