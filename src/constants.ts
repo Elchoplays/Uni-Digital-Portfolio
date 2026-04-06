@@ -241,7 +241,7 @@ export const projects: Project[] = [
         description: 'This project explored the immersive technologies available and how they could support engineering by improving client engagement and design reviews. I was able to experience a range of advanced tools during my time at Sheffield Hallam, and some of my understanding also came from my workplace environment. \n\nThe aim was to balance cost with benefits and identify the most suitable technology to showcase Arup’s digital work and strengthen communication with clients.',
         processDescription: 'During this project, I explored a range of immersive technologies, starting with high‑end dome systems, which I experienced at Sheffield Hallam in the Igloo before moving on to more practical options like VR, MR, and AR. I compared the costs, ease of use, and benefits of each, and considered how they could be applied to real engineering projects. \n\nDome systems provide an impressive shared experience but require significant investment, ongoing maintenance, and dedicated space, making them impractical for everyday use. VR proved useful for walking through 3D models and spotting design issues early. MR showed strong potential for overlaying digital plans onto real environments to support construction planning, and AR worked well for quick client presentations and helping people understand complex designs more easily.',
         images: [VREquipment],
-        videos: ['https://youtu.be/eNRhM7VkT2Q'],
+        videos: ['https://youtu.be/eNRhM7VkT2Q', 'https://youtu.be/da_e4Pqs_3c', 'https://youtu.be/jlIJDBahILU', 'https://youtu.be/4HY7YJPKpsQ'],
         ksbs: {
           knowledge: ['K1', 'K2', 'K4', 'K5', 'K8', 'K10', 'K11', 'K12', 'K13', 'K14', 'K16', 'K19', 'K20', 'K21'],
           skills: ['S5', 'S6', 'S10', 'S12', 'S13', 'S17', 'S18'],
@@ -255,7 +255,7 @@ export const projects: Project[] = [
         color: 'red',
         description: 'Dummy description for project work content.',
         processDescription: 'Through this work, I gained a clearer understanding of how immersive technology can improve teamwork, reduce errors, and strengthen client engagement. I also learned the importance of balancing innovation with cost, ensuring that technology choices are practical as well as impactful. Overall, the project showed that VR, MR, and AR offer flexible and affordable solutions that add real value to engineering projects without the large investment required for dome systems.',
-        images: [VRDEMO, VRDEMO2],
+        images: [VRDEMO, VRDEMO2,Dprinting4],
         ksbs: {
           knowledge: ['K1', 'K2', 'K4', 'K5', 'K8', 'K10', 'K11', 'K12', 'K13', 'K14', 'K16', 'K19', 'K20', 'K21'],
           skills: ['S5', 'S6', 'S10', 'S12', 'S13', 'S17', 'S18'],
