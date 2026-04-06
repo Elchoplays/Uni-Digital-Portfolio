@@ -55,6 +55,7 @@ import ProcessFigma from './assets/ProcessFigma.png';
 import ProcessFigma2 from './assets/ProcessFigma2.png';
 import ProcessFigma3 from './assets/ProcessFIGMA3.png';
 import ClipChamp from './assets/ClipChamp.png';
+import secretcode from './assets/Code_Secret.png';
 
 
 
@@ -148,7 +149,7 @@ export const projects: Project[] = [
         isDefault: true,
         description: "The Reservoir project gave me the opportunity to use my Python skills in a real engineering context, moving from training exercises to practical problem‑solving. My main tasks were to improve a Bill of Quantities calculation script so that it worked reliably with the current dataset, and to create a new Python script that automatically generated legend codes based on the data available in the OpenGround database. \n\nThe project helped build my confidence in coding, introduced me to more advanced techniques, and showed how AI tools like Copilot can support learning and development.",
         processDescription: "I began by reviewing the project requirements and exploring the OpenGround database to understand how the data was structured. I then planned the logic for a new legend code script and improved the Bill of Quantities script so it would run reliably with the current dataset. The Bill of Quantities script had been built for another project and was not designed to handle multiple projects, so I redesigned and fixed it to work more broadly. The challenge with the legend code script was to read geology descriptions and match them to the most suitable legend codes, despite variations in how the descriptions were written. \n\nTo address these issues, I tested, rewrote, and refined the code, explored new Python libraries to make the script cleaner, and used Copilot to troubleshoot and learn alternative approaches. I also added clear comments to the code so others could reuse my work. Through this process, I became more confident using Python in real engineering tasks, learned the value of breaking problems into steps, and saw how AI tools can support learning. Overall, the project strengthened my coding, problem‑solving, and teamwork skills, and prepared me to take on larger technical challenges.",
-        images: [PythonScript, PythonScript2, PythonScript3],
+        images: [PythonScript, PythonScript2, PythonScript3, secretcode],
         ksbs: {
           knowledge: ['K6', 'K7', 'K8', 'K9', 'K13', 'K14', 'K17', 'K18'],
           skills: ['S5', 'S6', 'S10', 'S12', 'S13', 'S14', 'S15', 'S16', 'S18'],
