@@ -9,12 +9,19 @@ interface PortfolioProps {
 }
 
 const ProjectCard: React.FC<{ project: Project; onSelect: () => void; index: number }> = ({ project, onSelect, index }) => {
-  const displayImage = project.headerImage || project.images[0];
+  const firstSectionImage = project.sections?.find(s => (s.images && s.images.length > 0))?.images?.[0];
+  const displayImage = project.headerImage || firstSectionImage || project.images[0];
   const isCombinedSection = (project.sections?.length ?? 0) > 0;
-  const hasImages = project.images.length > 0;
-  const hasVideos = project.videos && project.videos.length > 0;
-  const imageCount = project.images.length;
-  const videoCount = project.videos?.length || 0;
+
+  // Prefer counting media from sections (if present) to avoid under-counting
+  const sectionImageCount = project.sections?.reduce((sum, s) => sum + (s.images?.length ?? 0), 0) ?? 0;
+  const sectionVideoCount = project.sections?.reduce((sum, s) => sum + (s.videos?.length ?? 0), 0) ?? 0;
+
+  const imageCount = sectionImageCount > 0 ? sectionImageCount : (project.images?.length ?? 0);
+  const videoCount = sectionVideoCount > 0 ? sectionVideoCount : (project.videos?.length ?? 0);
+
+  const hasImages = imageCount > 0;
+  const hasVideos = videoCount > 0;
   const shouldReduceMotion = useReducedMotion();
   
   return (
