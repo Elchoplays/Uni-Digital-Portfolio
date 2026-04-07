@@ -325,4 +325,50 @@ export const projects: Project[] = [
       }
     ]
   },
+  {
+    id: '13',
+    title: 'Placeholder Project',
+    category: 'Engineering & Design',
+    description: 'Placeholder short description: this project entry is temporary and is only being used to test the portfolio card layout, text wrapping, and responsiveness across different screen sizes before final content is added.',
+    processDescription: 'Placeholder process description: this temporary content represents a draft workflow summary for layout testing. It is intentionally generic and can be replaced later with accurate project steps, methods, tools used, and outcomes once the real project information is ready.',
+    images: [Dprinting1, Dprinting2, Dprinting3, Dprinting4, Dprinting5, Dprinting6],
+    videos: ['https://youtube.com/shorts/xwoWwcZufM8','https://youtube.com/shorts/XOYg_JeFOlY'],
+    ksbs: {
+      knowledge: ['K1', 'K2', 'K8', 'K10', 'K11', 'K12', 'K13', 'K14', 'K16', 'K20', 'K21'],
+      skills: ['S1', 'S4', 'S5', 'S6', 'S10', 'S14', 'S18'],
+      behaviours: ['B1', 'B2', 'B4', 'B5']
+    },
+    sections: [
+      {
+        id: 'uni',
+        title: 'Uni Work',
+        subtitle: 'Placeholder Main Title',
+        color: 'white',
+        isDefault: true,
+        description: 'Placeholder description section for university context. This text is intentionally temporary and exists so spacing, typography, and content hierarchy can be reviewed in the modal before real project content is written.',
+        processDescription: 'Placeholder workflow section for university context. This draft copy simulates a multi-sentence process narrative so layout behavior can be tested for paragraph flow, line breaks, and responsive readability.',
+        images: [Dprinting1, Dprinting2, Dprinting3],
+        videos: ['https://youtube.com/shorts/xwoWwcZufM8','https://youtube.com/shorts/XOYg_JeFOlY'],
+        ksbs: {
+          knowledge: ['K1', 'K2', 'K8', 'K10', 'K11', 'K12', 'K13', 'K14', 'K16', 'K20', 'K21'],
+          skills: ['S1', 'S4', 'S5', 'S6', 'S10', 'S14', 'S18'],
+          behaviours: ['B1', 'B2', 'B4', 'B5']
+        }
+      },
+      {
+        id: 'project',
+        title: 'Project Work',
+        subtitle: 'Placeholder Secondary Focus',
+        color: 'red',
+        description: 'Placeholder description section for project context. This content is temporary and is included only to test component structure and responsive behavior with realistic sentence length.',
+        processDescription: 'Placeholder workflow section for project context. This text is a stand-in for the final process narrative and helps verify styling, spacing, and readability for longer content blocks.',
+        images: [Dprinting4, Dprinting5, Dprinting6],
+        ksbs: {
+          knowledge: ['K1', 'K2', 'K8', 'K10', 'K11', 'K12', 'K13', 'K14', 'K16', 'K20', 'K21'],
+          skills: ['S1', 'S4', 'S5', 'S6', 'S10', 'S14', 'S18'],
+          behaviours: ['B1', 'B2', 'B4', 'B5']
+        }
+      }
+    ]
+  },
 ];
