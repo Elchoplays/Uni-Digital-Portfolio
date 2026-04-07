@@ -56,7 +56,7 @@ import ProcessFigma2 from './assets/ProcessFigma2.png';
 import ProcessFigma3 from './assets/ProcessFIGMA3.png';
 import ClipChamp from './assets/ClipChamp.png';
 import secretcode from './assets/Code_Secret.png';
-
+import photoablumn from './assets/PhotoAlbum.jpeg';
 
 
 export const projects: Project[] = [
@@ -210,7 +210,7 @@ export const projects: Project[] = [
     category: 'Photography & Editing',
     description: "As part of my ongoing development in photography, I kept improving my skills through workshops and hands‑on practice. A recent commission to photograph a big birthday celebration and a wedding gave me the chance to use my technical knowledge in a real setting, focusing on lighting, composition, and capturing important moments.",
     processDescription: "Each commission came with its own challenges. At the wedding, the focus was on capturing the bridal party as they got ready, while working in a small space and managing indoor lighting. The 80th birthday celebration brought together guests from different places, and the client wanted plenty of photos of people they do not often see, which meant paying close attention to group shots and key moments. \n\nOne of the main issues at the birthday party was the cake‑cutting, which took place outside under a green gazebo because of the poor weather. This created a strong green tint in the photos. The main technical challenge was correcting this colour cast. Using professional editing software such as Photoshop and Lightroom, I restored natural tones and improved the overall appearance of the images. \n\nThe project ended with the design and delivery of a commemorative photo album, giving me valuable experience in managing the whole process from client consultation through to final delivery.",
-    images: [AbiWedding1, AbiWedding2, Before, After],
+    images: [AbiWedding1, AbiWedding2, Before, After, photoablumn],
     headerImage: WhatsAppImage,
     ksbs: {
       knowledge: ['K1', 'K2', 'K4', 'K7', 'K10'],
