@@ -57,6 +57,15 @@ import ProcessFigma3 from './assets/ProcessFIGMA3.png';
 import ClipChamp from './assets/ClipChamp.png';
 import secretcode from './assets/Code_Secret.png';
 import photoablumn from './assets/PhotoAlbum.jpeg';
+import QuarryOld from './assets/QuarryOld.png';
+import QuarryPicture from './assets/Quarry_Picture.jpg';
+import QuarryImage2 from './assets/QuarryImage2.jpeg';
+import QuarryImage3 from './assets/QuarryImage3.png';
+import QuarryRoad4 from './assets/QuarryRoad4.png';
+import QuarryCutFill from './assets/Quarry_Cut&Fill.png';
+import QuarryMissingArea from './assets/QuarryMissing_Area.png';
+import MissingQuarryImage from './assets/MissingQuarryImage.png';
+import Xcross from './assets/Xcross_sectionDesign.png';
 
 
 export const projects: Project[] = [
@@ -327,12 +336,11 @@ export const projects: Project[] = [
   },
   {
     id: '13',
-    title: 'Placeholder Project',
+    title: 'Quarry Geotechnics Review',
     category: 'Engineering & Design',
     description: 'Placeholder short description: this project entry is temporary and is only being used to test the portfolio card layout, text wrapping, and responsiveness across different screen sizes before final content is added.',
     processDescription: 'Placeholder process description: this temporary content represents a draft workflow summary for layout testing. It is intentionally generic and can be replaced later with accurate project steps, methods, tools used, and outcomes once the real project information is ready.',
-    images: [Dprinting1, Dprinting2, Dprinting3, Dprinting4, Dprinting5, Dprinting6],
-    videos: ['https://youtube.com/shorts/xwoWwcZufM8','https://youtube.com/shorts/XOYg_JeFOlY'],
+    images: [QuarryImage3 ,QuarryOld, QuarryPicture, QuarryImage2, QuarryImage3, QuarryRoad4, QuarryCutFill],
     ksbs: {
       knowledge: ['K1', 'K2', 'K8', 'K10', 'K11', 'K12', 'K13', 'K14', 'K16', 'K20', 'K21'],
       skills: ['S1', 'S4', 'S5', 'S6', 'S10', 'S14', 'S18'],
@@ -341,14 +349,13 @@ export const projects: Project[] = [
     sections: [
       {
         id: 'uni',
-        title: 'Uni Work',
-        subtitle: 'Placeholder Main Title',
+        title: 'Quarry Topo Data Correction',
+        subtitle: 'LiDAR Topographic Gap Filling',
         color: 'white',
         isDefault: true,
-        description: 'Placeholder description section for university context. This text is intentionally temporary and exists so spacing, typography, and content hierarchy can be reviewed in the modal before real project content is written.',
+        description: 'This task focused on improving the quality and accuracy of the topographic surface for the quarry area. Updated topographic data had been provided because there had been significant changes to the ground levels, and the project required these changes to be accurately captured. \n\n Although a drone survey had been carried out to collect up‑to‑date data, some areas within the quarry were not successfully captured. This was mainly because water was present in parts of the quarry at the time of the survey. LiDAR and drone systems are unable to record reliable ground information through water, which resulted in gaps in the dataset. Additional data gaps were also caused by steep quarry faces and areas where LiDAR returns were missing or unreliable.',
         processDescription: 'Placeholder workflow section for university context. This draft copy simulates a multi-sentence process narrative so layout behavior can be tested for paragraph flow, line breaks, and responsive readability.',
-        images: [Dprinting1, Dprinting2, Dprinting3],
-        videos: ['https://youtube.com/shorts/xwoWwcZufM8','https://youtube.com/shorts/XOYg_JeFOlY'],
+        images: [QuarryImage3, QuarryOld, QuarryPicture, QuarryImage2],
         ksbs: {
           knowledge: ['K1', 'K2', 'K8', 'K10', 'K11', 'K12', 'K13', 'K14', 'K16', 'K20', 'K21'],
           skills: ['S1', 'S4', 'S5', 'S6', 'S10', 'S14', 'S18'],
@@ -357,12 +364,12 @@ export const projects: Project[] = [
       },
       {
         id: 'project',
-        title: 'Project Work',
+        title: 'Cut and Fill Analysis',
         subtitle: 'Placeholder Secondary Focus',
         color: 'red',
         description: 'Placeholder description section for project context. This content is temporary and is included only to test component structure and responsive behavior with realistic sentence length.',
         processDescription: 'Placeholder workflow section for project context. This text is a stand-in for the final process narrative and helps verify styling, spacing, and readability for longer content blocks.',
-        images: [Dprinting4, Dprinting5, Dprinting6],
+        images: [QuarryRoad4, Xcross, QuarryCutFill, QuarryMissingArea],
         ksbs: {
           knowledge: ['K1', 'K2', 'K8', 'K10', 'K11', 'K12', 'K13', 'K14', 'K16', 'K20', 'K21'],
           skills: ['S1', 'S4', 'S5', 'S6', 'S10', 'S14', 'S18'],
