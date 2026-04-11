@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
-import type { Project, ProjectSection, KSBs } from '../types';
+import type { Project, ProjectSection, KSBs, ExternalLink } from '../types';
 import KSBTooltipBadge from './KSBTooltipBadge';
 
 const KSBBadge: React.FC<{ type: 'K' | 'S' | 'B'; code: string }> = ({ type, code }) => {
@@ -32,6 +32,32 @@ const KSBsDisplay: React.FC<{ ksbs: KSBs }> = ({ ksbs }) => {
     </div>
   );
 }
+
+const LinkList: React.FC<{ links: ExternalLink[]; heading: string; subtitle: string }> = ({ links, heading, subtitle }) => {
+  return (
+    <div className="border-t-2 border-arup-red pt-8">
+      <h3 className="mb-2 text-2xl font-bold text-arup-dark-gray dark:text-white">{heading}</h3>
+      <p className="mb-4 text-sm text-gray-600 dark:text-slate-400">{subtitle}</p>
+      <div className="space-y-3">
+        {links.map(link => (
+          <a
+            key={link.id}
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Open ${link.title} in a new tab`}
+            className="block rounded-xl border border-arup-red/30 bg-arup-red/5 px-4 py-3 transition-colors duration-200 hover:bg-arup-red/10 dark:border-arup-red/35 dark:bg-arup-red/10"
+          >
+            <p className="text-sm font-bold text-arup-dark-gray dark:text-white">{link.title}</p>
+            {link.description && (
+              <p className="mt-1 text-xs leading-relaxed text-gray-600 dark:text-slate-300">{link.description}</p>
+            )}
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const getYouTubeEmbedUrl = (url: string): string => {
     // Try to extract from YouTube Shorts format first: youtube.com/shorts/VIDEO_ID
@@ -65,6 +91,10 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
     // Use section data if sections exist, otherwise use project data
     const displayData = activeSection || project;
     const displayTitle = activeSection?.subtitle || activeSection?.title || project.title;
+    const isBusinessCaseContainer = project.id === '14';
+    const sectionLinks = activeSection?.links ?? [];
+    const sharedLinks = project.links ?? [];
+    const stareReportLinks = project.stareReportLinks ?? [];
     const orderedSections = [...sections].sort((a, b) => {
       const getRank = (section: ProjectSection) => {
         const key = `${section.id} ${section.title}`.toLowerCase();
@@ -129,6 +159,7 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
           </svg>
         </motion.button>
         {/* --- Image Gallery Section --- */}
+        {!isBusinessCaseContainer && (
         <div className="relative flex h-1/2 w-full flex-col items-center justify-center overflow-hidden bg-arup-light-gray dark:bg-slate-950 lg:h-full lg:w-[60%]">
           {/* Media Tabs */}
           {hasVideos && (
@@ -235,9 +266,10 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
             </>
           )}
         </div>
+        )}
 
         {/* --- Content Section --- */}
-        <div className="relative isolate h-1/2 w-full overflow-x-clip overflow-y-auto bg-white dark:bg-slate-900 lg:h-full lg:w-[40%]">
+        <div className={`relative isolate w-full overflow-x-clip overflow-y-auto bg-white dark:bg-slate-900 ${isBusinessCaseContainer ? 'h-full lg:w-full' : 'h-1/2 lg:h-full lg:w-[40%]'}`}>
           <div className="p-8 md:p-12 lg:p-16">
             <span className="inline-flex rounded-full bg-arup-red/10 px-3 py-1 text-xs font-bold text-arup-red uppercase tracking-[0.2em]">{project.category}</span>
 
@@ -274,16 +306,54 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
             <p className="mb-12 whitespace-pre-line text-lg leading-relaxed text-gray-700 dark:text-slate-300">{displayData.description}</p>
 
             <div className="space-y-12">
+              {isBusinessCaseContainer ? (
+                <>
+                  {sharedLinks.length > 0 && (
+                    <LinkList
+                      links={sharedLinks}
+                      heading="Business Cases"
+                      subtitle="Open each business case board directly in Miro."
+                    />
+                  )}
+
+                  {stareReportLinks.length > 0 && (
+                    <LinkList
+                      links={stareReportLinks}
+                      heading="Stare Reports"
+                      subtitle="Supporting Stare Report boards for this container project."
+                    />
+                  )}
+                </>
+              ) : (
+                <>
                 <div className="border-t-2 border-arup-red pt-8">
                   <h3 className="mb-4 text-2xl font-bold text-arup-dark-gray dark:text-white">Process & Learnings</h3>
                   <p className="whitespace-pre-line text-base leading-relaxed text-gray-600 dark:text-slate-300">{displayData.processDescription}</p>
-              </div>
+                </div>
+
+                {sectionLinks.length > 0 && (
+                  <LinkList
+                    links={sectionLinks}
+                    heading="Stare Reports (Business Case)"
+                    subtitle="Links specific to the business case selected above."
+                  />
+                )}
+
+                {sharedLinks.length > 0 && (
+                  <LinkList
+                    links={sharedLinks}
+                    heading="Stare Reports (Shared)"
+                    subtitle="Shared references available across all three business cases."
+                  />
+                )}
 
                 <div className="border-t-2 border-arup-red pt-8">
                   <h3 className="mb-4 text-2xl font-bold text-arup-dark-gray dark:text-white">KSB Framework</h3>
                   <p className="mb-4 text-sm text-gray-600 dark:text-slate-400">Click each code to view the KSB definition.</p>
                   <KSBsDisplay ksbs={displayData.ksbs} />
-              </div>
+                </div>
+                </>
+              )}
             </div>
           </div>
         </div>

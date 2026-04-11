@@ -5,6 +5,13 @@ export interface KSBs {
   behaviours: string[];
 }
 
+export interface ExternalLink {
+  id: string;
+  title: string;
+  url: string;
+  description?: string;
+}
+
 export interface ProjectSection {
   id: string;
   title: string;
@@ -15,6 +22,7 @@ export interface ProjectSection {
   processDescription: string;
   images: string[];
   videos?: string[];
+  links?: ExternalLink[];
   ksbs: KSBs;
 }
 
@@ -26,6 +34,8 @@ export interface Project {
   processDescription: string;
   images: string[];
   videos?: string[];
+  links?: ExternalLink[];
+  stareReportLinks?: ExternalLink[];
   headerImage?: string;
   ksbs: KSBs;
   sections?: ProjectSection[];

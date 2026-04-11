@@ -379,4 +379,94 @@ export const projects: Project[] = [
       }
     ]
   },
+  {
+    id: '14',
+    title: 'Business Cases and Stare Reports',
+    category: 'Business Case Portfolio',
+    description: 'This container project groups three business cases in one place and provides direct access to related Stare Reports stored in Miro. Use the tabs to move between business cases and use the links to open supporting report boards.',
+    processDescription: 'This structure has been designed to keep report content clear and easy to navigate. Each business case has its own context specific links, and shared Stare Reports are available across all tabs so common references are always easy to find.',
+    images: [],
+    headerImage: QuarryPicture,
+    links: [
+      {
+        id: 'business-case-1',
+        title: 'Business Case 1',
+        description: 'Placeholder business case board. Replace with final case title and URL.',
+        url: 'https://miro.com/app/board/REPLACE_WITH_BUSINESS_CASE_1/'
+      },
+      {
+        id: 'business-case-2',
+        title: 'Business Case 2',
+        description: 'Placeholder business case board. Replace with final case title and URL.',
+        url: 'https://miro.com/app/board/REPLACE_WITH_BUSINESS_CASE_2/'
+      },
+      {
+        id: 'business-case-3',
+        title: 'Business Case 3',
+        description: 'Placeholder business case board. Replace with final case title and URL.',
+        url: 'https://miro.com/app/board/REPLACE_WITH_BUSINESS_CASE_3/'
+      }
+    ],
+    stareReportLinks: [
+      {
+        id: 'stare-report-1',
+        title: 'Stare Report 1',
+        description: 'Dummy Stare Report link for placeholder content.',
+        url: 'https://miro.com/app/board/REPLACE_WITH_STARE_REPORT_1/'
+      },
+      {
+        id: 'stare-report-2',
+        title: 'Stare Report 2',
+        description: 'Dummy Stare Report link for placeholder content.',
+        url: 'https://miro.com/app/board/REPLACE_WITH_STARE_REPORT_2/'
+      },
+      {
+        id: 'stare-report-3',
+        title: 'Stare Report 3',
+        description: 'Dummy Stare Report link for placeholder content.',
+        url: 'https://miro.com/app/board/REPLACE_WITH_STARE_REPORT_3/'
+      },
+      {
+        id: 'stare-report-4',
+        title: 'Stare Report 4',
+        description: 'Dummy Stare Report link for placeholder content.',
+        url: 'https://miro.com/app/board/REPLACE_WITH_STARE_REPORT_4/'
+      },
+      {
+        id: 'stare-report-5',
+        title: 'Stare Report 5',
+        description: 'Dummy Stare Report link for placeholder content.',
+        url: 'https://miro.com/app/board/REPLACE_WITH_STARE_REPORT_5/'
+      },
+      {
+        id: 'stare-report-6',
+        title: 'Stare Report 6',
+        description: 'Dummy Stare Report link for placeholder content.',
+        url: 'https://miro.com/app/board/REPLACE_WITH_STARE_REPORT_6/'
+      },
+      {
+        id: 'stare-report-7',
+        title: 'Stare Report 7',
+        description: 'Dummy Stare Report link for placeholder content.',
+        url: 'https://miro.com/app/board/REPLACE_WITH_STARE_REPORT_7/'
+      },
+      {
+        id: 'stare-report-8',
+        title: 'Stare Report 8',
+        description: 'Dummy Stare Report link for placeholder content.',
+        url: 'https://miro.com/app/board/REPLACE_WITH_STARE_REPORT_8/'
+      },
+      {
+        id: 'stare-report-9',
+        title: 'Stare Report 9',
+        description: 'Dummy Stare Report link for placeholder content.',
+        url: 'https://miro.com/app/board/REPLACE_WITH_STARE_REPORT_9/'
+      }
+    ],
+    ksbs: {
+      knowledge: ['K1', 'K2', 'K8', 'K10', 'K13', 'K14', 'K16'],
+      skills: ['S1', 'S4', 'S5', 'S6', 'S10', 'S14', 'S18'],
+      behaviours: ['B1', 'B2', 'B4', 'B5']
+    }
+  },
 ];
