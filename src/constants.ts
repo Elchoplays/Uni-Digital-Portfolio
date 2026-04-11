@@ -338,7 +338,7 @@ export const projects: Project[] = [
     id: '13',
     title: 'Quarry Geotechnics Review',
     category: 'Engineering & Design',
-    description: 'Placeholder short description: this project entry is temporary and is only being used to test the portfolio card layout, text wrapping, and responsiveness across different screen sizes before final content is added.',
+    description: 'This project explored how complex quarry projects are and what is involved in understanding them. this project entry is temporary and is only being used to test the portfolio card layout, text wrapping, and responsiveness across different screen sizes before final content is added.',
     processDescription: 'Placeholder process description: this temporary content represents a draft workflow summary for layout testing. It is intentionally generic and can be replaced later with accurate project steps, methods, tools used, and outcomes once the real project information is ready.',
     images: [QuarryPicture, QuarryImage3 ,QuarryOld, QuarryImage2, QuarryImage3, QuarryRoad4, QuarryCutFill],
     headerImage: QuarryPicture,
