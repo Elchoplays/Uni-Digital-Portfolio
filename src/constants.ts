@@ -340,7 +340,7 @@ export const projects: Project[] = [
     category: 'Engineering & Design',
     description: 'Placeholder short description: this project entry is temporary and is only being used to test the portfolio card layout, text wrapping, and responsiveness across different screen sizes before final content is added.',
     processDescription: 'Placeholder process description: this temporary content represents a draft workflow summary for layout testing. It is intentionally generic and can be replaced later with accurate project steps, methods, tools used, and outcomes once the real project information is ready.',
-    images: [QuarryImage3 ,QuarryOld, QuarryPicture, QuarryImage2, QuarryImage3, QuarryRoad4, QuarryCutFill],
+    images: [QuarryPicture, QuarryImage3 ,QuarryOld, QuarryImage2, QuarryImage3, QuarryRoad4, QuarryCutFill],
     ksbs: {
       knowledge: ['K1', 'K2', 'K8', 'K10', 'K11', 'K12', 'K13', 'K14', 'K16', 'K20', 'K21'],
       skills: ['S1', 'S4', 'S5', 'S6', 'S10', 'S14', 'S18'],
@@ -365,10 +365,10 @@ export const projects: Project[] = [
       {
         id: 'project',
         title: 'Cut and Fill Analysis',
-        subtitle: 'Placeholder Secondary Focus',
+        subtitle: 'Complex Cut and Fill Assessment',
         color: 'red',
-        description: 'Placeholder description section for project context. This content is temporary and is included only to test component structure and responsive behavior with realistic sentence length.',
-        processDescription: 'Placeholder workflow section for project context. This text is a stand-in for the final process narrative and helps verify styling, spacing, and readability for longer content blocks.',
+        description: 'This project looks at the site topography to estimate the amount of cut and fill needed to achieve a balanced earthworks design. Ideally, material excavated from cut areas would be reused on site in areas of fill, reducing the need to import or export material and helping to lower costs and environmental impact. \n\nOn this site, balancing cut and fill was more complex due to challenging existing ground conditions. A former quarry lies beneath part of the site, with the current road built over it, resulting in large variations in ground levels. This made it difficult to compare existing and proposed levels and raised questions about how realistically material could be reused. As a result, the assessment required careful consideration and detailed discussion within the project team, with different options reviewed to understand the impact of the ground conditions and road alignment.',
+        processDescription: 'To complete the cut and fill analysis, I first reviewed the available topographic and ground level data to understand the existing site conditions. Before carrying out the analysis, I had to design what the proposed new ground levels would look like. I was instructed that the new ground should fall at a 1 in 4 slope from the edge of the road down to the existing ground level. This slope was shallow enough for the land quality team to install trees, helping the project meet its environmental requirements. I also had to model a slope between the main road and a secondary road so that the two could connect smoothly. \n\nOnce the proposed ground levels were designed, I compared the existing ground surface with the proposed design surface by creating volume calculations between the two. These volumes were then used to identify areas of cut and fill and formed the basis of the analysis. \n\nDuring this process, the former quarry and the road built over it became a key challenge. The unusual ground profile meant that standard assumptions about reusing material could not always be applied. This showed the importance of understanding the site’s history and existing ground conditions before relying solely on cut and fill results. \n\nA key learning from this work was that cut and fill analysis is not just a technical task. While software can calculate volumes, professional judgement is needed to interpret the results properly. Ground conditions, previous land use, and construction constraints all affect whether the calculated material volumes can realistically be reused on site.',
         images: [QuarryRoad4, Xcross, QuarryCutFill, QuarryMissingArea],
         ksbs: {
           knowledge: ['K1', 'K2', 'K8', 'K10', 'K11', 'K12', 'K13', 'K14', 'K16', 'K20', 'K21'],
