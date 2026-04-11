@@ -321,10 +321,10 @@ export const projects: Project[] = [
       {
         id: 'project',
         title: 'Project Work',
-        subtitle: 'Applied 3D Printing',
+        subtitle: '3D Printed Ground Model',
         color: 'red',
-        description: 'Dummy description for project work content.',
-        processDescription: 'Dummy process description for project work content.',
+        description: 'As part of this project, I experimented with using a 3D printer to produce a physical ground model based on a 3D geological model. The aim was to explore whether 3D printing could be a useful way to help people better understand ground conditions by turning digital data into a physical object. \n\nThe ground model was prepared so that each geological layer was printed in a different colour. This made it easier to clearly see the different strata and understand how the geology changed with depth. Being able to physically hold the model helped with visualising the relationships between layers and made the geology more accessible to people who may struggle to interpret traditional drawings, sections, or screens.',
+        processDescription: 'One of the main benefits was how effective the physical model was for visualisation. Being able to see and physically hold the geology made it much easier to explain complex ground conditions, especially to people without a technical background. Using different colours for each geological layer was particularly useful, as it made the model clear, easy to follow, and more intuitive to understand. \n\n However, there were also clear challenges. Printing the model at full scale is not realistic because the ground model is based on real‑world coordinates and covers a very large area. This meant the model had to be scaled down, and some simplification was required. As a result, certain geological details had to be reduced or removed to make the model suitable for 3D printing. \n\n Another key limitation is that ground models are constantly changing as new ground investigation data becomes available. Because of this, a 3D printed model can quickly become out of date. Unlike digital models, which can be updated easily, a physical model would need to be re‑printed every time the geology changes. This makes 3D printing impractical for live or evolving projects.',
         images: [Dprinting4, Dprinting5, Dprinting6],
         ksbs: {
           knowledge: ['K1', 'K2', 'K8', 'K10', 'K11', 'K12', 'K13', 'K14', 'K16', 'K20', 'K21'],
