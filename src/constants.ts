@@ -341,6 +341,7 @@ export const projects: Project[] = [
     description: 'Placeholder short description: this project entry is temporary and is only being used to test the portfolio card layout, text wrapping, and responsiveness across different screen sizes before final content is added.',
     processDescription: 'Placeholder process description: this temporary content represents a draft workflow summary for layout testing. It is intentionally generic and can be replaced later with accurate project steps, methods, tools used, and outcomes once the real project information is ready.',
     images: [QuarryPicture, QuarryImage3 ,QuarryOld, QuarryImage2, QuarryImage3, QuarryRoad4, QuarryCutFill],
+    headerImage: QuarryPicture,
     ksbs: {
       knowledge: ['K1', 'K2', 'K8', 'K10', 'K11', 'K12', 'K13', 'K14', 'K16', 'K20', 'K21'],
       skills: ['S1', 'S4', 'S5', 'S6', 'S10', 'S14', 'S18'],
