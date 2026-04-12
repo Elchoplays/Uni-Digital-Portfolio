@@ -391,77 +391,71 @@ export const projects: Project[] = [
       {
         id: 'business-case-1',
         title: 'Business Case 1',
-        description: 'Placeholder business case board. Replace with final case title and URL.',
-        url: 'https://miro.com/app/board/REPLACE_WITH_BUSINESS_CASE_1/'
+        description: 'This project focuses on improving how geotechnical data is used by moving from gINT to modern tools like OpenGround and Graphe to produce clearer ground models and graphs.',
+        url: 'https://miro.com/app/board/uXjVN8z7lag=/?share_link_id=878274260624'
       },
       {
         id: 'business-case-2',
         title: 'Business Case 2',
-        description: 'Placeholder business case board. Replace with final case title and URL.',
-        url: 'https://miro.com/app/board/REPLACE_WITH_BUSINESS_CASE_2/'
+        description: 'This project improves digital sketching within the geotechnical team by moving from traditional methods to modern tools like Concepts to create clearer, more engaging technical visuals.',
+        url: 'https://miro.com/app/board/uXjVLQamFtA=/?share_link_id=124301491638'
       },
       {
         id: 'business-case-3',
-        title: 'Business Case 3',
-        description: 'Placeholder business case board. Replace with final case title and URL.',
-        url: 'https://miro.com/app/board/REPLACE_WITH_BUSINESS_CASE_3/'
+        title: 'Leadership Business Case 3',
+        description: 'This project aims to improve how the geotechnics team communicates designs by using immersive technology to make project reviews clearer, more interactive, and easier to understand.',
+        url: 'https://miro.com/app/board/uXjVJ9yUF04=/?share_link_id=726506470931'
       }
     ],
     stareReportLinks: [
       {
         id: 'stare-report-1',
-        title: 'Stare Report 1',
-        description: 'Dummy Stare Report link for placeholder content.',
-        url: 'https://miro.com/app/board/REPLACE_WITH_STARE_REPORT_1/'
+        title: 'Stare Report 1 - 3D Modelling',
+        description: 'This project focuses on creating an accurate 3D ground model for a mining site to support shaft foundation planning and calculate cut and fill volumes for environmental assessments.',
+        url: 'https://miro.com/app/board/uXjVJ9yUF04=/?share_link_id=726506470931'
       },
       {
         id: 'stare-report-2',
-        title: 'Stare Report 2',
-        description: 'Dummy Stare Report link for placeholder content.',
-        url: 'https://miro.com/app/board/REPLACE_WITH_STARE_REPORT_2/'
+        title: 'Stare Report 2- Appraisal Feedback',
+        description: 'This Stare report focuses on improving how design mark‑ups are reviewed on a rail project by addressing gaps in process understanding to reduce missed comments and improve accuracy.',
+        url: 'https://miro.com/app/board/uXjVJ9yUF04=/?share_link_id=726506470931'
       },
       {
         id: 'stare-report-3',
-        title: 'Stare Report 3',
-        description: 'Dummy Stare Report link for placeholder content.',
-        url: 'https://miro.com/app/board/REPLACE_WITH_STARE_REPORT_3/'
+        title: 'Stare Report 3 - OpenGround and Graphe',
+        description: 'This Stare supports a new railway scheme by using OpenGround and Graphe to produce geological sections and graphs that help engineers analyse ground conditions and make informed decisions.',
+        url: 'https://miro.com/app/board/uXjVJ9yUF04=/?share_link_id=726506470931'
       },
       {
         id: 'stare-report-4',
-        title: 'Stare Report 4',
-        description: 'Dummy Stare Report link for placeholder content.',
-        url: 'https://miro.com/app/board/REPLACE_WITH_STARE_REPORT_4/'
+        title: 'Stare Report 4 - OpenGround Adoption in Geotechnics',
+        description: 'This Stare Report focuses on improving how geotechnical information is shared by creating an infographic that encourages the use of OpenGround over gINT within the geotechnical team.',
+        url: 'https://miro.com/app/board/uXjVJ9yUF04=/?share_link_id=726506470931'
       },
       {
         id: 'stare-report-5',
-        title: 'Stare Report 5',
-        description: 'Dummy Stare Report link for placeholder content.',
-        url: 'https://miro.com/app/board/REPLACE_WITH_STARE_REPORT_5/'
+        title: 'Stare Report 5 - AI Copilot Exploration',
+        description: 'This Stare Report focuses on exploring the use of AI Copilot to improve efficiency and content quality by supporting repetitive tasks, research, and insight generation across projects.',
+        url: 'https://miro.com/app/board/uXjVJ9yUF04=/?share_link_id=726506470931'
       },
       {
         id: 'stare-report-6',
-        title: 'Stare Report 6',
-        description: 'Dummy Stare Report link for placeholder content.',
-        url: 'https://miro.com/app/board/REPLACE_WITH_STARE_REPORT_6/'
+        title: 'Stare Report 6 - Digital Sketching Exploration',
+        description: 'This Stare Report focuses on improving how geotechnical ideas are shared by exploring digital sketching tools like Procreate and Concepts to produce clearer, more professional report visuals.',
+        url: 'https://miro.com/app/board/uXjVJ9yUF04=/?share_link_id=726506470931'
       },
       {
         id: 'stare-report-7',
-        title: 'Stare Report 7',
-        description: 'Dummy Stare Report link for placeholder content.',
-        url: 'https://miro.com/app/board/REPLACE_WITH_STARE_REPORT_7/'
+        title: 'Stare Report 7 - Geotechnical Team Graphic Update',
+        description: 'This Stare Report focuses on updating a geotechnical team graphic to better showcase the team’s full range of skills and create a clear, professional visual for wider audiences.',
+        url: 'https://miro.com/app/board/uXjVJ9yUF04=/?share_link_id=726506470931'
       },
       {
         id: 'stare-report-8',
-        title: 'Stare Report 8',
-        description: 'Dummy Stare Report link for placeholder content.',
-        url: 'https://miro.com/app/board/REPLACE_WITH_STARE_REPORT_8/'
+        title: 'Stare Report 8 - Automating Engineering Data with Python',
+        description: 'This Stare Report focuses on developing advanced Python skills by applying coding to real engineering tasks, improving data processing accuracy, automation, and output generation for the project team.',
+        url: 'https://miro.com/app/board/uXjVJ9yUF04=/?share_link_id=726506470931'
       },
-      {
-        id: 'stare-report-9',
-        title: 'Stare Report 9',
-        description: 'Dummy Stare Report link for placeholder content.',
-        url: 'https://miro.com/app/board/REPLACE_WITH_STARE_REPORT_9/'
-      }
     ],
     ksbs: {
       knowledge: ['K1', 'K2', 'K8', 'K10', 'K13', 'K14', 'K16'],
