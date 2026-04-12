@@ -35,10 +35,10 @@ const KSBsDisplay: React.FC<{ ksbs: KSBs }> = ({ ksbs }) => {
 
 const LinkList: React.FC<{ links: ExternalLink[]; heading: string; subtitle: string }> = ({ links, heading, subtitle }) => {
   return (
-    <div className="border-t-2 border-arup-red pt-8">
-      <h3 className="mb-2 text-2xl font-bold text-arup-dark-gray dark:text-white">{heading}</h3>
-      <p className="mb-4 text-sm text-gray-600 dark:text-slate-400">{subtitle}</p>
-      <div className="space-y-3">
+    <div className="border-t-2 border-arup-red pt-8 lg:pt-10">
+      <h3 className="mb-2 text-2xl font-bold text-arup-dark-gray dark:text-white lg:text-3xl">{heading}</h3>
+      <p className="mb-4 max-w-3xl text-sm text-gray-600 dark:text-slate-400 lg:mb-6 lg:text-base">{subtitle}</p>
+      <div className="grid grid-cols-1 gap-3 lg:grid-cols-2 lg:gap-4">
         {links.map(link => (
           <a
             key={link.id}
@@ -46,11 +46,19 @@ const LinkList: React.FC<{ links: ExternalLink[]; heading: string; subtitle: str
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Open ${link.title} in a new tab`}
-            className="block rounded-xl border border-arup-red/30 bg-arup-red/5 px-4 py-3 transition-colors duration-200 hover:bg-arup-red/10 dark:border-arup-red/35 dark:bg-arup-red/10"
+            className="group block h-full rounded-xl border border-arup-red/30 bg-arup-red/5 px-4 py-3 transition-all duration-200 hover:bg-arup-red/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-arup-red focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-arup-red/35 dark:bg-arup-red/10 dark:focus-visible:ring-offset-slate-900 lg:px-6 lg:py-4 lg:hover:-translate-y-0.5 lg:hover:shadow-sm"
           >
-            <p className="text-sm font-bold text-arup-dark-gray dark:text-white">{link.title}</p>
+            <div className="flex items-start justify-between gap-3">
+              <p className="text-sm font-bold text-arup-dark-gray dark:text-white lg:text-base">{link.title}</p>
+              <span className="mt-0.5 shrink-0 text-arup-medium-gray transition-colors duration-200 group-hover:text-arup-red dark:text-slate-300 dark:group-hover:text-arup-red" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5H19.5M19.5 4.5V10.5M19.5 4.5L10.5 13.5" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 7.5A1.5 1.5 0 017.5 6h3.75M18 13.5V18A1.5 1.5 0 0116.5 19.5H6.75A2.25 2.25 0 014.5 17.25V8.25A2.25 2.25 0 016.75 6H10.5" />
+                </svg>
+              </span>
+            </div>
             {link.description && (
-              <p className="mt-1 text-xs leading-relaxed text-gray-600 dark:text-slate-300">{link.description}</p>
+              <p className="mt-1 text-xs leading-relaxed text-gray-600 dark:text-slate-300 lg:mt-1.5 lg:text-sm">{link.description}</p>
             )}
           </a>
         ))}
@@ -270,7 +278,7 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
 
         {/* --- Content Section --- */}
         <div className={`relative isolate w-full overflow-x-clip overflow-y-auto bg-white dark:bg-slate-900 ${isBusinessCaseContainer ? 'h-full lg:w-full' : 'h-1/2 lg:h-full lg:w-[40%]'}`}>
-          <div className="p-8 md:p-12 lg:p-16">
+          <div className={`p-8 md:p-12 lg:p-16 ${isBusinessCaseContainer ? 'mx-auto w-full lg:max-w-6xl' : ''}`}>
             <span className="inline-flex rounded-full bg-arup-red/10 px-3 py-1 text-xs font-bold text-arup-red uppercase tracking-[0.2em]">{project.category}</span>
 
             {/* Section Tabs */}
@@ -305,7 +313,7 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
             )}
             <p className="mb-12 whitespace-pre-line text-lg leading-relaxed text-gray-700 dark:text-slate-300">{displayData.description}</p>
 
-            <div className="space-y-12">
+            <div className={isBusinessCaseContainer ? 'space-y-12 lg:space-y-14' : 'space-y-12'}>
               {isBusinessCaseContainer ? (
                 <>
                   {sharedLinks.length > 0 && (
