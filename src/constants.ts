@@ -67,6 +67,7 @@ import QuarryCutFill from './assets/Quarry_Cut&Fill.png';
 import QuarryMissingArea from './assets/QuarryMissing_Area.png';
 import MissingQuarryImage from './assets/MissingQuarryImage.png';
 import Xcross from './assets/Xcross_sectionDesign.png';
+import Business_Case from './assets/Business Case.png';
 
 
 export const projects: Project[] = [
@@ -387,7 +388,7 @@ export const projects: Project[] = [
     description: 'This container project groups three business cases in one place and provides direct access to related Stare Reports stored in Miro. Use the tabs to move between business cases and use the links to open supporting report boards.',
     processDescription: 'This structure has been designed to keep report content clear and easy to navigate. Each business case has its own context specific links, and shared Stare Reports are available across all tabs so common references are always easy to find.',
     images: [],
-    headerImage: QuarryPicture,
+    headerImage: Business_Case,
     links: [
       {
         id: 'business-case-1',
