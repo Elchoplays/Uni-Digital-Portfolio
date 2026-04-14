@@ -59,6 +59,7 @@ import secretcode from './assets/Code_Secret.png';
 import photoablumn from './assets/PhotoAlbum.jpeg';
 import QuarryOld from './assets/QuarryOld.png';
 import QuarryPicture from './assets/Quarry_Picture.jpg';
+import OrganisationStructureImage from './assets/Organisation Diagram Creative.png';
 import QuarryImage2 from './assets/QuarryImage2.jpeg';
 import QuarryImage3 from './assets/QuarryImage3.png';
 import QuarryRoad4 from './assets/QuarryRoad4.png';
@@ -457,6 +458,12 @@ export const projects: Project[] = [
         url: 'https://miro.com/app/board/uXjVJ9yUF04=/?share_link_id=726506470931'
       },
     ],
+    organisationStructure: {
+      title: 'Organisation Structure',
+      description: 'Overview of the Organisation Structure and Geotechnical Team Responsibilities',
+      image: OrganisationStructureImage,
+      alt: 'Overview of the Project Organisation Structure and Geotechnical Team Responsibilities.'
+    },
     ksbs: {
       knowledge: ['K1', 'K2', 'K8', 'K10', 'K13', 'K14', 'K16'],
       skills: ['S1', 'S4', 'S5', 'S6', 'S10', 'S14', 'S18'],

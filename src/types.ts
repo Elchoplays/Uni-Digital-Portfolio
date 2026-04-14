@@ -12,6 +12,13 @@ export interface ExternalLink {
   description?: string;
 }
 
+export interface OrganisationStructureContent {
+  title: string;
+  description?: string;
+  image: string;
+  alt: string;
+}
+
 export interface ProjectSection {
   id: string;
   title: string;
@@ -36,6 +43,7 @@ export interface Project {
   videos?: string[];
   links?: ExternalLink[];
   stareReportLinks?: ExternalLink[];
+  organisationStructure?: OrganisationStructureContent;
   headerImage?: string;
   ksbs: KSBs;
   sections?: ProjectSection[];

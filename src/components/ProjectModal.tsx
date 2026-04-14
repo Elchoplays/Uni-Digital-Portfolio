@@ -103,6 +103,7 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
     const sectionLinks = activeSection?.links ?? [];
     const sharedLinks = project.links ?? [];
     const stareReportLinks = project.stareReportLinks ?? [];
+    const organisationStructure = project.organisationStructure;
     const orderedSections = [...sections].sort((a, b) => {
       const getRank = (section: ProjectSection) => {
         const key = `${section.id} ${section.title}`.toLowerCase();
@@ -330,6 +331,24 @@ const ProjectModal: React.FC<{ project: Project; onClose: () => void }> = ({ pro
                       heading="Stare Reports"
                       subtitle="Supporting Stare Report boards for this container project."
                     />
+                  )}
+
+                  {organisationStructure && (
+                    <div className="border-t-2 border-arup-red pt-8 lg:pt-10">
+                      <h3 className="mb-2 text-2xl font-bold text-arup-dark-gray dark:text-white lg:text-3xl">{organisationStructure.title}</h3>
+                      {organisationStructure.description && (
+                        <p className="mb-4 max-w-3xl text-sm text-gray-600 dark:text-slate-400 lg:mb-6 lg:text-base">{organisationStructure.description}</p>
+                      )}
+                      <div className="overflow-hidden rounded-2xl border border-arup-red/20 bg-arup-light-gray p-3 dark:border-arup-red/35 dark:bg-slate-950 lg:p-4">
+                        <img
+                          src={organisationStructure.image}
+                          alt={organisationStructure.alt}
+                          loading="lazy"
+                          decoding="async"
+                          className="mx-auto h-auto w-full max-w-4xl object-contain"
+                        />
+                      </div>
+                    </div>
                   )}
                 </>
               ) : (
