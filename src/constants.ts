@@ -360,9 +360,9 @@ export const projects: Project[] = [
         processDescription: 'Two different approaches were used because the amount and quality of data available was different for each quarry. \n\nFor the upper quarry site, there was enough coverage from an older topographic survey carried out in 2019. Although this data was not fully up to date, it covered the whole area and provided a reliable base surface. This meant the existing data could be used to fill the quarry with confidence, with only small changes needed to match the newer information. \n\nThe second quarry was more challenging. Although updated data had been collected using a drone survey, the coverage was incomplete. Some areas were not captured because there was water present during the survey. Drone and LiDAR systems cannot collect accurate ground data through water, which caused gaps in the data. Further gaps were created by steep quarry faces and areas where the LiDAR results were missing or unreliable. \n\nTo deal with this, I used the ground level data that was available where coverage existed. For areas with missing data, I flattened the surface to create a sensible and consistent ground model. This made sure the surface could still be used for the project, while clearly recognising the limits of the available data. This approach helped balance accuracy with practicality.',
         images: [QuarryImage3, QuarryOld, QuarryPicture, QuarryImage2],
         ksbs: {
-          knowledge: ['K1', 'K2', 'K8', 'K10', 'K11', 'K12', 'K13', 'K14', 'K16', 'K20', 'K21'],
-          skills: ['S1', 'S4', 'S5', 'S6', 'S10', 'S14', 'S18'],
-          behaviours: ['B1', 'B2', 'B4', 'B5']
+          knowledge: ['K2', 'K8', 'K17', 'K18', 'K19', 'K20'],
+          skills: ['S5', 'S12', 'S14', 'S16', 'S18'],
+          behaviours: ['B1', 'B2', 'B3', 'B5']
         }
       },
       {
@@ -374,9 +374,9 @@ export const projects: Project[] = [
         processDescription: 'To complete the cut and fill analysis, I first reviewed the available topographic and ground level data to understand the existing site conditions. Before carrying out the analysis, I had to design what the proposed new ground levels would look like. I was instructed that the new ground should fall at a 1 in 4 slope from the edge of the road down to the existing ground level. This slope was shallow enough for the land quality team to install trees, helping the project meet its environmental requirements. I also had to model a slope between the main road and a secondary road so that the two could connect smoothly. \n\nOnce the proposed ground levels were designed, I compared the existing ground surface with the proposed design surface by creating volume calculations between the two. These volumes were then used to identify areas of cut and fill and formed the basis of the analysis. \n\nDuring this process, the former quarry and the road built over it became a key challenge. The unusual ground profile meant that standard assumptions about reusing material could not always be applied. This showed the importance of understanding the site’s history and existing ground conditions before relying solely on cut and fill results. \n\nA key learning from this work was that cut and fill analysis is not just a technical task. While software can calculate volumes, professional judgement is needed to interpret the results properly. Ground conditions, previous land use, and construction constraints all affect whether the calculated material volumes can realistically be reused on site.',
         images: [QuarryRoad4, Xcross, QuarryCutFill, QuarryMissingArea],
         ksbs: {
-          knowledge: ['K1', 'K2', 'K8', 'K10', 'K11', 'K12', 'K13', 'K14', 'K16', 'K20', 'K21'],
-          skills: ['S1', 'S4', 'S5', 'S6', 'S10', 'S14', 'S18'],
-          behaviours: ['B1', 'B2', 'B4', 'B5']
+          knowledge: ['K2', 'K8', 'K14', 'K16', 'K17', 'K18', 'K19', 'K20'],
+          skills: ['S5', 'S6', 'S12', 'S14', 'S15', 'S16', 'S18'],
+          behaviours: ['B2', 'B3', 'B5']
         }
       }
     ]
